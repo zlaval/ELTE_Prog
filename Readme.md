@@ -1,0 +1,1 @@
+Minden kód csak az adott órán vett és megengedett stuktúrákat tartalmazza!!
