@@ -33,17 +33,18 @@ int main()
         result[i] = 0;
     }
 
-    int k=0;
+    int k = 0;
     for (int i = 0; i < N; i++)
     {
-        for (int j = 0; j < M; j++)
+        int j = 0;
+        while (j < M && H[i][j] != maxTemp)
         {
-            if (H[i][j] == maxTemp)
-            {
-                result[i] = 1;
-                k++;
-                break;
-            }
+            j++;
+        }
+        if (j < M)
+        {
+            result[i] = 1;
+            k++;
         }
     }
 
