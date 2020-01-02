@@ -1,1 +1,1 @@
-Minden kód csak az adott órán vett és megengedett stuktúrákat tartalmazza!!
+Minden kód csak az adott órán vett és megengedett vezértéseket/stuktúrákat/includokat tartalmazza!!
