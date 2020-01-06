@@ -1,4 +1,3 @@
-//6.1 NOK
 #include <iostream>
 
 using namespace std;
