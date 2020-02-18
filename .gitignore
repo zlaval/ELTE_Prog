@@ -2,3 +2,11 @@
 *.txt
 *.pdf
 .vscode/
+
+
+CMakeLists*
+cmake-build-debug/
+~*.*
+*.iml
+.idea/
+out/
