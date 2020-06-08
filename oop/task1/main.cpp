@@ -3,6 +3,7 @@
 #include "../lib/summation.hpp"
 #include "../lib/stringstreamenumerator.hpp"
 
+
 struct Catch {
     std::string breed;
     int weight;
@@ -81,6 +82,7 @@ private:
     bool eos;
 public:
     AnglerEnumerator(const std::string &fileName) : enor(fileName){};
+
 protected:
     void first() override {
         enor.first();
@@ -113,11 +115,18 @@ protected:
     bool cond(const Angler &e) const override { return e.catchOnAll; }
 };
 
+
 int main(int argc, char *argv[]) {
-    std::string path = argc > 1 ? argv[1] : "D:\\Application\\elte-prog\\oop\\task1\\input.txt";
-    Print print(&std::cout);
-    AnglerEnumerator enumerator(path);
-    print.addEnumerator(&enumerator);
-    print.run();
-    return 0;
+    try {
+        std::string path = argc > 1 ? argv[1] : "D:\\Application\\elte-prog\\oop\\task1\\input.txt";
+        Print print(&std::cout);
+        AnglerEnumerator enumerator(path);
+        print.addEnumerator(&enumerator);
+        print.run();
+        return 0;
+    } catch (...) {
+        std::cout<<"Missing file";
+        return 1;
+    }
+
 }
