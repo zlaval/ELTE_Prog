@@ -1,10 +1,10 @@
-##Leírás
+## Leírás
 
-A bemenet horgászversenyeken fogott halakat tartalmaz emberenként ezen belül versenyenként.
+A bemenet horgászversenyeken fogott halakat tartalmaz emberenként ezen belül versenyenként rendezve.
 Írjuk ki azok nevét, akik minden versenyen minimum két 5kg feletti pontyot fogtak.
 
 
-#####Minta bemenet
+##### Minta bemenet:
 >Feri v1 ponty 4 keszeg 1 
 >
 >Feri v2 ponty 1 Ponty 3 

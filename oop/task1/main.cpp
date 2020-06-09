@@ -28,13 +28,13 @@ protected:
         return 0;
     }
     int add(const int &a, const int &b) const override {
-        return a + 1;
+        return a + b;
     }
     bool cond(const Catch &e) const override {
         return e.breed == "ponty" && e.weight > 5;
     }
     int func(const Catch &e) const override {
-        return 0;
+        return 1;
     }
 };
 
