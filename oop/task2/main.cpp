@@ -97,7 +97,7 @@ public:
         catchOnAll = c.catchCarpOverThreeKg;
     }
 
-    CompetitionSum operator+(const CompetitionSum &a) const {
+    CompetitionSum max(const CompetitionSum &a) const {
         CompetitionSum res;
         if (this->maxWeight > a.maxWeight) {
             res.maxWeight = maxWeight;
@@ -131,7 +131,7 @@ protected:
         return c;
     }
     CompetitionSum add(const CompetitionSum &a, const CompetitionSum &b) const override {
-        return a + b;
+        return a.max(b);
     }
 
     void first() override {}
