@@ -183,7 +183,6 @@ public:
 
 
 class BiggestFishOnCompetitions: public MaxSearch<Angler,Angler,CompareBiggestFishesSize>{
-public:
 protected:
     Angler func(const Angler &e) const override {
         return e;

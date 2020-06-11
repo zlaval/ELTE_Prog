@@ -1,0 +1,9 @@
+Bela v2 harcsa 200
+Bela v3 ponty 6
+Feri v1 ponty 4 harcsa 16 harcsa 3
+Feri v2 keszeg 1 amur 87
+Sanyi v1 ponty 4 harcsa 16
+Sanyi v3 ponty 7 keszeg 1
+Gizi v2
+Kari v1 ponty 3 keszeg 31
+Kari v2 ponty 5 keszeg 1

@@ -58,7 +58,7 @@ public:
 
 //template specialization if the second parameter is vector
 //it is used to solve problems with multiple answers.
-template < typename Item, typename Value = Item >
+template < typename Item, typename Value >
 class Summation<Item, std::vector<Value> > : public Procedure<Item, std::vector<Value> >
 {
 private:

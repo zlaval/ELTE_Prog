@@ -1,0 +1,11 @@
+Sanyi v1 ponty 4 harcsa 16
+Sanyi v3 ponty 4 keszeg 1
+Feri v1 ponty 4 ponty 7 ponty 13
+Feri v2 ponty 6 ponty 3 ponty 19
+Bela v2
+Bela v3 ponty 6
+Gizi v2
+Kari v1 ponty 6 keszeg 1 ponty 21
+Kari v2 ponty 5 keszeg 1 ponty 12
+Jeno v1 ponty 10 keszeg 1 ponty 13
+Jeno v2 ponty 1 ponty 33 ponty 16
