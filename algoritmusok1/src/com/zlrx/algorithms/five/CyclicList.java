@@ -3,7 +3,7 @@ package com.zlrx.algorithms.five;
 import java.util.Arrays;
 import java.util.List;
 
-public class CiclicList {
+public class CyclicList {
 
     class Node {
         Node previous;

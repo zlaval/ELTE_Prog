@@ -5,10 +5,6 @@
 #include <iostream>
 #include <math.h>
 
-//1től indexelt
-//balra tömörített bináris fa amire
-//max heap: minden belső csúcs nagyobb mint a gyerekeié
-//részfák kupacok, bal jobb oldal között nincs reláció
 class Heap {
 private:
     int *array;

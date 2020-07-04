@@ -30,11 +30,11 @@ int main() {
 //
 //    delete list;
 
-    std::string b[10] = {"111","231","202","010","003","311","112","310","210","001"};
+    std::string b[6] = {"11", "20", "10", "23", "21", "30"};
 
     CountingSort c;
 
-    c.sort(b,10,3,4); //d=max num+1
+    c.sort(b,6,2,4); //d=max num+1
 
     return 0;
 }

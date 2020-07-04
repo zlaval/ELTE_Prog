@@ -19,26 +19,20 @@ int main() {
 //    std::cout << a << " " << b << " " << c << std::endl;
 //    std::cout << "=====================================================================" << std::endl;
 
-    HashTable hashTable2(10);
+    HashTable hashTable2(8);
     hashTable2.printHeader();
-    hashTable2.putQuadric(3);
     hashTable2.putQuadric(13);
-    hashTable2.putQuadric(45);
-    hashTable2.putQuadric(8);
-    hashTable2.putQuadric(27);
-    hashTable2.putQuadric(33);
-
-    hashTable2.removeQuadric(13);
-    hashTable2.removeQuadric(33);
     hashTable2.putQuadric(20);
-
-    hashTable2.getQuadric(14);
-//    hashTable2.getQuadric(12);
-//    hashTable2.getQuadric(15);
-//    hashTable2.putQuadric(4);
-//    hashTable2.removeQuadric(10);
-//    hashTable2.putQuadric(35);
-//    hashTable2.putQuadric(10);
+    hashTable2.putQuadric(31);
+    hashTable2.putQuadric(87);
+    hashTable2.putQuadric(12);
+    hashTable2.removeQuadric(31);
+    hashTable2.getQuadric(12);
+    hashTable2.getQuadric(15);
+    hashTable2.putQuadric(4);
+    hashTable2.removeQuadric(10);
+    hashTable2.putQuadric(35);
+    hashTable2.putQuadric(10);
     std::cout <<std::endl;
     std::cout << "=====================================================================" << std::endl;
 

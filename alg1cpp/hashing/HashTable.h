@@ -38,11 +38,12 @@ public:
         return (key) % m;
     }
 
+    //TODO here you can modify key hashing
     int h(int key, int i) {
-        //KEY =1/2
-        int c1 = 2;
-        int c2 = 5;
-        return (key + (c1 * i + c2 * i * i) ) % m;
+        //KEY = 1/2 to make it whole number, remove [/ 2] before modulo
+        int c1 = 1;
+        int c2 = 1;
+        return (key + (c1 * i + c2 * i * i) / 2) % m;
     }
 
     int h2(int element) {
