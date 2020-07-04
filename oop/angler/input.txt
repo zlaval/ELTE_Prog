@@ -1,0 +1,7 @@
+JANIBA   Kiliti0512   Ponty   45   Ponty   53   Harcsa   96
+BELABA   Kiliti0512   Ponty   45
+JANIBA   Kiliti0513   Ponty   45   Ponty   53   Harcsa   96
+BELABA   Kiliti0513
+JANIBA   Kiliti0514   Ponty   45   Ponty   53
+BELABA   Kiliti0514   Ponty   45   Ponty   53   Harcsa   96
+SANYIBA   Kiliti0514   Ponty   45

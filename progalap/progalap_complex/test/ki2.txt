@@ -1,0 +1,2 @@
+Number of settlements contains a daily minimum temperature: 3
+1 2 3
