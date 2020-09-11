@@ -1,0 +1,7 @@
+1 porkolt 10:30 3 300
+4 porkolt 12:30 2 350
+5 vadas 7:30 10 400
+6 vadas 8:25  2 300
+7 vadas 12:00 5 500
+5 pizza 16:20 1 240
+9 pitta 19:30 6 110

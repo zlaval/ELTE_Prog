@@ -1,0 +1,5 @@
+3
+H Halcsa 3
+M Madarka 3
+K Kutyulee 10
+r

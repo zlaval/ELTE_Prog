@@ -1,0 +1,9 @@
+pizza liszt 3
+pizza sajt 2
+pizza so 1
+kremes cukor 2
+kremes tej 1
+kremes porcukor 3
+korozott turo 3
+korozott hagyma 1
+korozott cukor 2

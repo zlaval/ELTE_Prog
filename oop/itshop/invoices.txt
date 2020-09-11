@@ -1,0 +1,3 @@
+ZLRX1 Laura Chocolate 12000 Milk 5600 Shirt 1400 Skirt 1000
+ZLRX1 Erik Máté Gpu 50000 Cpu 20000 Board 300000 Case 200001
+ZLRX3 Alex Levente Lego 6600 PlayDoh 6600
