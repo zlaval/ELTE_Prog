@@ -28,7 +28,15 @@ class Huffman(private val originalStr: String) {
         pq = PriorQueue(nodes)
         val root = buildTree()
         buildCodeTable(root);
+        printCodeTable()
         return calculateFinalCode()
+    }
+
+    private fun printCodeTable() {
+        codeTable.forEach {
+            val (letter, code) = it
+            println("$letter: $code")
+        }
     }
 
     private fun sliceToChars() {
@@ -87,6 +95,7 @@ data class Node(
     override fun compareTo(other: Node): Int = this.value.compareTo(other.value)
 }
 
+//FIXME optimize
 class PriorQueue(nodes: List<Node>) {
 
     private val list = mutableListOf<Node>()
