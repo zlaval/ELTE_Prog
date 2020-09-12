@@ -44,15 +44,12 @@ class LZWCoder(private val plainText: String, private val codeTable: MutableMap<
 
         return result;
     }
-
-
 }
 
 class LZWDecoder(
     private val coded: String,
     private val codeTable: MutableMap<Int, String>
 ) {
-
 
     fun decode(): String {
         val codes = coded.split(" ")
@@ -81,15 +78,12 @@ class LZWDecoder(
                 result = result.substring(0, result.length - codeTable[codes[elementIndex - 1]]!!.length)
                 result += codeTable[codes[elementIndex]]
             }
-
             elementIndex++
         }
-
 
         return result
     }
 
     private fun inCodeTable(str: String) = codeTable.values.contains(str)
-
 
 }

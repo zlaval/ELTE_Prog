@@ -7,29 +7,70 @@ fun main() {
     println("Give me a sentence: ")
     val str = readLine()
     if (str != null) {
-        val huffman = Huffman(str)
-        val code = huffman.calculateCode()
-        println(code)
+        val huffmanEncode = HuffmanEncode(str)
+        val code = huffmanEncode.calculateCode()
+        println(code.first)
+
+        val huffmanDecode = HuffmanDecode(code.first, code.second)
+        val decoded = huffmanDecode.decode()
+        println(decoded)
     } else {
         println(":(")
     }
 }
 
+abstract class HuffMan {
 
-class Huffman(private val originalStr: String) {
+    protected val codeTable = HashMap<String, String>()
+
+    protected fun buildCodeTable(parent: Node) {
+        fun traverse(accumulator: String, node: Node?) {
+            if (node == null) {
+                return
+            }
+            if (node.left == null && node.right == null) {
+                codeTable[node.letter!!] = accumulator
+            }
+            traverse(accumulator + "0", node.left)
+            traverse(accumulator + "1", node.right)
+        }
+        traverse("", parent);
+    }
+}
+
+class HuffmanDecode(private val encoded: String, private val root: Node) : HuffMan() {
+
+    private lateinit var reversedCodeTable: Map<String, String>
+
+    fun decode(): String {
+        buildCodeTable(root)
+        reversedCodeTable = codeTable.entries.associate { (k, v) -> v to k }
+        return buildString()
+    }
+
+    private fun buildString(): String {
+        val codes = encoded.split(" ").filter { it.isNotBlank() }
+        return codes
+            .map { reversedCodeTable[it] }
+            .joinToString("")
+    }
+}
+
+
+class HuffmanEncode(private val originalStr: String) : HuffMan() {
 
     private val charMap = LinkedHashMap<String, Int>()
     private lateinit var pq: PriorQueue
-    private val codeTable = HashMap<String, String>()
 
-    fun calculateCode(): String {
+    fun calculateCode(): Pair<String, Node> {
         sliceToChars()
         val nodes = buildNodes()
         pq = PriorQueue(nodes)
         val root = buildTree()
         buildCodeTable(root);
         printCodeTable()
-        return calculateFinalCode()
+        val result = calculateFinalCode()
+        return Pair(result, root)
     }
 
     private fun printCodeTable() {
@@ -61,20 +102,6 @@ class Huffman(private val originalStr: String) {
         val parent = Node(left.value + right.value, left = left, right = right)
         pq.add(parent)
         return buildTree()
-    }
-
-    private fun buildCodeTable(parent: Node) {
-        fun traverse(accumulator: String, node: Node?) {
-            if (node == null) {
-                return
-            }
-            if (node.left == null && node.right == null) {
-                codeTable[node.letter!!] = accumulator
-            }
-            traverse(accumulator + "0", node.left)
-            traverse(accumulator + "1", node.right)
-        }
-        traverse("", parent);
     }
 
     private fun calculateFinalCode(): String =
