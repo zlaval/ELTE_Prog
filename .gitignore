@@ -12,3 +12,4 @@ out/
 gradlew*
 gradle/**
 build/
+wrapper/

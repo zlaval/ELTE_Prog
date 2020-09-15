@@ -1,15 +1,29 @@
 package com.zlrx.algo2
 
 fun main() {
-    val plainText = "ABABABAACAACCBBAAAAAAAAA"
+    val text = "ABABCABABA"
     val codeTable = mapOf("A" to 1, "B" to 2, "C" to 3)
-    val lzwCoder = LZWCoder(plainText, codeTable.toMutableMap())
-    val code = lzwCoder.code()
-    println(code)
-    val revertedCodeTable = codeTable.entries.associate { (k, v) -> v to k }
-    val lzwDecoder = LZWDecoder(code, revertedCodeTable.toMutableMap())
-    println(lzwDecoder.decode())
+    val plainCodeTable = codeTable.toMutableMap()
+    val lzwCoder = LZWCoder(text, plainCodeTable)
+    val encoded = lzwCoder.code()
+    printResultWithCodeTable(text, encoded, plainCodeTable)
+    val revertedCodeTable = codeTable.entries.associate { (k, v) -> v to k }.toMutableMap()
+    val lzwDecoder = LZWDecoder(encoded, revertedCodeTable)
+    val decoded = lzwDecoder.decode()
+    printResultWithCodeTable(encoded, decoded, revertedCodeTable)
+}
 
+fun <T, U> printResultWithCodeTable(original: String, result: String, codeTable: Map<T, U>) {
+    println(original)
+    println()
+    codeTable.forEach {
+        val (k, v) = it
+        println("$k => $v")
+    }
+
+    println()
+    println(result)
+    println("***************************************")
 }
 
 class LZWCoder(private val plainText: String, private val codeTable: MutableMap<String, Int>) {
@@ -24,7 +38,7 @@ class LZWCoder(private val plainText: String, private val codeTable: MutableMap<
 
         var actualIndex = 0
 
-        while (actualIndex < charList.size - 1) {
+        while (actualIndex < charList.size) {
             var nextIndex = actualIndex
             var nextString = charList[actualIndex]
             while (codeTable.contains(nextString) && charList.size > nextIndex + 1) {
