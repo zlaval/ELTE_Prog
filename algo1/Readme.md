@@ -1,5 +1,5 @@
 **CLion Project**
 
-- Every code contains only materials that was presented before the code was made 
+- Every code contains materials that was presented on the class before the code was made 
 - Some code may not works properly
-- Not refactored, lot of code are dirty
+- Not refactored, lot of codes are dirty
