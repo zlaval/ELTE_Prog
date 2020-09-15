@@ -1,7 +1,11 @@
 package com.zlrx.algo2
 
 fun main() {
+<<<<<<< HEAD
     val text = "ABABCABABA"
+=======
+    val plainText = "ABABCABABA"
+>>>>>>> d27640d4a63d126041b9da988900a4427835eeff
     val codeTable = mapOf("A" to 1, "B" to 2, "C" to 3)
     val plainCodeTable = codeTable.toMutableMap()
     val lzwCoder = LZWCoder(text, plainCodeTable)
@@ -38,7 +42,11 @@ class LZWCoder(private val plainText: String, private val codeTable: MutableMap<
 
         var actualIndex = 0
 
+<<<<<<< HEAD
         while (actualIndex < charList.size) {
+=======
+        while (actualIndex < charList.size ) {
+>>>>>>> d27640d4a63d126041b9da988900a4427835eeff
             var nextIndex = actualIndex
             var nextString = charList[actualIndex]
             while (codeTable.contains(nextString) && charList.size > nextIndex + 1) {
