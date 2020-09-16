@@ -1,5 +1,7 @@
 package com.zlrx.algo2
 
+import com.zlrx.algo2.helper.TreePrinter
+import com.zlrx.algo2.model.Node
 import java.util.*
 import kotlin.collections.HashMap
 
@@ -29,7 +31,7 @@ abstract class HuffMan {
                 return
             }
             if (node.left == null && node.right == null) {
-                codeTable[node.letter!!] = accumulator
+                codeTable[node.data!!] = accumulator
             }
             traverse(accumulator + "0", node.left)
             traverse(accumulator + "1", node.right)
@@ -43,13 +45,14 @@ class HuffmanDecode(private val encoded: String, private val root: Node) : HuffM
     private lateinit var reversedCodeTable: Map<String, String>
 
     fun decode(): String {
+        TreePrinter.printTree(root)
         buildCodeTable(root)
         reversedCodeTable = codeTable.entries.associate { (k, v) -> v to k }
         return buildString()
     }
 
     private fun buildString(): String {
-        val codes = encoded.split(" ").filter { it.isNotBlank() }
+        val codes = encoded.split(" ")
         return codes
             .map { reversedCodeTable[it] }
             .joinToString("")
@@ -67,6 +70,7 @@ class HuffmanEncode(private val originalStr: String) : HuffMan() {
         val nodes = buildNodes()
         pq = PriorQueue(nodes)
         val root = buildTree()
+        TreePrinter.printTree(root)
         buildCodeTable(root);
         printCodeTable()
         val result = calculateFinalCode()
@@ -99,7 +103,8 @@ class HuffmanEncode(private val originalStr: String) : HuffMan() {
         }
         val left = pq.poll()
         val right = pq.poll()
-        val parent = Node(left.value + right.value, left = left, right = right)
+        val value = left.value + right.value
+        val parent = Node(value, left = left, right = right, data = value.toString())
         pq.add(parent)
         return buildTree()
     }
@@ -110,16 +115,6 @@ class HuffmanEncode(private val originalStr: String) : HuffMan() {
             .map { codeTable[it] }
             .joinToString(" ")
 
-}
-
-data class Node(
-    val value: Int,
-    val letter: String? = null,
-    var left: Node? = null,
-    var right: Node? = null,
-
-    ) : Comparable<Node> {
-    override fun compareTo(other: Node): Int = this.value.compareTo(other.value)
 }
 
 //FIXME optimize
