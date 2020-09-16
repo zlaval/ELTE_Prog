@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Szerepjáték - Csomagok</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="packages.js"></script>
+</head>
+
+<body>
+    <header class="main-header">
+        <div>
+            <a href="../index.html" class="main-header__brand">
+                Kezdőlap
+            </a>
+        </div>
+        <nav class="main-nav">
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="main-nav__items">
+                <li class="main-nav__item nav__item-active">
+                    <a href="../packages/index.html">Csomagok</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="../gallery/index.html">Képtár</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="../order/index.html">Rendelés</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="relative-section">
+            <div class="banner-content">
+                <h1 class="banner-title">Válaszd a neked megfelelő tartalmat</h1>
+            </div>
+            <figure>
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="../assets/bg.jpg">
+                    <source media="(min-width: 768px)" srcset="../assets/bg_medium.jpg">
+                    <img class="banner-image" src="../assets/bg_small.jpg" alt="Tartalom választás háttérkép">
+                </picture>
+            </figure>
+            <div class="banner-overlay"></div>
+        </section>
+
+        <section id="plans" class="content-wrap">
+            <h1 class="plans__section-title">Csomagok</h1>
+            <div class="plans">
+                <article class="plan">
+                    <h2 class="plan__title">ALAP</h2>
+                    <h3 class="plan__price">3000 HUF</h3>
+                    <h4>Kezdő játékosoknak</h4>
+                    <ul class="plan__features">
+                        <li>Teljes alapjáték</li>
+                        <li>10 választható karakter</li>
+                        <li>100 óra játékidő</li>
+                        <li>Ajándék térkép</li>
+                    </ul>
+                    <div>
+                        <button class="plan__button" onclick="buy('Alap')">EZT VÁLASZTOM</button>
+                    </div>
+                </article>
+                <article class="plan plan--highlighted">
+                    <h2 class="plan__annotation">AJÁNLOTT</h2>
+                    <h2 class="plan__title">BŐVÍTETT</h2>
+                    <h3 class="plan__price">5000 HUF</h3>
+                    <h4>Kalandvágyóknak</h4>
+                    <ul class="plan__features">
+                        <li>Alapjáték és kiegészítők</li>
+                        <li>15 választható karakter</li>
+                        <li>200 óra játékidő</li>
+                        <li>Ajándék játékbeli tárgy</li>
+                    </ul>
+                    <div>
+                        <button class="plan__button" onclick="buy('Bővített')">EZT VÁLASZTOM</button>
+                    </div>
+                </article>
+                <article class="plan">
+                    <h2 class="plan__title">VETERÁN</h2>
+                    <h3 class="plan__price">7000 HUF</h3>
+                    <h4>Régi játékosoknak</h4>
+                    <ul class="plan__features">
+                        <li>A többi csomag tartalma</li>
+                        <li>Dobozos verzió</li>
+                        <li>Szövet térkép</li>
+                        <li>Ajándék nyaklánc</li>
+                    </ul>
+                    <div>
+                        <button class="plan__button" onclick="buy('Veterán')">EZT VÁLASZTOM</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="main-characters">
+            <h1 class="section-title">Válaszd ki a hősöd</h1>
+            <ul class="main-characters__list">
+                <li class="main-character">
+                    <img class="main-character__image" src="../assets/portrait_img/char1.png" alt="Tolvaj">
+                    <p class="main-character__description">Tolvaj</p>
+                </li>
+                <li class="main-character">
+                    <img class="main-character__image" src="../assets/portrait_img/char2.png" alt="Lovag">
+                    <p class="main-character__description">Lovag</p>
+                </li>
+                <li class="main-character">
+                    <img class="main-character__image" src="../assets/portrait_img/char3.png" alt="Varázsló">
+                    <p class="main-character__description">Varázsló</p>
+                </li>
+                <li class="main-character">
+                    <img class="main-character__image" src="../assets/portrait_img/char4.png" alt="Druida">
+                    <p class="main-character__description">Druida</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <nav>
+            <ul class="main-footer__texts">
+                <li class="main-footer__text main-footer__link">
+                    <a href="#">Oldal tetejére</a>
+                </li>
+                <li class="main-footer__text">
+                    Készült: <time datetime="2020-04-30 20:00">2020.04.30 20:00</time>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

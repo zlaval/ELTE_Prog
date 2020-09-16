@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Szerepjáték - Megrendelés</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../shared.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/css/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/build/ol.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="map.js"></script>
+</head>
+
+<body>
+    <header class="main-header">
+        <div>
+            <a href="../index.html" class="main-header__brand">
+                Kezdőlap
+            </a>
+        </div>
+        <nav class="main-nav">
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn">
+                <span class="navicon"></span>
+            </label>
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="../packages/index.html">Csomagok</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="../gallery/index.html">Képtár</a>
+                </li>
+                <li class="main-nav__item nav__item-active">
+                    <a href="../order/index.html">Rendelés</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="order-title">Megrendelés</h1>
+        <section class="content-wrap">
+            <div class="flex-row">
+                <div class="half-width full-width-mobile">
+                    <form action="mailto:joedoe@gamecompany.com" method="POST" enctype="text/plain" class="order-form">
+                        <label for="first_name">Vezetéknév</label>
+                        <input type="text" id="first_name" maxlength="50" />
+                        <label for="last_name">Keresztnév</label>
+                        <input type="text" id="last_name" maxlength="50" />
+                        <label for="email">Email</label>
+                        <input type="email" id="email" maxlength="50" />
+                        <label for="address">Cím</label>
+                        <input type="text" id="address" maxlength="50" />
+
+                        <h2>Választott csomag</h2>
+                        <div>
+                            <input class="block-overwrite" type="radio" id="package_1" name="package-choice"
+                                value="package_1" />
+                            <label class="radio-label" for="package_1">Alap</label>
+                        </div>
+                        <div>
+                            <input class="block-overwrite" type="radio" id="package_2" name="package-choice"
+                                value="package_2" />
+                            <label class="radio-label" for="package_2">Bővített</label>
+                        </div>
+                        <div>
+                            <input class="block-overwrite" type="radio" id="package_3" name="package-choice"
+                                value="package_3" />
+                            <label class="radio-label" for="package_3">Veterán</label>
+                        </div>
+                        <label for="comment-area">Megjegyzés</label>
+                        <textarea id="comment-area" rows="10" cols="50" maxlength="500"></textarea>
+                        <input type="checkbox" id="agree-conditions" />
+                        <label for="agree-conditions">Feltételek elfogadása</label>
+
+                        <button type="submit" class="submit_btn">Megrendel</button>
+                        <button type="reset" class="reset_btn">Mégse</button>
+                    </form>
+                </div>
+                <div class="half-width full-width-mobile">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <nav>
+            <ul class="main-footer__texts">
+                <li class="main-footer__text main-footer__link">
+                    <a href="#">Oldal tetejére</a>
+                </li>
+                <li class="main-footer__text">
+                    Készült: <time datetime="2020-04-30 20:00">2020.04.30 20:00</time>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

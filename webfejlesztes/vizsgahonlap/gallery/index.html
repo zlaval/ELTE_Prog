@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Szerepjáték - Képtár</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../shared.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/jquery.flex-photo-gallery.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="gallery.js"></script>
+    <script src="../assets/js/jquery.flex-photo-gallery.js"></script>
+</head>
+
+<body>
+    <header class="main-header">
+        <div>
+            <a href="../index.html" class="main-header__brand">
+                Kezdőlap
+            </a>
+        </div>
+        <nav class="main-nav">
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="../packages/index.html">Csomagok</a>
+                </li>
+                <li class="main-nav__item nav__item-active">
+                    <a href="../gallery/index.html">Képtár</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="../order/index.html">Rendelés</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-wrap">
+            <h1 class="section-title">Képtár</h1>
+            <div id="gallery" class="gallery-div"></div>
+            <div class='resizing-video-container'>
+                <video width="480" height="270" controls src="../assets/video/video.mp4"
+                    poster="../assets/video/video_poseter.jpg"></video>
+            </div>
+            <p>
+                <a href="../gallery/video_content.html">Tovább a videó szöveges leírásához</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <nav>
+            <ul class="main-footer__texts">
+                <li class="main-footer__text main-footer__link">
+                    <a href="#">Oldal tetejére</a>
+                </li>
+                <li class="main-footer__text">
+                    Készült: <time datetime="2020-04-30 20:00">2020.04.30 20:00</time>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

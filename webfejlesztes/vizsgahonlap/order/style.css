@@ -1,0 +1,106 @@
+main {
+  padding-top: 2.75rem;
+  background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 5%, transparent),
+    url("../assets/wallpaper.jpg") left 10% bottom 65% / cover no-repeat
+      border-box border-box,
+    red;
+  width: 100%;
+}
+
+.order-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #eeeeee;
+}
+
+.order-form {
+  padding: 1rem;
+}
+
+.order-form label,
+h2 {
+  color: white;
+  font-weight: bold;
+}
+
+.order-form h2 {
+  margin-bottom: 0;
+}
+
+.order-form label,
+.order-form input,
+.order-form textarea {
+  display: block;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.order-form input {
+  border: 1px solid #eeeeee;
+  padding: 0.2rem 0.5rem;
+  font: inherit;
+}
+
+#agree-conditions,
+.order-form input[id*="agree"] + label {
+  display: inline-block;
+  width: auto;
+}
+
+.order-form button[type="submit"] {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .order-form {
+    margin: auto;
+    width: 30rem;
+  }
+}
+
+#map {
+  width: 500px;
+  height: 700px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.order-form label.radio-label {
+  display: inline-block;
+  width: auto;
+}
+
+.order-form input.block-overwrite {
+  display: inline-block;
+  width: auto;
+}
+
+.submit_btn {
+  display: block;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgb(99, 72, 219);
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.reset_btn {
+  color: #212129;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #edf2f7;
+}
+
+@media print {
+  #map {
+    display: none;
+  }
+}
