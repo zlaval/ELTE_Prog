@@ -17,7 +17,7 @@ object TreePrinter {
         if (nodes.isEmpty() || nodes.isAllElementsNull()) return
 
         val floor = maxLevel - level
-        val endgeLines = (2.0.pow(max(floor - 1, 0))).toInt()
+        val edgeLines = (2.0.pow(max(floor - 1, 0))).toInt()
         val firstSpaces = (2.0.pow(floor)- 1).toInt()
         val betweenSpaces = (2.0.pow(floor + 1)- 1).toInt()
 
@@ -40,11 +40,11 @@ object TreePrinter {
         }
         println()
 
-        for (i in 1..endgeLines) {
+        for (i in 1..edgeLines) {
             for (j in nodes.indices) {
                 printWhitespaces(firstSpaces - i)
                 if (nodes[j] == null) {
-                    printWhitespaces(endgeLines * 2 + i + 1)
+                    printWhitespaces(edgeLines * 2 + i + 1)
                     continue
                 }
                 if (nodes[j]?.left != null) {
@@ -59,7 +59,7 @@ object TreePrinter {
                 } else {
                     printWhitespaces(1)
                 }
-                printWhitespaces(endgeLines * 2 - i)
+                printWhitespaces(edgeLines * 2 - i)
             }
             println()
         }
