@@ -6,7 +6,8 @@ data class Node(
     val data: String? = null,
     var left: Node? = null,
     var right: Node? = null,
-
-    ) : Comparable<Node> {
+    var parent: Node? = null,
+    var balance: Int = 0
+) : Comparable<Node> {
     override fun compareTo(other: Node): Int = this.value.compareTo(other.value)
 }
