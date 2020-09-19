@@ -6,13 +6,15 @@ import kotlin.math.max
 
 fun main() {
     AVL()
+        .add(51)
+        .add(35)
         .add(47)
         .add(70)
         .add(92)
         .add(12)
         .add(81)
         .add(87)
-        .add(110)
+        .add(99)
         .add(85)
         .add(5)
         .add(41)
@@ -62,24 +64,90 @@ class AVL {
     }
 
     private fun reBalance(node: Node) {
-        //TODO
         var actualNode: Node? = node
         var shouldBalance = false
-        while (!shouldBalance || actualNode == null) {
-            val leftHeight = height(node.left) + 1
-            val rightHeight = height(node.right) + 1
-            val diff = leftHeight - rightHeight
-            node.balance = diff
+        while (!shouldBalance && actualNode != null) {
+            val leftHeight = height(actualNode.left) + 1
+            val rightHeight = height(actualNode.right) + 1
+            val diff = rightHeight - leftHeight
+            actualNode.balance = diff
             if (diff < -1 || diff > 1) {
                 shouldBalance = true
             } else {
-                actualNode = node.parent
+                actualNode = actualNode.parent
             }
         }
         if (shouldBalance) {
-            //TODO balance the tree
+            balance(actualNode!!)
         }
 
+    }
+
+    private fun balance(node: Node) {
+        if (node.balance == 2) {
+            if (node.right?.balance == 1) {
+                balancePPP(node)
+            } else if (node.right?.balance == -1) {
+                balancePPM(node)
+            }
+        } else if (node.balance == -2) {
+            if (node.left?.balance == 1) {
+                balanceMMP(node)
+            } else if (node.left?.balance == -1) {
+                balanceMMM(node)
+            }
+        }
+    }
+
+    private fun balancePPM(node: Node) {
+        val newRoot = node.right!!.left!!
+        val parent = node.parent
+        node.right = newRoot.left
+        val newParent = newRoot.parent
+        newRoot.parent?.left = newRoot.right
+        newRoot.right = newParent
+        newRoot.left = node
+        handleRoot(node, parent, newRoot)
+    }
+
+    private fun balanceMMP(node: Node) {
+        val newRoot = node.left!!.right!!
+        val parent = node.parent
+        node.left = newRoot.right
+        val newParent = newRoot.parent
+        newRoot.parent?.right = newRoot.left
+        newRoot.left = newParent
+        newRoot.right = node
+        handleRoot(node, parent, newRoot)
+    }
+
+    private fun balancePPP(node: Node) {
+        val newRoot = node.right!!
+        val parent = node.parent
+        node.right = newRoot.left
+        newRoot.left = node
+        handleRoot(node, parent, newRoot)
+    }
+
+    private fun balanceMMM(node: Node) {
+        val newRoot = node.left!!
+        val parent = node.parent
+        node.left = newRoot.right
+        newRoot.right = node
+        handleRoot(node, parent, newRoot)
+    }
+
+    private fun handleRoot(originalChild: Node, parent: Node?, newNode: Node) {
+        if (parent == null) {
+            root = newNode
+            newNode.parent = null
+        } else {
+            if (parent.left === originalChild) {
+                parent.left = newNode
+            } else {
+                parent.right = newNode
+            }
+        }
     }
 
     private fun height(node: Node?): Int {
