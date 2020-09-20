@@ -29,12 +29,15 @@ object TreePrinter {
             if (node != null) {
                 newNodes.add(node.left)
                 newNodes.add(node.right)
-                val data = if (printValue) "${node.value}" else if (node.data.equals(" ")) "_" else node.data
+                var data = if (printValue) "${node.value}" else if (node.data.equals(" ")) "__" else node.data
+                if(data!!.length<2){
+                    data= "$data "
+                }
                 print(data)
             } else {
                 newNodes.add(null)
                 newNodes.add(null)
-                print(" ")
+                print("  ")
             }
             printWhitespaces(betweenSpaces)
         }
@@ -48,14 +51,14 @@ object TreePrinter {
                     continue
                 }
                 if (nodes[j]?.left != null) {
-                    print("/")
+                    print(" /")
                 } else {
                     printWhitespaces(1)
                 }
                 printWhitespaces(i * 2 - 1)
 
                 if (nodes[j]?.right != null) {
-                    print("""\""")
+                    print("""\ """)
                 } else {
                     printWhitespaces(1)
                 }
@@ -76,6 +79,6 @@ object TreePrinter {
     fun List<Node?>.isAllElementsNull() = this.all { it == null }
 
     private fun printWhitespaces(count: Int) {
-        for (i in 0 until count) print(" ")
+        for (i in 0 until count) print("  ")
     }
 }

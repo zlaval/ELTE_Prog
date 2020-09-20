@@ -14,7 +14,7 @@ fun main() {
         .add(12)
         .add(81)
         .add(87)
-        .add(99)
+        .add(110)
         .add(85)
         .add(5)
         .add(41)
@@ -27,6 +27,7 @@ class AVL {
 
     fun add(value: Int): AVL {
         val node = Node(value)
+        var rebalanced = false
         if (root == null) {
             root = node
         } else {
@@ -51,11 +52,15 @@ class AVL {
                 parent.right = node
             }
             node.parent = parent
-            reBalance(node)
+            println("********************** $value inserted - Tree before rebalancing *******************************************")
+            TreePrinter.printTree(root!!, true)
+            rebalanced = reBalance(node)
         }
         println()
-        TreePrinter.printTree(root!!, true)
-        println("*****************************************************************************************************")
+        if (rebalanced) {
+            println("------------------------------------ Tree after rebalanced ---------------------------------------------")
+            TreePrinter.printTree(root!!, true)
+        }
         return this
     }
 
@@ -63,7 +68,7 @@ class AVL {
         //TODO
     }
 
-    private fun reBalance(node: Node) {
+    private fun reBalance(node: Node): Boolean {
         var actualNode: Node? = node
         var shouldBalance = false
         while (!shouldBalance && actualNode != null) {
@@ -80,7 +85,7 @@ class AVL {
         if (shouldBalance) {
             balance(actualNode!!)
         }
-
+        return shouldBalance
     }
 
     private fun balance(node: Node) {
@@ -150,14 +155,24 @@ class AVL {
         }
     }
 
-    private fun height(node: Node?): Int {
-        return if (node == null) {
-            -1
-        } else {
-            val left = height(node.left)
-            val right = height(node.right)
-            max(left, right) + 1
+
+    companion object {
+
+        fun height(node: Node?): Int {
+            return if (node == null) {
+                -1
+            } else {
+                val left = height(node.left)
+                val right = height(node.right)
+                max(left, right) + 1
+            }
         }
+
+        fun isAVLTree(root: Node): Boolean {
+            return true
+
+        }
+
     }
 
 }
