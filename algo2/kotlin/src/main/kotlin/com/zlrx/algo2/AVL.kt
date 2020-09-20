@@ -54,12 +54,16 @@ class AVL {
             node.parent = parent
             println("********************** $value inserted - Tree before rebalancing *******************************************")
             TreePrinter.printTree(root!!, true)
+            val aVLTree=isAVLTree(root)
+            println("Tree is AVL now: $aVLTree")
             rebalanced = reBalance(node)
         }
         println()
         if (rebalanced) {
             println("------------------------------------ Tree after rebalanced ---------------------------------------------")
             TreePrinter.printTree(root!!, true)
+            val aVLTree=isAVLTree(root)
+            println("Tree is AVL now: $aVLTree")
         }
         return this
     }
@@ -168,9 +172,38 @@ class AVL {
             }
         }
 
-        fun isAVLTree(root: Node): Boolean {
-            return true
 
+        fun isAVLTree(node: Node?): Boolean {
+            if (node == null) {
+                return true
+            }
+            val left = node.left
+            val right = node.right
+            var leftHeight = 0
+            var rightHeight = 0
+
+            var thisIsAvl = true
+            if (left != null) {
+                thisIsAvl = thisIsAvl && left.value < node.value
+                leftHeight = height(left)+1
+            }
+            if (right != null) {
+                thisIsAvl = thisIsAvl && right.value > node.value
+                rightHeight = height(right)+1
+            }
+
+            val levelDiff = leftHeight - rightHeight
+
+            if (levelDiff > 1 || levelDiff < -1) {
+                return false
+            }
+
+            if (thisIsAvl) {
+                val leftIsAvl = isAVLTree(left)
+                val rightIsAvl = isAVLTree(right)
+                return leftIsAvl && rightIsAvl
+            }
+            return false
         }
 
     }
