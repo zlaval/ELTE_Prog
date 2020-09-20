@@ -54,7 +54,7 @@ class AVL {
             node.parent = parent
             println("********************** $value inserted - Tree before rebalancing *******************************************")
             TreePrinter.printTree(root!!, true)
-            val aVLTree=isAVLTree(root)
+            val aVLTree = isAVLTree(root)
             println("Tree is AVL now: $aVLTree")
             rebalanced = reBalance(node)
         }
@@ -62,7 +62,7 @@ class AVL {
         if (rebalanced) {
             println("------------------------------------ Tree after rebalanced ---------------------------------------------")
             TreePrinter.printTree(root!!, true)
-            val aVLTree=isAVLTree(root)
+            val aVLTree = isAVLTree(root)
             println("Tree is AVL now: $aVLTree")
         }
         return this
@@ -174,36 +174,39 @@ class AVL {
 
 
         fun isAVLTree(node: Node?): Boolean {
-            if (node == null) {
-                return true
-            }
-            val left = node.left
-            val right = node.right
-            var leftHeight = 0
-            var rightHeight = 0
+            fun isAvlTreeInner(node: Node?): Pair<Boolean, Int> {
+                if (node == null) {
+                    return Pair(true, 0)
+                }
+                val left = node.left
+                val right = node.right
 
-            var thisIsAvl = true
-            if (left != null) {
-                thisIsAvl = thisIsAvl && left.value < node.value
-                leftHeight = height(left)+1
-            }
-            if (right != null) {
-                thisIsAvl = thisIsAvl && right.value > node.value
-                rightHeight = height(right)+1
+                var thisIsAvl = true
+
+                if (left != null) {
+                    thisIsAvl = thisIsAvl && left.value < node.value
+                }
+                if (right != null) {
+                    thisIsAvl = thisIsAvl && right.value > node.value
+                }
+
+                if (thisIsAvl) {
+                    val leftAvl = isAvlTreeInner(left)
+                    val rightAvl = isAvlTreeInner(right)
+                    val leftHeight = leftAvl.second + 1
+                    val rightHeight = rightAvl.second + 1
+
+                    val levelDiff = leftHeight - rightHeight
+                    if (levelDiff > 1 || levelDiff < -1) {
+                        return Pair(false, 0)
+                    }
+                    val isChildrenAvl = leftAvl.first && rightAvl.first
+                    return Pair(isChildrenAvl, max(leftHeight, rightHeight))
+                }
+                return Pair(false, 0)
             }
 
-            val levelDiff = leftHeight - rightHeight
-
-            if (levelDiff > 1 || levelDiff < -1) {
-                return false
-            }
-
-            if (thisIsAvl) {
-                val leftIsAvl = isAVLTree(left)
-                val rightIsAvl = isAVLTree(right)
-                return leftIsAvl && rightIsAvl
-            }
-            return false
+            return isAvlTreeInner(node).first
         }
 
     }
