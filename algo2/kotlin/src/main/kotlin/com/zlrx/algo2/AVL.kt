@@ -5,7 +5,7 @@ import com.zlrx.algo2.model.Node
 import kotlin.math.max
 
 fun main() {
-    AVL()
+    val avl = AVL()
         .add(51)
         .add(35)
         .add(47)
@@ -18,6 +18,15 @@ fun main() {
         .add(85)
         .add(5)
         .add(41)
+
+
+    avl.minRemove()
+    avl.minRemove()
+    avl.minRemove()
+    avl.minRemove()
+    avl.minRemove()
+
+
 }
 
 
@@ -68,11 +77,100 @@ class AVL {
         return this
     }
 
-    fun delete(node: Node) {
-        //TODO
+    fun minRemove(): Node? {
+        if (root == null) {
+            return null
+        }
+        var node = root!!
+        while (node.left != null) {
+            node = node.left!!
+        }
+        delete(node)
+        println("------------------------------------ After min remove ---------------------------------------------")
+        TreePrinter.printTree(root!!, true)
+        return node
     }
 
-    private fun reBalance(node: Node): Boolean {
+    private fun findMinInSubTree(parent: Node): Node {
+        var node = parent.right
+        while (node?.left != null) {
+            node = node.left!!
+        }
+        return node!!//TODO
+    }
+
+    fun maxRemove(): Node? {
+        if (root == null) {
+            return null
+        }
+        var node = root!!
+        while (node.right != null) {
+            node = node.right!!
+        }
+        delete(node)
+        return node
+    }
+
+    //TODO refactor
+    fun delete(node: Node) {
+        when {
+            node.left == null -> {
+                when {
+                    node.parent?.left == node -> {
+                        node.parent?.left = node.right
+                    }
+                    node.parent?.right == node -> {
+                        node.parent?.right = node.right
+                    }
+                    else -> {
+                        root = node.right
+                    }
+                }
+            }
+            node.right == null -> {
+                when {
+                    node.parent?.left == node -> {
+                        node.parent?.left = node.left
+                    }
+                    node.parent?.right == node -> {
+                        node.parent?.right = node.left
+                    }
+                    else -> {
+                        root = node.left
+                    }
+                }
+            }
+            else -> {
+                val minNode = findMinInSubTree(node)
+                if (node.parent?.left == node) {
+                    node.parent?.left = minNode
+                } else {
+                    node.parent?.right = minNode
+                }
+                minNode.left = node.left
+                minNode.parent?.left = minNode.right
+                minNode.right = node.right
+            }
+        }
+
+        node.parent = null
+        node.left = null
+        node.right = null
+        reBalanceAfterDelete(root)
+
+    }
+
+    //TODO naiv rebalance
+    private fun reBalanceAfterDelete(node: Node?) {
+        if (node == null) {
+            return
+        }
+        reBalanceAfterDelete(node.left)
+        reBalance(node, true)
+        reBalanceAfterDelete(node.right)
+    }
+
+    private fun reBalance(node: Node, afterDelete: Boolean = false): Boolean {
         var actualNode: Node? = node
         var shouldBalance = false
         while (!shouldBalance && actualNode != null) {
@@ -87,25 +185,45 @@ class AVL {
             }
         }
         if (shouldBalance) {
-            balance(actualNode!!)
+            balance(actualNode!!, afterDelete)
         }
         return shouldBalance
     }
 
-    private fun balance(node: Node) {
+    private fun balance(node: Node, afterDelete: Boolean = false) {
         if (node.balance == 2) {
             if (node.right?.balance == 1) {
                 balancePPP(node)
             } else if (node.right?.balance == -1) {
                 balancePPM(node)
+            } else if (node.right?.balance == 0 && afterDelete) {
+                balancePP0(node)
             }
         } else if (node.balance == -2) {
             if (node.left?.balance == 1) {
                 balanceMMP(node)
             } else if (node.left?.balance == -1) {
                 balanceMMM(node)
+            } else if (node.left?.balance == 0 && afterDelete) {
+                balanceMM0(node)
             }
         }
+    }
+
+    private fun balancePP0(node: Node) {
+        val newRoot = node.right!!
+        val parent = node.parent
+        node.right = newRoot.left
+        newRoot.left = node
+        handleRoot(node, parent, newRoot)
+    }
+
+    private fun balanceMM0(node: Node) {
+        val newRoot = node.left!!
+        val parent = node.parent
+        node.left = newRoot.right
+        newRoot.right = node
+        handleRoot(node, parent, newRoot)
     }
 
     private fun balancePPM(node: Node) {
@@ -208,6 +326,7 @@ class AVL {
 
             return isAvlTreeInner(node).first
         }
+
 
     }
 

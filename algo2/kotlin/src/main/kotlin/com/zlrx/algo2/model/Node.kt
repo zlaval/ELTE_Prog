@@ -20,6 +20,7 @@ class Node : Comparable<Node> {
 
     var parent: Node? = null
     var balance: Int = 0
+    var level: Int? = null
 
     constructor(
         value: Int,
@@ -27,7 +28,8 @@ class Node : Comparable<Node> {
         left: Node? = null,
         right: Node? = null,
         parent: Node? = null,
-        balance: Int = 0
+        balance: Int = 0,
+        level:Int?=null
     ) {
         this.value = value
         this.data = data
@@ -35,6 +37,7 @@ class Node : Comparable<Node> {
         this.right = right
         this.parent = parent
         this.balance = balance
+        this.level=level
     }
 
 
