@@ -1,5 +1,6 @@
 package com.zlrx.algo2
 
+import com.zlrx.algo2.helper.ExpressionBinTreeBuilder
 import com.zlrx.algo2.helper.TreePrinter
 import com.zlrx.algo2.model.Node
 import kotlin.math.max
@@ -26,13 +27,15 @@ fun main() {
     avl.minRemove()
     avl.minRemove()
 
-
+    println("#############################################################################")
+    val avl2 = AVL.fromTree(ExpressionBinTreeBuilder.toBinTree("(((((1)5)11(15))25((27)30))50(((55)60)75(80)))"))
+    avl2.maxRemove()
 }
 
 
-class AVL {
+class AVL(private var root: Node?) {
 
-    private var root: Node? = null
+    constructor() : this(null)
 
     fun add(value: Int): AVL {
         val node = Node(value)
@@ -167,6 +170,8 @@ class AVL {
         }
         reBalanceAfterDelete(node.left)
         reBalance(node, true)
+        println("-------------------balancing after delete----------------------")
+        TreePrinter.printTree(root!!,true)
         reBalanceAfterDelete(node.right)
     }
 
@@ -277,8 +282,18 @@ class AVL {
         }
     }
 
-
     companion object {
+
+        fun fromTree(root: Node?): AVL {
+            if (root == null) {
+                return AVL()
+            }
+            if (!isAVLTree(root)) {
+                throw IllegalArgumentException("Not an avl tree")
+            }
+
+            return AVL(root)
+        }
 
         fun height(node: Node?): Int {
             return if (node == null) {
@@ -329,5 +344,6 @@ class AVL {
 
 
     }
+
 
 }
