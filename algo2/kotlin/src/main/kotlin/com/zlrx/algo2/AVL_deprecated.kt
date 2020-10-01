@@ -32,7 +32,7 @@ fun main() {
     avl2.maxRemove()
 }
 
-
+@Deprecated("new class version available. @see com.zlrx.algo2.AvlTree ")
 class AVL(private var root: Node?) {
 
     constructor() : this(null)
@@ -171,7 +171,7 @@ class AVL(private var root: Node?) {
         reBalanceAfterDelete(node.left)
         reBalance(node, true)
         println("-------------------balancing after delete----------------------")
-        TreePrinter.printTree(root!!,true)
+        TreePrinter.printTree(root!!, true)
         reBalanceAfterDelete(node.right)
     }
 
