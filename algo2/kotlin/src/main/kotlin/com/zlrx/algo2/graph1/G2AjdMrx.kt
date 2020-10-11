@@ -20,7 +20,7 @@ private fun toG2(matrix: Array<Array<Int>>): Array<Array<Int>> {
         row.withIndex().forEach { (j, value) ->
             if (value == 1) {
                 matrix[j].withIndex().forEach { (k, v) ->
-                    if (v == 1 && i!=k) {
+                    if (v == 1 && i != k) {
                         result[i][k] = 1
                     }
                 }
@@ -28,14 +28,4 @@ private fun toG2(matrix: Array<Array<Int>>): Array<Array<Int>> {
         }
     }
     return result
-}
-
-
-private fun printResult(adjMtx: Array<Array<Int>>) {
-    adjMtx.forEach { row ->
-        row.forEach {
-            print("$it ")
-        }
-        print(System.lineSeparator())
-    }
 }

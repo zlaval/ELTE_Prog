@@ -1,5 +1,7 @@
 package com.zlrx.algo2.graph1
 
+import com.zlrx.algo2.graph1.model.Edge
+
 fun main() {
     val edgeList = arrayListOf(
         Edge(1, Edge(3)),
@@ -22,13 +24,4 @@ fun transform(edgeList: List<Edge?>): Array<Array<Int>> {
         }
     }
     return array
-}
-
-private fun printResult(adjMtx: Array<Array<Int>>) {
-    adjMtx.forEach { row ->
-        row.forEach {
-            print("$it ")
-        }
-        print(System.lineSeparator())
-    }
 }

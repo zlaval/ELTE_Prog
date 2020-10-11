@@ -1,10 +1,10 @@
 package com.zlrx.algo2.graph1
 
+import com.zlrx.algo2.graph1.model.State
+import com.zlrx.algo2.graph1.model.Vertex
 import java.util.*
 
 fun main() {
-
-
     val v0 = Vertex("0")
     val v1 = Vertex("1")
     val v2 = Vertex("2")

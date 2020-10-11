@@ -1,5 +1,7 @@
 package com.zlrx.algo2.graph1
 
+import com.zlrx.algo2.graph1.model.State
+import com.zlrx.algo2.graph1.model.Vertex
 import java.util.*
 
 
@@ -27,9 +29,7 @@ fun main() {
     println(d)
     println(e)
     println(f)
-
 }
-
 
 private fun <T> bfs(root: Vertex<T>) {
     val queue = LinkedList<Vertex<T>>()

@@ -1,5 +1,7 @@
 package com.zlrx.algo2.graph1
 
+import com.zlrx.algo2.graph1.model.Edge
+
 fun main() {
     val matrix = arrayListOf<List<Int>>(
         arrayListOf(0, 1, 0, 1, 0),
@@ -30,21 +32,3 @@ private fun toAdjacencyMatrix(matrix: List<List<Int>>): List<Edge?> {
     }
     return edgeList
 }
-
-private fun printEdgeList(edgeList: List<Edge?>) {
-    edgeList.withIndex().forEach { (i, value) ->
-        var edge = value
-        print("${i + 1} -> ")
-        while (edge != null) {
-            print("${edge.value + 1}")
-            if (edge.next != null) {
-                print(" -> ")
-            }
-            edge = edge.next
-        }
-        println()
-    }
-}
-
-
-

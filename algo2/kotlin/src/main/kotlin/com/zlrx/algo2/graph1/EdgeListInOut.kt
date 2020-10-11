@@ -1,5 +1,7 @@
 package com.zlrx.algo2.graph1
 
+import com.zlrx.algo2.graph1.model.Edge
+
 fun main() {
     val edgeList = ArrayList<Edge?>()
     val a = Edge(1, Edge(3));

@@ -1,4 +1,4 @@
-package com.zlrx.algo2.graph1
+package com.zlrx.algo2.graph1.model
 
 data class Edge(
     var value: Int,
