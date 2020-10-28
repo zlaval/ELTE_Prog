@@ -3,7 +3,7 @@ package com.zlrx.algo2.graph1
 import com.zlrx.algo2.graph1.model.Edge
 
 fun main() {
-    val edgeList = arrayListOf(
+    val adjList = arrayListOf(
         Edge(1, Edge(3)),
         Edge(3, Edge(4)),
         Edge(0),
@@ -11,19 +11,19 @@ fun main() {
         Edge(1, Edge(2))
     )
 
-    val result = toG2(edgeList)
-    printEdgeList(result)
+    val result = toG2(adjList)
+    printAdjList(result)
 }
 
-private fun toG2(edgeList: List<Edge?>): List<Edge?> {
+private fun toG2(adjList: List<Edge?>): List<Edge?> {
     val result = ArrayList<Edge?>()
-    for (i in edgeList.indices) {
+    for (i in adjList.indices) {
         result.add(null)
     }
-    edgeList.withIndex().forEach { (i, e) ->
+    adjList.withIndex().forEach { (i, e) ->
         var edge = e
         while (edge != null) {
-            var g2edge = edgeList[edge.value]
+            var g2edge = adjList[edge.value]
             while (g2edge != null) {
                 if (g2edge.value != i) {
                     val newEdge = Edge(g2edge.value)

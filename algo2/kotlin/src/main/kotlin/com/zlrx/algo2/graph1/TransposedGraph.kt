@@ -3,26 +3,26 @@ package com.zlrx.algo2.graph1
 import com.zlrx.algo2.graph1.model.Edge
 
 fun main() {
-    val edgeList = ArrayList<Edge?>()
+    val adjList = ArrayList<Edge?>()
     val a = Edge(1, Edge(3));
     val b = Edge(3, Edge(4));
     val c = Edge(0);
     val e = Edge(1, Edge(2));
-    edgeList.add(a)
-    edgeList.add(b)
-    edgeList.add(c)
-    edgeList.add(null)
-    edgeList.add(e)
-    val result = transpose(edgeList)
-    printEdgeList(result)
+    adjList.add(a)
+    adjList.add(b)
+    adjList.add(c)
+    adjList.add(null)
+    adjList.add(e)
+    val result = transpose(adjList)
+    printAdjList(result)
 }
 
-private fun transpose(edgeList: List<Edge?>): List<Edge?> {
+private fun transpose(adjList: List<Edge?>): List<Edge?> {
     val result = ArrayList<Edge?>()
-    for (i in edgeList.indices) {
+    for (i in adjList.indices) {
         result.add(null)
     }
-    edgeList.withIndex().reversed().forEach { (i, v) ->
+    adjList.withIndex().reversed().forEach { (i, v) ->
         var edge = v
         while (edge != null) {
             val u = edge.value

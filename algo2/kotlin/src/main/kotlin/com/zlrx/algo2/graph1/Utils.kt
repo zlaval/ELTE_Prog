@@ -2,8 +2,8 @@ package com.zlrx.algo2.graph1
 
 import com.zlrx.algo2.graph1.model.Edge
 
-fun printEdgeList(edgeList: List<Edge?>) {
-    edgeList.withIndex().forEach { (i, value) ->
+fun printAdjList(adjList: List<Edge?>) {
+    adjList.withIndex().forEach { (i, value) ->
         var edge = value
         print("${i + 1} -> ")
         while (edge != null) {
