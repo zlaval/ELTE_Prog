@@ -66,8 +66,9 @@ class NetworkPathDijkstra {
             actualVertex.adjacencies.forEach {
                 val target = it.target
                 val actualChance = (it.weight * actualVertex.maxChance) / 100
-                println("${actualVertex.name} --> ${target.name} chance was ${target.maxChance} new chance is $actualChance")
+                println("${actualVertex.name} --> ${target.name} chance was ${target.maxChance} calculated chance is $actualChance")
                 if (actualChance > target.maxChance) {
+                    println("change best to the calculated")
                     pq.remove(target)
                     target.maxChance = actualChance
                     target.parent = actualVertex
@@ -80,7 +81,9 @@ class NetworkPathDijkstra {
     fun printResult() {
         println("**********************RESULT***********************")
         fun printAllWeight(vertex: Vertex, parent: Vertex? = null) {
-            if (parent == null || parent == start) {
+            if (parent == null) {
+                println("start from ${vertex.name}, it has ${vertex.maxChance}% chance")
+            }else if(parent == start){
                 println("${start.name} -> ${vertex.name} has ${vertex.maxChance}% chance")
             } else if (parent == vertex.parent) {
                 println("${start.name} -> ... -> ${vertex.parent?.name} -> ${vertex.name} has ${vertex.maxChance}% chance")
