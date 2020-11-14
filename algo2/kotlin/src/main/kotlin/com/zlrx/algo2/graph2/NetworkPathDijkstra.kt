@@ -30,6 +30,22 @@ class NetworkPathDijkstra {
 
     private val start: Vertex
 
+    /**
+     *   [1]-----25----->[2]
+     *     \             ^\
+     *      70         /   85
+     *       \      2        \
+     *        ˇ   /           ˇ
+     *        [3]------25---->[6]
+     *        /\               ^
+     *      50  90             |
+     *     /     \             70
+     *    ˇ       ˘            |
+     *   [4]<-60--[5]---60--->[7]
+     *
+     */
+    
+
     init {
         start = Vertex("1")
         val second = Vertex("2")
@@ -52,7 +68,8 @@ class NetworkPathDijkstra {
         third.adjacencies.addAll(arrayOf(tse, tfo, tfi, tsi))
 
         val fise = Edge(60.0, fifth, seventh)
-        fifth.adjacencies.add(fise)
+        val fifo = Edge(60.0, fifth, forth)
+        fifth.adjacencies.addAll(arrayOf(fifo,fise))
 
         val sevsi = Edge(70.0, seventh, sixth)
         seventh.adjacencies.add(sevsi)
@@ -81,12 +98,16 @@ class NetworkPathDijkstra {
     fun printResult() {
         println("**********************RESULT***********************")
         fun printAllWeight(vertex: Vertex, parent: Vertex? = null) {
-            if (parent == null) {
-                println("start from ${vertex.name}, it has ${vertex.maxChance}% chance")
-            }else if(parent == start){
-                println("${start.name} -> ${vertex.name} has ${vertex.maxChance}% chance")
-            } else if (parent == vertex.parent) {
-                println("${start.name} -> ... -> ${vertex.parent?.name} -> ${vertex.name} has ${vertex.maxChance}% chance")
+            when (parent) {
+                null -> {
+                    println("start from ${vertex.name}, it has ${vertex.maxChance}% chance")
+                }
+                start -> {
+                    println("${start.name} -> ${vertex.name} has ${vertex.maxChance}% chance")
+                }
+                vertex.parent -> {
+                    println("${start.name} -> ... -> ${vertex.parent?.name} -> ${vertex.name} has ${vertex.maxChance}% chance")
+                }
             }
             vertex.adjacencies.forEach {
                 printAllWeight(it.target, vertex)
