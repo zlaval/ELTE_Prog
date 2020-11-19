@@ -1,34 +1,23 @@
 <?php
 
-$errors = [];
+require 'BookRepository.php';
+require 'Book.php';
+require 'validator.php';
+
+$error = false;
+$bookRepository = new BookRepository();
 
 if ($_POST) {
-    // $a = (int)$_POST['a'];
-    // $b = (int)$_POST['b'];
+    $error = verify_post($_POST);
 
-    // echo 'K = ' . ($a + $b) . ' T = ' . ($a * $b);
+    if (!$error) {
+        $title = $_POST['title'];
+        $author = $_POST['author'];
+        $producedAt = $_POST['producedAt'];
 
-    if (empty($_POST['a'])) {
-        array_push($errors, 'The "a" field is required!');
+        $book = new Book($title, $author, $producedAt);
+        $bookRepository->add($book);
     }
-    else if (!is_numeric($_POST['a'])) {
-        $errors[] = 'The "a" field is not numeric!';
-    }
-    else {
-        $a = (int)$_POST['a'];
-
-        if ($a <= 0) {
-            $errors[] = 'The "a" field must be postive!';
-        }
-    }
-}
-
-function get_form_data($key) {
-    if (!isset($_POST[$key])) {
-        return '';
-    }
-
-    return $_POST[$key];
 }
 
 ?>
@@ -36,21 +25,16 @@ function get_form_data($key) {
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Webprogramming - Backend practice</title>
+    <title>Minta</title>
 </head>
 <body>
-<?php if (count($errors) > 0): ?>
-    <ul>
-        <?php foreach($errors as $error): ?>
-            <li><?= $error ?></li>
-        <?php endforeach ?>
-    </ul>
-<?php endif ?>
 <form method="POST">
-    <label>a:</label>
-    <input type="text" name="a" value="<?= get_form_data('a') ?>">
-    <label>b:</label>
-    <input type="text" name="b" value="<?= get_form_data('b') ?>">
+    <label>Title:</label>
+    <input type="text" name="title">
+    <label>Author:</label>
+    <input type="text" name="author">
+    <label>Produced At:</label>
+    <input type="number" name="producedAt">
     <button>Submit</button>
 </form>
 </body>

@@ -44,7 +44,7 @@ class NetworkPathDijkstra {
      *   [4]<-60--[5]---60--->[7]
      *
      */
-    
+
 
     init {
         start = Vertex("1")
