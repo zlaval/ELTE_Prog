@@ -28,7 +28,7 @@ class JsonIO extends AbstractFileIO {
     }
 
     public function save($data) {
-        $json_content = json_encode($data, JSON_PRETTY_PRINT);
+        $json_content = json_encode( $data, JSON_PRETTY_PRINT);
         file_put_contents($this->filepath, $json_content);
     }
 }

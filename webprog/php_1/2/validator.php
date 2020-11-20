@@ -1,13 +1,14 @@
 <?php
 
 function array_all_keys_exist($array, $inputs) {
+    $errors = [];
     foreach ($inputs as $input) {
-        if (!isset($array[$input])) {
-            return FALSE;
+        if (empty($array[$input])) {
+            $errors[] = $input;
         }
     }
 
-    return TRUE;
+    return $errors;
 }
 
 function verify_get(...$inputs) {

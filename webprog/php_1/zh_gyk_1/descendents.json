@@ -1,0 +1,52 @@
+[
+    {
+        "nev": "\u00c1vdoloz\u00f3 P\u00e9ter",
+        "csalad": "Habsburg",
+        "kozeli": true
+    },
+    {
+        "nev": "Brend\u00f3 Istv\u00e1n",
+        "csalad": "Romanoff",
+        "kozeli": false
+    },
+    {
+        "nev": "Gyorskocsi Viktor",
+        "csalad": "Romanoff",
+        "kozeli": true
+    },
+    {
+        "nev": "Esidisi B\u00e9la",
+        "csalad": "Bourbon",
+        "kozeli": true
+    },
+    {
+        "nev": "Jean-Pierre N\u00e1ndor",
+        "csalad": "Habsburg",
+        "kozeli": true
+    },
+    {
+        "nev": "J\u00f3n\u00e1s-Csillag Gerg\u0151",
+        "csalad": "Habsburg",
+        "kozeli": false
+    },
+    {
+        "nev": "Karsai Laura",
+        "csalad": "Romanoff",
+        "kozeli": true
+    },
+    {
+        "nev": "Liza-Lizzi J\u00falia",
+        "csalad": "Bourbon",
+        "kozeli": true
+    },
+    {
+        "nev": "Nori\u00e1ki \u00c1ron",
+        "csalad": "Romanoff",
+        "kozeli": true
+    },
+    {
+        "nev": "Vam\u00fa Bal\u00e1zs",
+        "csalad": "Bourbon",
+        "kozeli": true
+    }
+]

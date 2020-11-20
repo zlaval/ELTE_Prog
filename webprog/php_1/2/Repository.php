@@ -28,7 +28,7 @@ abstract class BaseRepository implements Repository {
     protected $contents;
     protected $io;
 
-    public function __construct(FileIO $io, $assoc = false) {
+    public function __construct(FileIO $io, $assoc = true) {
         $this->io = $io;
         $this->contents = (array)$this->io->load($assoc);
     }
@@ -39,12 +39,13 @@ abstract class BaseRepository implements Repository {
 
     public function add($record): string {
         $id = uniqid();
+        echo is_object($record);
         if (is_array($record)) {
             $record['id'] = $id;
         } else if (is_object($record)) {
-            $record->setId( $id);
+            $record->id=$id;
         }
-        $this->contents[$id] = $record;
+        $this->contents[] = $record;
         return $id;
     }
 

@@ -27,6 +27,7 @@ function get_form_data($key) {
     if (!isset($_POST[$key])) {
         return '';
     }
+
     return $_POST[$key];
 }
 
