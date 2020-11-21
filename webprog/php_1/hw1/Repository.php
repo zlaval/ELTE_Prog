@@ -39,6 +39,7 @@ abstract class BaseRepository implements Repository {
 
     public function add($record): string {
         $id = uniqid();
+        echo is_object($record);
         if (is_array($record)) {
             $record['id'] = $id;
         } else if (is_object($record)) {
