@@ -8,8 +8,5 @@ class DescendentsRepository extends BaseRepository {
         parent::__construct(new JsonIO("descendents.json"),false);
     }
 
-    public function aaa(){
-
-    }
 
 }
