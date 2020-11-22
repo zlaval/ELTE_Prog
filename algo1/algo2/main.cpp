@@ -39,8 +39,9 @@ private:
     void runFW() {
         int round = 0;
         for (int k = 0; k < N; ++k) {
+            bool hasChange = false;
             for (int i = 0; i < N; ++i) {
-                bool hasChange = false;
+
                 for (int j = 0; j < N; ++j) {
                     int ijPathWeight = D[i][k] + D[k][j];
                     if (D[i][k] == INT_MAX || D[k][j] == INT_MAX) {
@@ -56,10 +57,11 @@ private:
                         }
                     }
                 }
-                round++;
-                if (hasChange) {
-                    printDPMatrices("in step " + std::to_string(round));
-                }
+
+            }
+            round++;
+            if (hasChange) {
+                printDPMatrices("in step " + std::to_string(round));
             }
         }
         printAllPathes();
@@ -75,7 +77,7 @@ private:
         int *row = P[node];
 
         std::cout << "Routes from node " << node + 1 << std::endl;
-        std::cout << node + 1 << std::endl;
+        std::cout << std::endl;
         for (int i = 0; i < N; i++) {
             if (i != node) {
                 std::cout << "Route from " << node + 1 << " to " << i + 1 << ". Weight: " << D[node][i] << std::endl;
@@ -155,10 +157,10 @@ int main() {
     const int N = 4;
 
     int **matrixPointer = new int *[N]{
-        new int[N]{0, 1, INT_MAX, 3},
-        new int[N]{INT_MAX, 0, INT_MAX, 1},
-        new int[N]{1, 2, 0, INT_MAX},
-        new int[N]{INT_MAX, INT_MAX, 2, 0}
+        new int[N]{0, 2, INT_MAX, 5},
+        new int[N]{INT_MAX, 0, 1, INT_MAX},
+        new int[N]{3, INT_MAX, 0, 1},
+        new int[N]{INT_MAX, 2, INT_MAX, 0}
     };
 
     auto *warshallFloyd = new WarshallFloyd(matrixPointer, N);
