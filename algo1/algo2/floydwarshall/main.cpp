@@ -81,7 +81,7 @@ private:
         for (int i = 0; i < N; i++) {
             if (i != node) {
                 std::cout << "Route from " << node + 1 << " to " << i + 1 << ". Weight: " << D[node][i] << std::endl;
-                std::string path =  std::to_string(i + 1);
+                std::string path = std::to_string(i + 1);
                 int through = row[i] - 1;
                 while (through != node && through != 0) {
                     path = std::to_string((through + 1)) + " -> " + path;
@@ -156,11 +156,18 @@ int main() {
     SetConsoleOutputCP(CP_UTF8);
     const int N = 4;
 
+//    int **matrixPointer = new int *[N]{
+//        new int[N]{0, 2, INT_MAX, 5},
+//        new int[N]{INT_MAX, 0, 1, INT_MAX},
+//        new int[N]{3, INT_MAX, 0, 1},
+//        new int[N]{INT_MAX, 2, INT_MAX, 0}
+//    };
+
     int **matrixPointer = new int *[N]{
-        new int[N]{0, 2, INT_MAX, 5},
-        new int[N]{INT_MAX, 0, 1, INT_MAX},
-        new int[N]{3, INT_MAX, 0, 1},
-        new int[N]{INT_MAX, 2, INT_MAX, 0}
+        new int[N]{0, 1, INT_MAX, 3},
+        new int[N]{INT_MAX, 0, INT_MAX, 1},
+        new int[N]{1, 2, 0, INT_MAX},
+        new int[N]{INT_MAX, INT_MAX, 2, 0}
     };
 
     auto *warshallFloyd = new WarshallFloyd(matrixPointer, N);
