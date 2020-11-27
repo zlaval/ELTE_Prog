@@ -1,72 +1,72 @@
 package com.zlrx.algo2.classalgs
 
-
-const val NA = Integer.MAX_VALUE
-
 fun main() {
-
 //    val matrix = arrayListOf<List<Int>>(
-//        arrayListOf(NA, 2, 4, NA, NA, NA, NA),
-//        arrayListOf(NA, NA, NA, -1, 0, NA, NA),
-//        arrayListOf(NA, 2, NA, NA, NA, NA, NA),
-//        arrayListOf(NA, NA, 1, NA, 2, 3, NA),
-//        arrayListOf(NA, NA, NA, NA, NA, 1, 3),
-//        arrayListOf(NA, NA, NA, NA, NA, NA, -2),
-//        arrayListOf(NA, NA, NA, NA, NA, NA, NA)
+//        arrayListOf(NA, 5, NA, 4, 2, NA),
+//        arrayListOf(NA, NA, 1, 1, 2, NA),
+//        arrayListOf(NA, NA, NA, NA, 1, NA),
+//        arrayListOf(NA, NA, NA, NA, NA, NA),
+//        arrayListOf(NA, NA, NA, 2, NA, 1),
+//        arrayListOf(NA, NA, 3, NA, NA, NA)
 //    )
 
     val matrix = arrayListOf<List<Int>>(
-        arrayListOf(NA, 3, NA, 6, 2, NA),
-        arrayListOf(NA, NA, 1, NA, NA, NA),
-        arrayListOf(NA, NA, NA, 1, NA, NA),
-        arrayListOf(NA, -2, NA, NA, 1, NA),
-        arrayListOf(NA, -2, NA, NA, NA, 3),
-        arrayListOf(1, NA, NA, NA, NA, NA)
+        arrayListOf(NA, 1, NA, NA, 3, NA, NA),
+        arrayListOf(NA, NA, 3, NA, 1, NA, NA),
+        arrayListOf(NA, NA, NA, 2, NA, 6, NA),
+        arrayListOf(NA, NA, NA, NA, NA, NA, 1),
+        arrayListOf(NA, NA, NA, NA, NA, NA, NA),
+        arrayListOf(NA, 2, NA, NA, 2, NA, NA),
+        arrayListOf(NA, NA, 1, NA, NA, 1, NA),
     )
 
-    val bf = BellmanFord(matrix, 0)
-    bf.computePath()
+    val dijkstra = Dijkstra(matrix, 0)
+    dijkstra.calculatePath()
 }
 
 
-class BellmanFord(private val matrix: List<List<Int>>, private val start: Int, private val userChar: Boolean = true) {
+class Dijkstra(val matrix: List<List<Int>>, val start: Int, val userChar: Boolean = true) {
 
     private val d = Array(matrix.size) { NA }
     private val pi = Array(matrix.size) { NA }
-    private val q = mutableListOf<Int>()
-    private var iteration = 0
-    private var iterationElements = 1
-    private var nextIterationElements = 0
-    fun computePath() {
+    private var q = mutableListOf<Int>()
+
+    fun calculatePath() {
+        printHeader()
         d[start] = 0
         pi[start] = -52
         q.add(start)
-        printHeader()
         while (q.isNotEmpty()) {
-            val u = q.removeAt(0)
+            val u = q.removeMin()
             val row = matrix[u]
-            iterationElements--
             row.forEachIndexed { index, edge ->
                 if (edge != NA) {
-                    val pathWeightToEdge = d[u] + edge
-                    if (d[index] > pathWeightToEdge) {
-                        d[index] = pathWeightToEdge
+                    val distance = d[u] + edge
+                    if (distance < d[index]) {
+                        d[index] = distance
                         pi[index] = u
                         if (!q.contains(index)) {
-                            nextIterationElements++
                             q.add(index)
                         }
+                        q.adjust()
                     }
                 }
             }
-            printRound(" ${mapToChar(u)}:${d[u]}:${iteration} ")
-            if (iterationElements == 0) {
-                println("-------------------------------------------------------------------------------------------------------")
-                iterationElements = nextIterationElements
-                nextIterationElements = 0
-                iteration++
-            }
+            printRound(" ${mapToChar(u)}:${d[u]} ")
         }
+    }
+
+    private fun MutableList<Int>.adjust() {
+        q = q.map { Pair(it, d[it]) }
+            .sortedBy { it.second }
+            .map { it.first }
+            .toMutableList()
+    }
+
+    private fun MutableList<Int>.removeMin(): Int {
+        val min = this[0]
+        this.removeAt(0)
+        return min
     }
 
     private fun printHeader() {
@@ -79,9 +79,7 @@ class BellmanFord(private val matrix: List<List<Int>>, private val start: Int, p
             print(" ${mapToChar(i)} |")
         }
         print(" || ")
-        print(" iter.d,e ")
-        print(" || ")
-        print(" exp")
+        print("  iter.d ")
         print(" || ")
         print(" queue  ")
         println()
@@ -109,8 +107,6 @@ class BellmanFord(private val matrix: List<List<Int>>, private val start: Int, p
         print(" || ")
         print(" $str ")
         print(" || ")
-        print(" $iteration ")
-        print(" || ")
         print("<")
         for (element in q) {
             print("${mapToChar(element)}, ")
@@ -118,7 +114,6 @@ class BellmanFord(private val matrix: List<List<Int>>, private val start: Int, p
         print(">")
         println()
     }
-
 
     private fun mapToChar(value: Int): String =
         if (userChar) {
@@ -128,5 +123,6 @@ class BellmanFord(private val matrix: List<List<Int>>, private val start: Int, p
             value.toString()
         }
 
-
 }
+
+
