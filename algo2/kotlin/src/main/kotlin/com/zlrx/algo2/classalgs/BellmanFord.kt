@@ -29,7 +29,7 @@ fun main() {
 }
 
 
-class BellmanFord(private val matrix: List<List<Int>>, private val start: Int, private val userChar: Boolean = true) {
+class BellmanFord(private val matrix: List<List<Int>>, private val start: Int, private val useChars: Boolean = true) {
 
     private val d = Array(matrix.size) { NA }
     private val pi = Array(matrix.size) { NA }
@@ -121,7 +121,7 @@ class BellmanFord(private val matrix: List<List<Int>>, private val start: Int, p
 
 
     private fun mapToChar(value: Int): String =
-        if (userChar) {
+        if (useChars) {
             val asci = value + 97
             asci.toChar().toString()
         } else {

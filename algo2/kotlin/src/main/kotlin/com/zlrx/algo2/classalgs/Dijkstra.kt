@@ -25,7 +25,7 @@ fun main() {
 }
 
 
-class Dijkstra(val matrix: List<List<Int>>, val start: Int, val userChar: Boolean = true) {
+class Dijkstra(val matrix: List<List<Int>>, val start: Int, val useChars: Boolean = true) {
 
     private val d = Array(matrix.size) { NA }
     private val pi = Array(matrix.size) { NA }
@@ -116,7 +116,7 @@ class Dijkstra(val matrix: List<List<Int>>, val start: Int, val userChar: Boolea
     }
 
     private fun mapToChar(value: Int): String =
-        if (userChar) {
+        if (useChars) {
             val asci = value + 97
             asci.toChar().toString()
         } else {
