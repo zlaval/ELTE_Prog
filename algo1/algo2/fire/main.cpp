@@ -1,6 +1,8 @@
 #include <iostream>
+#include <chrono>
 
 using namespace std;
+using namespace std::chrono;
 
 const int MAX_CITIES = 1001;
 const int MAX_ROUTE = 2000;
@@ -8,7 +10,7 @@ const int MAX_ROUTE = 2000;
 int adjMatrix[MAX_CITIES][MAX_CITIES];
 int parentMatrix[MAX_CITIES][MAX_CITIES];
 int fireDepartments[MAX_CITIES];
-int citiesOnFire[MAX_CITIES];
+int citiesOnFireIndices[MAX_CITIES];
 
 int main() {
 
@@ -18,10 +20,10 @@ int main() {
     int countOfAlerts;
 
     cin >> countOfCities >> countOfRoutes >> countOfFireDepartments >> countOfAlerts;
-
+    auto start = chrono::high_resolution_clock::now();
     for (int i = 0; i <= countOfCities; ++i) {
         fireDepartments[i] = 0;
-        citiesOnFire[i] = 0;
+        citiesOnFireIndices[i] = 0;
         for (int j = 0; j <= countOfCities; ++j) {
             if (i == j) {
                 adjMatrix[i][j] = 0;
@@ -55,10 +57,13 @@ int main() {
     for (int i = 0; i < countOfAlerts; ++i) {
         int cityOnFire;
         cin >> cityOnFire;
-        citiesOnFire[i] = cityOnFire;
+        citiesOnFireIndices[i] = cityOnFire;
     }
+    auto stop = high_resolution_clock::now();
+    auto duration = duration_cast<milliseconds>(stop - start);
+    cout <<"file_read"<< duration.count() << endl;
 
-
+    auto start1 = chrono::high_resolution_clock::now();
     for (int k = 1; k <= countOfCities; ++k) {
         for (int i = 1; i <= countOfCities; ++i) {
             for (int j = 1; j <= countOfCities; ++j) {
@@ -70,10 +75,13 @@ int main() {
             }
         }
     }
+    auto stop1 = high_resolution_clock::now();
+    auto duration1 = duration_cast<milliseconds>(stop1 - start1);
+    cout <<"calc path"<< duration1.count() << endl;
 
-
+    auto start2 = chrono::high_resolution_clock::now();
     for (int i = 0; i < countOfAlerts; ++i) {
-        int alarmIndex = citiesOnFire[i];
+        int alarmIndex = citiesOnFireIndices[i];
         if (fireDepartments[alarmIndex] == 1) {
             cout << alarmIndex << endl;
         } else {
@@ -104,5 +112,7 @@ int main() {
 
 
     }
-
+    auto stop2 = high_resolution_clock::now();
+    auto duration2 = duration_cast<milliseconds>(stop2 - start2);
+    cout <<"write result"<< duration2.count() << endl;
 }
