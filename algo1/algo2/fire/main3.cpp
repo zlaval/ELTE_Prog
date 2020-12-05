@@ -1,12 +1,7 @@
-
-
 #include <iostream>
-#include <set>
 #include <vector>
-#include <chrono>
 
 using namespace std;
-using namespace std::chrono;
 
 const int MAX_CITIES = 1001;
 const int MAX_ROUTE = 2000;
@@ -33,7 +28,6 @@ inline pair<int, int> remMiFromQueue() {
     }
     queue.erase(queue.begin() + index);
     return min;
-
 }
 
 inline void addToQueue(pair<int, int> pair) {
@@ -43,9 +37,7 @@ inline void addToQueue(pair<int, int> pair) {
             break;
         }
     }
-
     queue.push_back(pair);
-    //ha bent van a kulcs akkor csak upd
 }
 
 
@@ -75,7 +67,6 @@ int main() {
         cin >> firstCity >> secondCity >> distance;
         adjMatrix[firstCity][secondCity] = distance;
         adjMatrix[secondCity][firstCity] = distance;
-
     }
 
     for (int i = 0; i < countOfFireDepartments; ++i) {
@@ -91,10 +82,7 @@ int main() {
         citiesOnFire[i] = cityOnFire;
     }
 
-    //  auto start = chrono::high_resolution_clock::now();
-
-    //
-
+    //calculate path
     for (int i = 0; i < countOfFireDepartments; ++i) {
         int fireDepartment = fireDepartments[i];
 
@@ -113,15 +101,13 @@ int main() {
         if (citiesOnFireIndices[fireDepartment] == 1) {
             shortestPathToCityWeights[fireDepartment] = 0;
             shortestPathToCity[fireDepartment] = to_string(fireDepartment);
-            // burningCityVisited++;
         }
 
-        //can run just until burningCityVisited not equal to alert count
+        //maybe it can run just til visited burning cities count neq alerts count
         while (!queue.empty()) {
             pair<int, int> actual = remMiFromQueue();
             int u = actual.first;
             int *row = adjMatrix[u];
-
 
             for (int j = 0; j <= countOfCities; ++j) {
                 int edge = row[j];
@@ -134,37 +120,21 @@ int main() {
                 }
             }
 
-
-            //ha égő várost találtunk
             if (citiesOnFireIndices[u] == 1) {
-                //és az eddigi legjobb út nagyobb mint a most kalkulált
                 if (d[u] < shortestPathToCityWeights[u]) {
                     shortestPathToCityWeights[u] = d[u];
-                    //indulás fireDepartment -> u közötti út
                     int s = u;
                     string path = "";
                     while (s != 0) {
                         path = to_string(s) + " " + path;
                         s = pi[s];
                     }
-                    //TODO calculate path
                     shortestPathToCity[u] = path;
                 }
-
                 burningCityVisited++;
             }
-
         }
-        cout << "";
-
     }
-
-
-//    auto stop = high_resolution_clock::now();
-//    auto duration = duration_cast<milliseconds>(stop - start);
-//    cout << "calc time" << duration.count() << endl;
-
-    //
 
     for (int i = 0; i < countOfAlerts; ++i) {
         cout << shortestPathToCity[citiesOnFire[i]] << endl;

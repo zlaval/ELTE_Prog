@@ -5,24 +5,24 @@ const val NA = Integer.MAX_VALUE
 
 fun main() {
 
-//    val matrix = arrayListOf<List<Int>>(
-//        arrayListOf(NA, 2, 4, NA, NA, NA, NA),
-//        arrayListOf(NA, NA, NA, -1, 0, NA, NA),
-//        arrayListOf(NA, 2, NA, NA, NA, NA, NA),
-//        arrayListOf(NA, NA, 1, NA, 2, 3, NA),
-//        arrayListOf(NA, NA, NA, NA, NA, 1, 3),
-//        arrayListOf(NA, NA, NA, NA, NA, NA, -2),
-//        arrayListOf(NA, NA, NA, NA, NA, NA, NA)
-//    )
-
     val matrix = arrayListOf<List<Int>>(
-        arrayListOf(NA, 3, NA, 6, 2, NA),
-        arrayListOf(NA, NA, 1, NA, NA, NA),
-        arrayListOf(NA, NA, NA, 1, NA, NA),
-        arrayListOf(NA, -2, NA, NA, 1, NA),
-        arrayListOf(NA, -2, NA, NA, NA, 3),
-        arrayListOf(1, NA, NA, NA, NA, NA)
+        arrayListOf(NA, 2, 4, NA, NA, NA, NA),
+        arrayListOf(NA, NA, NA, -1, 0, NA, NA),
+        arrayListOf(NA, 2, NA, NA, NA, NA, NA),
+        arrayListOf(NA, NA, 1, NA, 2, 3, NA),
+        arrayListOf(NA, NA, NA, NA, NA, 1, 3),
+        arrayListOf(NA, NA, NA, NA, NA, NA, -2),
+        arrayListOf(NA, NA, NA, NA, NA, NA, NA)
     )
+
+//    val matrix = arrayListOf<List<Int>>(
+//        arrayListOf(NA, 3, NA, 6, 2, NA),
+//        arrayListOf(NA, NA, 1, NA, NA, NA),
+//        arrayListOf(NA, NA, NA, 1, NA, NA),
+//        arrayListOf(NA, -2, NA, NA, 1, NA),
+//        arrayListOf(NA, -2, NA, NA, NA, 3),
+//        arrayListOf(1, NA, NA, NA, NA, NA)
+//    )
 
     val bf = BellmanFord(matrix, 0)
     bf.computePath()
@@ -45,7 +45,7 @@ class BellmanFord(private val matrix: List<List<Int>>, private val start: Int, p
         while (q.isNotEmpty()) {
             val u = q.removeAt(0)
             val row = matrix[u]
-            iterationElements--
+           // iterationElements--
             row.forEachIndexed { index, edge ->
                 if (edge != NA) {
                     val pathWeightToEdge = d[u] + edge
@@ -53,7 +53,7 @@ class BellmanFord(private val matrix: List<List<Int>>, private val start: Int, p
                         d[index] = pathWeightToEdge
                         pi[index] = u
                         if (!q.contains(index)) {
-                            nextIterationElements++
+                            //nextIterationElements++
                             q.add(index)
                         }
                     }
