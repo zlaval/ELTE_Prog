@@ -3,6 +3,12 @@ package com.zlrx.algo2.classalgs
 fun main() {
     val text = "-ABABABACA".toCharArray().map { it.toString() }
     val pattern = "-ABABAC".toCharArray().map { it.toString() }
+
+
+  //  val text = "-ABABABABBABABABBAB".toCharArray().map { it.toString() }
+  //  val pattern = "-BABABBAB".toCharArray().map { it.toString() }
+
+
     val kpm = KMP(text, pattern)
     kpm.kmp()
 }
@@ -31,38 +37,42 @@ class KMP(val text: List<String>, val pattern: List<String>) {
                 i++
                 j++
                 if (j == pattern.size - 1) {
-                    printKmpRound(i, cpc)
+                    printKmpRound((i + 1 - pattern.size).toString(), cpc)
                     cpc = 0
                     s.add(i + 1 - pattern.size)
                     j = next[pattern.size - 1]
-                    tmp= Array(text.size) { null }
+                    for(k in 0 .. (i-j)){
+                        tmp[k]=null
+                    }
                 }
 
             } else if (j == 0) {
-                printKmpRound(i, cpc)
+                printKmpRound("  ", cpc)
                 tmp= Array(text.size) { null }
                 cpc = 0
                 i++
             } else {
-                printKmpRound(i, cpc)
+                printKmpRound("  ", cpc)
                 j = next[j]
-                for(k in 0 until j){
+                for(k in 0 .. (i-j)){
                     tmp[k]=null
                 }
                 cpc = 0
-
 
             }
             cpc++
 
         }
-        printKmpRound(i, cpc-1)
+        printKmpRound("  ", cpc-1)
         printKmpResult()
 
     }
 
-    private fun printKmpRound(i: Int, compareCount: Int) {
-        print(" $i |    $compareCount     |")
+    private fun printKmpRound(s: String, compareCount: Int) {
+        if(s!="  " &&s.toInt()<10){
+            print(" ")
+        }
+        print(" $s |    $compareCount     |")
         for (i in 1 until tmp.size) {
             val c = tmp[i]
             if (c == null) {
@@ -77,12 +87,12 @@ class KMP(val text: List<String>, val pattern: List<String>) {
     private fun printKmpHeader() {
         println()
         println("KMP rounds")
-        print("i= | comp.cnt |")
+        print(" s  | comp.cnt |")
         for (i in 1 until text.size) {
             print(" ${text[i]} |")
         }
         println()
-        repeat(16 + (text.size - 1) * 4) {
+        repeat(17 + (text.size - 1) * 4) {
             print("-")
         }
         println()
