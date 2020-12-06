@@ -1,13 +1,16 @@
 package com.zlrx.algo2.classalgs
 
 fun main() {
-    val text = "-ABABABACA".toCharArray().map { it.toString() }
-    val pattern = "-ABABAC".toCharArray().map { it.toString() }
+    //val text = "-ABABABACA".toCharArray().map { it.toString() }
+    //val pattern = "-ABABAC".toCharArray().map { it.toString() }
 
 
   //  val text = "-ABABABABBABABABBAB".toCharArray().map { it.toString() }
   //  val pattern = "-BABABBAB".toCharArray().map { it.toString() }
 
+
+    val text = "-BABBABABABABBABABABAAB".toCharArray().map { it.toString() }
+    val pattern = "-BABABAB".toCharArray().map { it.toString() }
 
     val kpm = KMP(text, pattern)
     kpm.kmp()
