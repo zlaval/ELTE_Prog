@@ -9,8 +9,8 @@ fun main() {
   //  val pattern = "-BABABBAB".toCharArray().map { it.toString() }
 
 
-    val text = "-BABBABABABABBABABABAAB".toCharArray().map { it.toString() }
-    val pattern = "-BABABAB".toCharArray().map { it.toString() }
+    val text = "-ABABABAABABAABABABAABABBABA".toCharArray().map { it.toString() }
+    val pattern = "-BABAABAB".toCharArray().map { it.toString() }
 
     val kpm = KMP(text, pattern)
     kpm.kmp()
@@ -29,6 +29,7 @@ class KMP(val text: List<String>, val pattern: List<String>) {
     }
 
     private fun run() {
+        var compares=0
         tmp = Array(text.size) { null }
         printKmpHeader()
         var i = 0
@@ -36,6 +37,7 @@ class KMP(val text: List<String>, val pattern: List<String>) {
         var cpc = 1
         while (i < text.size - 1) {
             tmp[i+1]=pattern[j+1]
+            compares++
             if (text[i + 1] == pattern[j + 1]) {
                 i++
                 j++
@@ -68,7 +70,7 @@ class KMP(val text: List<String>, val pattern: List<String>) {
         }
         printKmpRound("  ", cpc-1)
         printKmpResult()
-
+        println("Compares count: $compares")
     }
 
     private fun printKmpRound(s: String, compareCount: Int) {

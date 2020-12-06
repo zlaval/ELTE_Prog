@@ -2,8 +2,12 @@ package com.zlrx.algo2.classalgs
 
 
 fun main() {
-    val text = "-ABDAEBBCBBCABCBABCA".toCharArray().map { it.toString() }
-    val pattern = "-ABCA".toCharArray().map { it.toString() }
+//    val text = "-ABDAEBBCBBCABCBABCA".toCharArray().map { it.toString() }
+//    val pattern = "-ABCA".toCharArray().map { it.toString() }
+
+    val text = "-ADABACACACABADABABADABABA".toCharArray().map { it.toString() }
+    val pattern = "-ADABABA".toCharArray().map { it.toString() }
+
     val quickSearch = QuickSearch(text, pattern)
     quickSearch.run()
 }
@@ -18,10 +22,13 @@ class QuickSearch constructor(
     private val dictionary: LinkedHashMap<String, Int> = LinkedHashMap()
     private val sh = mutableListOf<Int>()
 
+    private var compares=0
+
     fun run() {
         buildDictionary()
         search()
         printResult()
+        println("Compares count: $compares")
     }
 
     private fun search() {
@@ -91,6 +98,9 @@ class QuickSearch constructor(
         var result = true
         var k = 1
         for (i in s + 1..s + m) {
+            if(result) {
+                compares++
+            }
             if (text[i] != pattern[k]) {
                 result = false
             }
