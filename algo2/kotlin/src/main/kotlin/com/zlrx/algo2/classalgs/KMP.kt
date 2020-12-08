@@ -7,8 +7,7 @@ fun main() {
 
   //  val text = "-ABABABABBABABABBAB".toCharArray().map { it.toString() }
   //  val pattern = "-BABABBAB".toCharArray().map { it.toString() }
-
-
+    
     val text = "-ABABABAABABAABABABAABABBABA".toCharArray().map { it.toString() }
     val pattern = "-BABAABAB".toCharArray().map { it.toString() }
 

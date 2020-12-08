@@ -125,7 +125,13 @@ class BellmanFord(private val matrix: List<List<Int>>, private val start: Int, p
             val asci = value + 97
             asci.toChar().toString()
         } else {
-            value.toString()
+            val v=value+1
+            if(v==-51){
+                "-"
+            }else{
+                v.toString()
+            }
+
         }
 
 

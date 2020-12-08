@@ -120,7 +120,13 @@ class Dijkstra(val matrix: List<List<Int>>, val start: Int, val useChars: Boolea
             val asci = value + 97
             asci.toChar().toString()
         } else {
-            value.toString()
+                val v=value+1
+            if(v==-51){
+                "-"
+            }else{
+                v.toString()
+            }
+
         }
 
 }
