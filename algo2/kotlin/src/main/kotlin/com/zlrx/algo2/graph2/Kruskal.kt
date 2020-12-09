@@ -51,7 +51,7 @@ val e15 = Edge(g, h, 6)
 val e16 = Edge(h, i, 1)
 
 val vertices: List<Vertex> = listOf(a, b, c, d, e, f, g, h, i)
-val edges: List<Edge> = listOf(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14, e16, e16).sorted()
+val edges: List<Edge> = listOf(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14, e15, e16).sorted()
 
 class DisjointSet(private val vertices: List<Vertex>) {
 
