@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             event.preventDefault()
             const formData = new URLSearchParams()
             formData.append("event", func)
-            const response = await fetch('index.php', {
+            const response = await fetch('f4_1.php', {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
