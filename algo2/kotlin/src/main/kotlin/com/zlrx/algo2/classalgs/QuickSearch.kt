@@ -5,8 +5,8 @@ fun main() {
 //    val text = "-ABDAEBBCBBCABCBABCA".toCharArray().map { it.toString() }
 //    val pattern = "-ABCA".toCharArray().map { it.toString() }
 
-    val text = "-ADABACACACABADABABADABABA".toCharArray().map { it.toString() }
-    val pattern = "-ADABABA".toCharArray().map { it.toString() }
+    val text = "-CABADABADABADABACABA".toCharArray().map { it.toString() }
+    val pattern = "-ABADABA".toCharArray().map { it.toString() }
 
     val quickSearch = QuickSearch(text, pattern)
     quickSearch.run()
@@ -37,6 +37,7 @@ class QuickSearch constructor(
         while (s + m <= n) {
             printProcessRound(s)
             if (match(s)) {
+                println(compares)
                 sh.add(s)
             }
             if (s + m < n) {
