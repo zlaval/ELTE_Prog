@@ -1,0 +1,5 @@
+DeliverServiceName,12345,1,2,3,4,5
+1,alma,korte
+2
+3,korte,cseresznye,korte
+1,korte,korte,korte,korte,cseresznye

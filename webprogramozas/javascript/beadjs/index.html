@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>Set</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+
+    <div id="menu">
+        <h1>SET</h1>
+        <button class="accordion">Játékszabály</button>
+        <div class="accordion-panel alert alert-warning">
+            A játéktér 3*4 lapot tartalmaz, téglalapot formázva, ebben kell SET-eket keresni. <br>
+            Az a játékos, aki talál a 12 lap között, bekiabálja, hogy: SET! A játékos megjelöli a lapokat.<br>
+            Amennyiben SET, az adott játékos megkapja az adott SET-et, majd a pakliból újabb lapok kerülnek a helyére.
+            <br>
+            A SET helytelen bemondásáért -1 pont jár, és a lapok maradnak az játéktéren. <br>
+            Azon ritka esetekben, amikor a 12 lapban nincs SET, még három lap kerül felcsapásra. <br>
+            Amikor a pakliból elfogyott a lap, akkor a játékosok addig játszanak, ameddig a maradék lapban már nem
+            található SET.<br>
+            Minden lapon 3 - haladó szint esetén 4 - tulajdonság van, minden tulajdonságból pontosan három:<br>
+            - Szimbólumok száma (1,2,3)<br>
+            - Szín (lila, vörös, zöld)<br>
+            - Alak (hullám, ovális, trapéz)<br>
+            - Minta (üres, csikos, teli).<br>
+            Három kártya akkor alkot Set-et, ha a fenti három - haladó esetén négy - tulajdonság mindegyikénél igaz a
+            következő feltétel:<br>
+            Az adott tulajdonság mindegyik kártyán egyforma, vagy mindegyik kártyán különböző., de sosem lehet két
+            egyforma és egy harmadik eltérő, mert az biztos nem SET!<br>
+            <br>
+            Aki a legtöbb pontot szerezte az nyeri a játékot. 1 SET = +1 pont, mínusz 1 pont a rosszul jelzett SET.<br>
+        </div>
+
+        <div id="options" class="form-group">
+            <div class="row">
+                <div class="col form-check ">
+                    <input id="play-mode" type="checkbox" class="form-check-input  double-checkbox" />
+                    <label class="form-check-label check-label" for="play-mode">Verseny</label>
+                </div>
+                <div class="col  form-check ">
+                    <input id="advanced" type="checkbox" class="form-check-input  double-checkbox" />
+                    <label class="form-check-label check-label" for="advanced">Haladó</label>
+                </div>
+                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 form-group">
+                    <label for="player-count">Játékos szám</label>
+                    <span id="player-count-display"></span>
+                    <input id="player-count" type="range" min="1" max="10" class="form-control-range">
+
+                </div>
+
+            </div>
+            <div id="other-options" class="row form-group">
+                <div class="col-lg-4 col-md-12 col-sm-12 form-check ">
+                    <input id="find-set-chx" type="checkbox" class="form-check-input double-checkbox" />
+                    <label class="form-check-label check-label" for="find-set-chx">SET keresése gomb</label>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 form-check ">
+                    <input id="show-set-chx" type="checkbox" class="form-check-input  double-checkbox" />
+                    <label class="form-check-label check-label" for="show-set-chx">SET mutatása gomb</label>
+
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12  form-check ">
+                    <input id="additional-card-chx" type="checkbox" class="form-check-input  double-checkbox" />
+                    <label class="form-check-label check-label" for="additional-card-chx">Kiegészítő kártyák hozzáadása
+                        gomb</label>
+                </div>
+
+            </div>
+            <div id="players"></div>
+            <button id="start-game" type="button" class="btn btn-primary">Start</button>
+        </div>
+        <h1 class="py-5 score-title">Verseny ranglista</h1>
+        <div class="row">
+            <div class="col text-center">
+                <h3 class="score-header">Egy játékos kezdő</h3>
+                <div id="competition-beginner" class="col-12">
+                    Nincs eredmény
+                </div>
+            </div>
+            <div class="col text-center">
+                <h3 class="score-header">Egy játékos haladó</h3>
+                <div id="competition-advanced" class="col-12">
+                    Nincs eredmény
+                </div>
+            </div>
+            <div class="col text-center">
+                <h3 class="score-header">Többjátékos</h3>
+                <div id="competition-multiplayer" class="col-12">
+                    Nincs eredmény
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="play-ground">
+        <div class="row buttonRow py-3">
+            <div class="col text-center py-1">
+                <button id="find-set-btn" type="button" class="btn btn-warning">SET keresés</button>
+            </div>
+            <div class="col text-center py-1">
+                <button id="show-set-btn" type="button" class="btn btn-success">SET mutatás</button>
+            </div>
+            <div class="col text-center py-1">
+                <button id="add-card-btn" type="button" class="btn btn-primary">Kiegészítés</button>
+            </div>
+            <div class="col text-center py-1">
+                <span class="elapsed-time btn btn-info">Játékidő: 0 s</span>
+            </div>
+            <div class="col text-center py-1">
+                <span class="deck-remain  btn btn-dark">Pakli: 27</span>
+            </div>
+        </div>
+        <div class="ui-div col-md-12 text-center py-3">
+            Válaszd ki a jelölő játékost
+        </div>
+
+        <div class="row py-3">
+            <div id="player-panel" class= "text-center col-lg-2 col-md-12 col-xs-12"></div>
+            <div id="card-panel" class="col-lg-8 col-md-12 col-xs-12"> </div>
+            <div class="point-div col-lg-2 col-md-12 col-xs-12 text-center"> </div>
+        </div>
+        <div class="row buttonRow" id="end-game-btns">
+            <div class="col-12 text-center py-3">
+                <button id="menu-btn" type="button" class="btn btn-primary">Menü</button>
+                <button id="new-game" type="button" class="btn btn-success">Új Kör</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.hit-box {
+    position: absolute;
+    padding: 16px;
+  }
+  
+  .red-square {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+  

@@ -1,0 +1,24 @@
+body {
+    background-color: black;
+    height: 100vh;
+    position: relative;
+    width: 100vh;
+    margin: 0;
+  }
+  
+  .star {
+    cursor: pointer;
+    font-size: 1.5em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: all 200ms ease-in; 
+  }
+  
+  .star::before {
+    content: '⭐';
+  }
+  
+  .star.falling {
+    top: 100vh !important;
+  }
+  
