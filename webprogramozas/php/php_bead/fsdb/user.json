@@ -1,0 +1,22 @@
+{
+    "5fdca4fb02bed": {
+        "id": "5fdca4fb02bed",
+        "name": "Superman",
+        "taj": "999999999",
+        "address": "Mos Eisley",
+        "email": "admin@nemkovid.hu",
+        "password": "$2y$10$LfDd4Zg4sbCW6zVQnt4nY.UumDhG\/0zT4QFoufjITGs.ffMp03U2O",
+        "userType": "ADMIN",
+        "appointment": null
+    },
+    "5fde8f3521ddc": {
+        "id": "5fde8f3521ddc",
+        "name": "Drizzt",
+        "taj": "123456789",
+        "address": "Amn jelszavam user",
+        "email": "user@nemkovid.hu",
+        "password": "$2y$10$DNhky8hhF\/rXu1mfUH\/VE.5JKwyTCVYTKTkSaAD.gHF8EXne0bSeu",
+        "userType": "USER",
+        "appointment": "5fde8f80b9aa0"
+    }
+}

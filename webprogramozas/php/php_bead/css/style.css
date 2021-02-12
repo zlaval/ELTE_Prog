@@ -1,0 +1,279 @@
+header {
+    overflow: hidden;
+    max-height: 100px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.btn {
+    margin-bottom: 8px !important;
+}
+
+.card {
+    border: none !important;
+}
+
+.card-body {
+    min-width: 35% !important;
+}
+
+.fa {
+    margin-right: 6px !important;
+}
+
+.fa-left {
+    margin-left: 6px !important;
+}
+
+.main-alert {
+    max-width: 700px;
+}
+
+#btn-login {
+    margin: 5px 0;
+}
+
+#btn-registration {
+    margin: 5px 10px;
+}
+
+#btn-logout {
+    margin: 5px 10px;
+}
+
+.buttonRow {
+    overflow: hidden;
+}
+
+.buttonRow button:last-child, .buttonRow .btn:last-child, .buttonRow input[type="button"]:last-child, .buttonRow input[type="submit"]:last-child {
+    margin-right: initial;
+}
+
+.header-container {
+    background-color: #EEEEEE;
+}
+
+.header-nav {
+}
+
+.title {
+    font-family: Permanent Marker, sans-serif;
+}
+
+.title-text {
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 0 15px;
+    color: white;
+    background-color: green;
+    box-shadow: 5px 5px 3px grey;
+}
+
+.header-title {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.home-link-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.home-link {
+    color: #444;
+    margin-left: 2rem;
+}
+
+.calendar-link {
+    margin-left: 20px;
+    color: #444;
+}
+
+.header-line {
+    margin-top: 0;
+    margin-bottom: 3rem;
+}
+
+.header-user-name {
+    font-size: 1.4rem;
+    margin-right: 20px;
+    font-weight: bold;
+    color: darkblue;
+    text-decoration: underline;
+}
+
+.subpage-title {
+    font-family: Shadows Into Light, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.appointment-title-date {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: darkblue;
+}
+
+.bd-accept-conditions__check {
+    margin-bottom: 1rem;
+}
+
+.home-title {
+    font-family: Shadows Into Light, sans-serif;
+    font-size: 2rem;
+}
+
+.injection-image {
+    max-width: 550px;
+    height: auto;
+}
+
+.home-main {
+    padding: 2rem 4rem;
+}
+
+.home-content {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.home-quote {
+    padding-top: 3rem;
+    padding-bottom: 3rem
+}
+
+.registration-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+.registration-warning {
+    margin-left: 8px;
+    margin-top: 6px;
+}
+
+.registration-warning-text {
+    margin-left: 3px;
+}
+
+.registration-warning-icon {
+    color: red;
+}
+
+#btn-login-form {
+    margin-top: 2rem;
+}
+
+.booking-calendar {
+    margin: 1rem 2rem 2rem;
+    overflow: hidden !important;
+}
+
+.booking-calendar-table {
+    width: 100%;
+    table-layout: auto;
+}
+
+.booking-calendar-table tr td {
+    width: 14.3% !important;
+}
+
+.booking-calendar-table-header {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.booking-calendar-table-td {
+    height: 6rem !important;
+}
+
+.booking-calendar-table-td-div {
+    border: 1px solid black;
+    border-radius: 10px;
+    min-height: 90%;
+    margin: 3px;
+}
+
+.booking-month-step {
+    margin: 2rem 2rem !important;
+}
+
+.booking-user-appointment {
+    font-size: 1.6rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    color: darkblue;
+}
+
+.booking-appointment {
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-bottom: 3px;
+    margin-left: 2px;
+    margin-right: 2px;
+    color: white;
+}
+
+.booking-appointment-link:link {
+    text-decoration: none;
+}
+
+.booking-date {
+    margin-left: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.booking-month{
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.appointment-green {
+    background-color: green;
+}
+
+.appointment-green:hover {
+    cursor: pointer;
+    background-color: darkgreen;
+    transform: scale(1.02, 1.1);
+}
+
+.appointment-red {
+    background-color: red;
+}
+
+.appointment-red:hover {
+    cursor: pointer;
+    background-color: #CC0000;
+    transform: scale(1.02, 1.1);
+}
+
+#btn-cancel-reservation {
+    margin-left: 2rem;
+}
+
+.admin-card-body {
+    background-color: #EEE !important;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+@media (max-width: 650px) {
+    header {
+        max-height: none;
+    }
+}
