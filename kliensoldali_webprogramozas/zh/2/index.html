@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <style>
+        .header {
+            position: fixed;
+            top: 0;
+            height: 60px;
+            background-color: white;
+        }
+
+        .header>a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 120px;
+        }
+
+        .header>a.target-visible {
+            background-color: gainsboro;
+        }
+
+        p {
+            font-size: 108px;
+            padding-top: 60px;
+        }
+
+        a {
+            font-size: 40px;
+        }
+
+        body {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a class="target-visible" data-scroll-style="smooth" href="#p1">p1</a>
+        <a data-scroll-style="jump" href="#p2">p2</a>
+        <a data-scroll-style="jump" href="#p3">p3</a>
+        <a data-scroll-style="smooth" href="#p4">p4</a>
+    </div>
+    <p id="p1" style="height: 100vh;">P1</p>
+    <p id="p2" style="height: 20vh;">P2</p>
+    <p id="p3" style="height: 70vh;">P3</p>
+    <p id="p4" style="height: 100vh;">P4</p>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
