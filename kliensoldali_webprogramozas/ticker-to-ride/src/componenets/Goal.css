@@ -1,0 +1,28 @@
+.goal-container {
+    display: inline-block;
+    min-width: 3.5vw;
+    min-height: 6.5vw;
+    border: 1px solid #666;
+    border-radius: .3em;
+    padding: .25em;
+    margin: 0 .5em .5em 0;
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+    box-shadow: .2em .2em .5em #333;
+}
+
+.goal-container:hover {
+    border: 2px solid black;
+}
+
+.goal-done {
+    color: lightgreen;
+}
+
+@media (max-width: 940px) {
+    .goal-container {
+        min-width: 3rem;
+        min-height: 5rem;
+    }
+}

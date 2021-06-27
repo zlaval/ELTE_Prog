@@ -1,0 +1,25 @@
+.lobby-players {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    vertical-align: center;
+}
+
+.lobby-header {
+    color: white;
+}
+
+.lobby-header-room {
+    color: black;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 2px solid black;
+    display: inline-block;
+    background-color: yellow;
+}
+
+.lobby-header-player_count {
+    color: darkblue;
+    font-weight: bold;
+    font-size: 1.8rem;
+}

@@ -1,0 +1,8 @@
+6
+Puffancs a 10
+Parabokor p 3
+Deltafa1 d 7
+Deltafa2 d 5
+Deltafa3 d 5
+Deltafa4 d 7
+10

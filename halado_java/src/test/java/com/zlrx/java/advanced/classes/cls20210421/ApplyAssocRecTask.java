@@ -26,7 +26,7 @@ class ApplyAssoc<T> extends RecursiveTask<T> {
 
         var first = new ApplyAssoc<T>(lower, aggregateFn);
         var second = new ApplyAssoc<T>(higher, aggregateFn);
-        System.out.println(Thread.currentThread().getName() + " thread");
+        System.out.println(Thread.currentThread().getName()+" thread");
 
         first.fork();
         second.fork();

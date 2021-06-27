@@ -1,0 +1,17 @@
+.connected-player-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    padding: 30px 30px;
+    border-radius: 50%;
+    margin: 20px;
+    border: 4px solid yellow;
+}
+
+.connected-player-name {
+    color: white;
+    font-size: 1.5rem;
+    font-style: italic;
+}

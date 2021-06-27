@@ -1,8 +1,16 @@
 package com.zlrx.java.advanced.classes.one;
 
-public class FibonacciIter {
+import java.util.HashMap;
+import java.util.Map;
+
+public class FibonacciIter<T> {
 
     public int fibonacci(int number) {
+
+        Object map = new HashMap<String, Integer>();
+
+        var x = (Map<String, Integer>) map;
+
         if (number < 0) {
             throw new IllegalArgumentException("Input number must be positive or zero");
         }

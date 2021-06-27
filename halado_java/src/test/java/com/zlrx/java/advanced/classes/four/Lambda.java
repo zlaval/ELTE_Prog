@@ -102,7 +102,9 @@ public class Lambda {
 
     @Test
     public void seventh() {
-
+        HashMap<String, String>m=new HashMap<>();
+        m.put("a","a")
+                m.entrySet()
         Supplier<Long> nextPrimes = new Supplier<>() {
             Long lastPrime = 1L;
 

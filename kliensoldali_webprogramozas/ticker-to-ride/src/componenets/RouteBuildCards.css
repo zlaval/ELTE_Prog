@@ -1,0 +1,29 @@
+.route_build_cards-container {
+    background: aqua;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    min-width: 20vw;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.route_build_cards-container:hover {
+    background: red;
+}
+
+.route_build_cards-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.route_build_card {
+    padding: 35px 25px;
+    margin: 10px 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.4rem;
+
+}

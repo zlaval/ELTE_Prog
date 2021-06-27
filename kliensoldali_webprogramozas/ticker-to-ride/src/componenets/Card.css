@@ -1,0 +1,40 @@
+.card-container {
+    display: inline-block;
+    width: 3.2vw;
+    height: 5.5vw;
+    border: 1px solid #666;
+    border-radius: .3em;
+    padding: .25em;
+    margin: 0 .5em .5em 0;
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+    box-shadow: .2em .2em .5em #333;
+}
+
+.card-container:hover {
+    border: 2px solid black;
+}
+
+.card-count {
+    color: brown;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.train-icon {
+    color: white;
+}
+
+@media (max-width: 940px) {
+    .card-container {
+        width: 3rem;
+        height: 5rem;
+    }
+
+    .card-count {
+        color: brown;
+        font-size: 22px;
+    }
+
+}

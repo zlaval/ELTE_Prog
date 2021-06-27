@@ -8,7 +8,7 @@ public class TimeoutTest {
     @Test(timeout = 1000)
     public void infiniteLoopTest() {
 
-        // while (true) ;
+       // while (true) ;
 
     }
 

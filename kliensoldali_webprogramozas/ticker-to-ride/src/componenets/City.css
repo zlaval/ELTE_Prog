@@ -1,0 +1,32 @@
+
+.city-marker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 1.4vw;
+    width: 1.4vw;
+    border: 2px solid black;
+    background-color: blue;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.city-fa_icon {
+    color: yellow;
+}
+
+.city-icon {
+    background-color: yellow;
+    width: 0.9vw;
+    height: 0.9vw;
+    border-radius: 50%;
+}
+
+.city-fa_icon:hover {
+    color: red;
+}
+
+.city-icon:hover {
+    background-color: red;
+}

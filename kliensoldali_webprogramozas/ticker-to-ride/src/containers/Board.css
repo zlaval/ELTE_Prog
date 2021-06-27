@@ -1,0 +1,120 @@
+.board-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.board-right-area {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.board-right-area--top {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.board-right-area--top-left {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+.board-player_goals {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.board-player_wages {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.board-right-area--top-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-grow: 1;
+    margin: 10px;
+}
+
+.board-right-area--bottom {
+    margin: 5px;
+}
+
+.board-left-area {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.board-cards {
+    padding: 0 10px;
+    width: 65vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.board-cards--cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 940px) {
+
+    .board-player_wages,
+    .board-player_goals {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .board-container {
+        flex-wrap: wrap;
+    }
+
+    .board-right-area {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .board-right-area--top {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .board-right-area--top-left {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .board-cards {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .board-cards--cards {
+        justify-content: center;
+    }
+}

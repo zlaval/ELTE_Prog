@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class FibonacciTest {
 
-    private Fibonacci underTest = new Fibonacci();
+    private Fibonacci underTest=new Fibonacci();
 
     @Test
     public void test_should_return_0_when_input_0() {

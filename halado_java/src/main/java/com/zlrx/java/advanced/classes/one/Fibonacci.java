@@ -12,7 +12,7 @@ public class Fibonacci {
         if (number == 0 || number == 1) {
             return number;
         }
-        List h = new ArrayList();
+        List h=new ArrayList();
         int left = fibonacci(number - 1);
         int right = fibonacci(number - 2);
         return left + right;

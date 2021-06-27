@@ -1,0 +1,8 @@
+.history-container {
+    min-height: 300px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    border: 5px solid white;
+    padding: 5px;
+}

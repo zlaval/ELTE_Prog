@@ -1,0 +1,57 @@
+.home-form {
+    display: inline-block;
+    width: 30%;
+}
+
+.home-title {
+    color: white;
+    font-weight: bold;
+    font-size: 6vw;
+}
+
+.home-logo {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 0;
+    box-shadow: 2px 3px 5px orange;
+}
+
+.home-label {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.home-player_count {
+    display: inline-block;
+    padding: 5px 5px;
+    background-color: green;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.home-player_count--input {
+    display: inline-block;
+}
+
+.home-player_count--input > input[type=radio] {
+    width: 1rem;
+    height: 1em;
+}
+
+.home-rule {
+    display: inline-block;
+    max-width: 600px;
+    background-color: lightblue;
+    color: black;
+    padding: 30px 30px;
+    border-radius: 20px;
+    border: 2px solid blue;
+}
+
+.home-rule-title {
+    padding-bottom: 15px;
+    color: black;
+}
+

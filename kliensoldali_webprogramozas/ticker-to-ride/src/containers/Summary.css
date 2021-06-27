@@ -1,0 +1,75 @@
+.summary-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.summary-box {
+    border: 10px solid white;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+    min-width: 18vw;
+    background-color: black;
+    color: white;
+}
+
+.summary-box-name {
+    font-weight: bold;
+    font-size: 2rem;
+    border-bottom: 1px solid white;
+}
+
+.summary-box-body {
+    margin: 15px 0;
+}
+
+.summary-box--goals {
+    margin: 5px 10px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-box-result {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 1.2rem;
+    background-color: #666666;
+}
+
+.summary-box-result--point {
+    font-size: 1.5rem;
+    color: lightblue;
+    margin-left: 10px;
+}
+
+.summary-box-success--list {
+    color: lightgreen;
+}
+
+.summary-box-failed--list {
+    color: red;
+}
+
+.summary-box-point {
+    font-size: 1.1rem;
+}
+
+.summary-box-longest_path {
+    color: orange;
+    font-size: 1.1rem;
+}
+
+.summary-box-success {
+    margin: 15px 5px;
+}
+
+.summary-box-failed {
+    margin: 15px 5px;
+}

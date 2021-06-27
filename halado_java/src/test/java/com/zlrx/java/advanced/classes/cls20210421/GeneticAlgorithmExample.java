@@ -158,8 +158,12 @@ class Population<T> {
 
 }
 
-
-//not very efficient algorithm
+/**
+ * use the -not very efficient- algorithm from
+ * https://kitlei.web.elte.hu/segedanyagok/felev/2020-2021-tavasz/halado-java/halado-java-feladatok.html#felsorol%C3%A1si-t%C3%ADpus
+ *
+ * @param <T>
+ */
 class GeneticAlgorithm<T> {
 
     private final Settings<T> settings;

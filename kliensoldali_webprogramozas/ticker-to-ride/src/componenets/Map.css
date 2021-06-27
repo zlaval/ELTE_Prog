@@ -1,0 +1,39 @@
+.map {
+    border: 2px solid black;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 8px brown;
+    width: 65vw;
+    height: calc(65vw * 0.67);
+}
+
+#map {
+    position: fixed;
+    background-image: url("../asset/map.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 65vw;
+    height: calc(65vw * 0.67);
+}
+
+.map-content {
+    width: 64.5vw;
+    position: absolute;
+    height: calc(65vw * 0.66);
+}
+
+@media (max-width: 940px) {
+    .map {
+        width: 100vw;
+        height: calc(100vw * 0.66);
+    }
+
+    .map-content {
+        width: 100vw;
+        height: calc(100vw * 0.66);
+    }
+
+    #map {
+        width: 100vw;
+        height: calc(100vw * 0.66);
+    }
+}

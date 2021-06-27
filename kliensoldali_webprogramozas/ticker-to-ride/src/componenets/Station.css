@@ -1,0 +1,13 @@
+
+.station-marker {
+    position: absolute;
+    border-radius: 50%;
+    height: 0.7vw;
+    width: 0.7vw;
+}
+
+/*.station-marker:hover {*/
+/*    border: 4px solid black;*/
+/*    height: 1vw;*/
+/*    width: 1vw;*/
+/*}*/

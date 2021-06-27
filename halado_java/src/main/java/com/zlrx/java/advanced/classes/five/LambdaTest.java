@@ -7,9 +7,11 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Spliterator;
 import java.util.StringJoiner;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 public class LambdaTest {
     private static class Message {
@@ -45,6 +47,7 @@ public class LambdaTest {
             byte[] slice = Arrays.copyOfRange(data, i, Math.min(data.length, i + Message.MAX_LENGTH));
             messages.add(new Message(slice, messages.size()));
         }
+
 
 
         //SEND --

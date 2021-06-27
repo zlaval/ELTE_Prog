@@ -1,0 +1,489 @@
+.deck-container {
+    width: 20rem;
+    height: 9vw;
+}
+
+.deck-name {
+    font-weight: bold;
+    font-size: 1vw;
+    color: blue;
+}
+
+ul.deck {
+    list-style-type: none;
+
+    margin: 0 0 1.5em 0;
+    position: relative;
+    clear: both;
+}
+
+ul.deck li {
+    margin: 0;
+    list-style-type: none;
+    float: left;
+    position: absolute;
+}
+
+ul.deck li:nth-child(1) {
+    left: 0;
+}
+
+ul.deck li:nth-child(2) {
+    left: 1px;
+}
+
+ul.deck li:nth-child(3) {
+    left: 2px;
+}
+
+ul.deck li:nth-child(4) {
+    left: 3px;
+}
+
+ul.deck li:nth-child(5) {
+    left: 4px;
+}
+
+ul.deck li:nth-child(6) {
+    left: 5px;
+}
+
+ul.deck li:nth-child(7) {
+    left: 6px;
+}
+
+ul.deck li:nth-child(8) {
+    left: 7px;
+}
+
+ul.deck li:nth-child(9) {
+    left: 8px;
+}
+
+ul.deck li:nth-child(10) {
+    left: 9px;
+}
+
+ul.deck li:nth-child(11) {
+    left: 10px;
+}
+
+ul.deck li:nth-child(12) {
+    left: 11px;
+}
+
+ul.deck li:nth-child(13) {
+    left: 12px;
+}
+
+ul.deck li:nth-child(14) {
+    left: 13px;
+}
+
+ul.deck li:nth-child(15) {
+    left: 14px;
+}
+
+ul.deck li:nth-child(16) {
+    left: 15px;
+}
+
+ul.deck li:nth-child(17) {
+    left: 16px;
+}
+
+ul.deck li:nth-child(18) {
+    left: 17px;
+}
+
+ul.deck li:nth-child(19) {
+    left: 18px;
+}
+
+ul.deck li:nth-child(20) {
+    left: 19px;
+}
+
+ul.deck li:nth-child(21) {
+    left: 20px;
+}
+
+ul.deck li:nth-child(22) {
+    left: 21px;
+}
+
+ul.deck li:nth-child(23) {
+    left: 22px;
+}
+
+ul.deck li:nth-child(24) {
+    left: 23px;
+}
+
+ul.deck li:nth-child(25) {
+    left: 24px;
+}
+
+ul.deck li:nth-child(26) {
+    left: 25px;
+}
+
+ul.deck li:nth-child(27) {
+    left: 26px;
+}
+
+ul.deck li:nth-child(28) {
+    left: 27px;
+}
+
+ul.deck li:nth-child(29) {
+    left: 28px;
+}
+
+ul.deck li:nth-child(30) {
+    left: 29px;
+}
+
+ul.deck li:nth-child(31) {
+    left: 30px;
+}
+
+ul.deck li:nth-child(32) {
+    left: 31px;
+}
+
+ul.deck li:nth-child(33) {
+    left: 32px;
+}
+
+ul.deck li:nth-child(34) {
+    left: 33px;
+}
+
+ul.deck li:nth-child(35) {
+    left: 34px;
+}
+
+ul.deck li:nth-child(36) {
+    left: 35px;
+}
+
+ul.deck li:nth-child(37) {
+    left: 36px;
+}
+
+ul.deck li:nth-child(38) {
+    left: 37px;
+}
+
+ul.deck li:nth-child(39) {
+    left: 38px;
+}
+
+ul.deck li:nth-child(40) {
+    left: 39px;
+}
+
+ul.deck li:nth-child(41) {
+    left: 40px;
+}
+
+ul.deck li:nth-child(42) {
+    left: 41px;
+}
+
+ul.deck li:nth-child(43) {
+    left: 42px;
+}
+
+ul.deck li:nth-child(44) {
+    left: 43px;
+}
+
+ul.deck li:nth-child(45) {
+    left: 44px;
+}
+
+ul.deck li:nth-child(46) {
+    left: 45px;
+}
+
+ul.deck li:nth-child(47) {
+    left: 46px;
+}
+
+ul.deck li:nth-child(48) {
+    left: 47px;
+}
+
+ul.deck li:nth-child(49) {
+    left: 48px;
+}
+
+ul.deck li:nth-child(50) {
+    left: 49px;
+}
+
+ul.deck li:nth-child(51) {
+    left: 50px;
+}
+
+ul.deck li:nth-child(52) {
+    left: 51px;
+}
+
+ul.deck li:nth-child(53) {
+    left: 52px;
+}
+
+ul.deck li:nth-child(54) {
+    left: 53px;
+}
+
+ul.deck li:nth-child(55) {
+    left: 54px;
+}
+
+ul.deck li:nth-child(56) {
+    left: 55px;
+}
+
+ul.deck li:nth-child(57) {
+    left: 56px;
+}
+
+ul.deck li:nth-child(58) {
+    left: 57px;
+}
+
+ul.deck li:nth-child(59) {
+    left: 58px;
+}
+
+ul.deck li:nth-child(60) {
+    left: 59px;
+}
+
+ul.deck li:nth-child(61) {
+    left: 60px;
+}
+
+ul.deck li:nth-child(62) {
+    left: 61px;
+}
+
+ul.deck li:nth-child(63) {
+    left: 62px;
+}
+
+ul.deck li:nth-child(64) {
+    left: 63px;
+}
+
+ul.deck li:nth-child(65) {
+    left: 64px;
+}
+
+ul.deck li:nth-child(66) {
+    left: 65px;
+}
+
+ul.deck li:nth-child(67) {
+    left: 66px;
+}
+
+ul.deck li:nth-child(68) {
+    left: 67px;
+}
+
+ul.deck li:nth-child(69) {
+    left: 68px;
+}
+
+ul.deck li:nth-child(70) {
+    left: 69px;
+}
+
+ul.deck li:nth-child(71) {
+    left: 70px;
+}
+
+ul.deck li:nth-child(72) {
+    left: 71px;
+}
+
+ul.deck li:nth-child(73) {
+    left: 72px;
+}
+
+ul.deck li:nth-child(74) {
+    left: 73px;
+}
+
+ul.deck li:nth-child(75) {
+    left: 74px;
+}
+
+ul.deck li:nth-child(76) {
+    left: 75px;
+}
+
+ul.deck li:nth-child(77) {
+    left: 76px;
+}
+
+ul.deck li:nth-child(78) {
+    left: 77px;
+}
+
+ul.deck li:nth-child(79) {
+    left: 78px;
+}
+
+ul.deck li:nth-child(80) {
+    left: 79px;
+}
+
+ul.deck li:nth-child(81) {
+    left: 80px;
+}
+
+ul.deck li:nth-child(82) {
+    left: 81px;
+}
+
+ul.deck li:nth-child(83) {
+    left: 82px;
+}
+
+ul.deck li:nth-child(84) {
+    left: 83px;
+}
+
+ul.deck li:nth-child(85) {
+    left: 84px;
+}
+
+ul.deck li:nth-child(86) {
+    left: 85px;
+}
+
+ul.deck li:nth-child(87) {
+    left: 86px;
+}
+
+ul.deck li:nth-child(88) {
+    left: 87px;
+}
+
+ul.deck li:nth-child(89) {
+    left: 88px;
+}
+
+ul.deck li:nth-child(90) {
+    left: 89px;
+}
+
+ul.deck li:nth-child(91) {
+    left: 90px;
+}
+
+ul.deck li:nth-child(92) {
+    left: 91px;
+}
+
+ul.deck li:nth-child(93) {
+    left: 92px;
+}
+
+ul.deck li:nth-child(94) {
+    left: 93px;
+}
+
+ul.deck li:nth-child(95) {
+    left: 94px;
+}
+
+ul.deck li:nth-child(96) {
+    left: 95px;
+}
+
+ul.deck li:nth-child(97) {
+    left: 96px;
+}
+
+ul.deck li:nth-child(98) {
+    left: 97px;
+}
+
+ul.deck li:nth-child(99) {
+    left: 98px;
+}
+
+ul.deck li:nth-child(100) {
+    left: 99px;
+}
+
+ul.deck li:nth-child(101) {
+    left: 100px;
+}
+
+ul.deck li:nth-child(102) {
+    left: 101px;
+}
+
+ul.deck li:nth-child(103) {
+    left: 102px;
+}
+
+ul.deck li:nth-child(104) {
+    left: 103px;
+}
+
+ul.deck li:nth-child(105) {
+    left: 104px;
+}
+
+ul.deck li:nth-child(106) {
+    left: 105px;
+}
+
+ul.deck li:nth-child(107) {
+    left: 106px;
+}
+
+ul.deck li:nth-child(108) {
+    left: 107px;
+}
+
+ul.deck li:nth-child(109) {
+    left: 108px;
+}
+
+ul.deck li:nth-child(110) {
+    left: 109px;
+}
+
+ul.deck li:nth-child(111) {
+    left: 110px;
+}
+
+
+@media (max-width: 940px) {
+    .deck-container {
+        height: 10em;
+        width: 100%;
+        text-align: center !important;
+    }
+
+    .deck-cards {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .deck-name {
+        font-size: 12px;
+    }
+}
