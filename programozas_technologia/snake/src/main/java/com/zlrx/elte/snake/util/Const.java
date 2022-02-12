@@ -8,7 +8,7 @@ public final class Const {
         throw new UnsupportedOperationException("Utility class");
     }
 
-    public static final boolean ENABLE_GIZMOS = false;
+    public static final boolean ENABLE_GIZMOS = true;
     public static final int WIDTH = 1495;
     public static final int HEIGHT = 1000;
     public static final int SNAKE_BODY_DIMENSION = 20;

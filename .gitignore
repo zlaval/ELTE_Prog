@@ -12,3 +12,15 @@ gradlew*
 gradle/**
 build/
 wrapper/
+*/OGLPack
+*/Debug
+*.vs
+/x64
+*.idb
+*.pdb
+*.obj
+*.tlog
+*vcxproj*
+*ilk
+*log
+*recipe

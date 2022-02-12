@@ -2,7 +2,7 @@ import {io} from "socket.io-client";
 import {SYNC_NAME} from "./actions/actions";
 
 //const path = "http://localhost:3031"
-const path = "http://webprogramozas.inf.elte.hu:3031"
+const path = "http://localhost:3031"
 
 let socket
 
