@@ -1,6 +1,8 @@
 package com.zlrx.classone
 
 import java.lang.Integer.min
+import java.math.BigDecimal
+import java.math.RoundingMode
 import kotlin.math.abs
 import kotlin.math.pow
 
@@ -20,6 +22,7 @@ fun main() {
     computerNumbers.calculateFlInt(137, 6, -10, 10)
     computerNumbers.calculateFlFraction(17, 8, -5, 5)
     computerNumbers.calculateFlFraction(167, 8, -5, 5)
+    computerNumbers.calculateErrors(3.14159265358, 3.14)
 }
 
 
@@ -96,7 +99,7 @@ class ComputerNumbers {
                 number -= barrier
             } else {
                 result += "0"
-                if(significantBitCount>0){
+                if (significantBitCount > 0) {
                     significantBitCount++
                 }
             }
@@ -109,6 +112,17 @@ class ComputerNumbers {
 
         println("fl(0.$fraction) = [$significantBits | $c]")
 
+    }
+
+
+    fun calculateErrors(number: Double, approx: Double) {
+        val delta = number - approx
+        val absDelta = abs(delta)
+        val approxAbsError = BigDecimal.valueOf(absDelta).setScale(approx.toString().length - 1, RoundingMode.UP).toDouble()
+        val relativeError = BigDecimal.valueOf(approxAbsError / number).setScale(6, RoundingMode.UP).toDouble()
+        val relativeErrorLimit = BigDecimal.valueOf(relativeError).setScale(approx.toString().length , RoundingMode.UP).toDouble()
+
+        println("a Delta: $delta, a abs delta: $absDelta, a abs err limit: $approxAbsError, relative error: $relativeError, relative error limit: $relativeErrorLimit ")
     }
 
 }

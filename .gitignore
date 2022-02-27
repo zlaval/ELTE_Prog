@@ -24,3 +24,8 @@ wrapper/
 *ilk
 *log
 *recipe
+*.pdb
+Debug/
+x64/
+*vcxproj
+*vcxproj*
