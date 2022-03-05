@@ -28,29 +28,41 @@ bool CMyApp::Init()
 	//
 
 	Vertex vert[] =
-	{ 
-		{glm::vec3(-1, -1, 0), glm::vec3(1, 0, 0)},
-		{glm::vec3( 1, -1, 0), glm::vec3(0, 1, 0)},
-		{glm::vec3(-1,  1, 0), glm::vec3(0, 0, 1)},
-		{glm::vec3( 1,  1, 0), glm::vec3(1, 1, 1)},
+	{
+		{glm::vec3(0, 1, 0), glm::vec3(1, 0, 0)},
+		{glm::vec3(-1, 1, 0), glm::vec3(1, 0, 0)},
+		{glm::vec3(-1,  0, 0), glm::vec3(1, 0, 0)},
+
+
+		{glm::vec3(0,  -1, 0), glm::vec3(0, 1, 0)},
+		{glm::vec3(-1,  0, 0), glm::vec3(0, 1, 0)},
+		{glm::vec3(-1,  -1, 0), glm::vec3(0, 1, 0)},
+
+		{glm::vec3(1,  1, 0), glm::vec3(0, 0, 1)},
+		{glm::vec3(0,  1, 0), glm::vec3(0, 0, 1)},
+		{glm::vec3(1,  0, 0), glm::vec3(0, 0, 1)},
+
+		{glm::vec3(1,  -1, 0), glm::vec3(1, 0, 1)},
+		{glm::vec3(1,  0, 0), glm::vec3(1, 0, 1)},
+		{glm::vec3(0,  -1, 0), glm::vec3(1, 0, 1)},
 	};
 
 	// 1 db VAO foglalása
 	glGenVertexArrays(1, &m_vaoID);
 	// a frissen generált VAO beállítasa aktívnak
 	glBindVertexArray(m_vaoID);
-	
+
 	// hozzunk létre egy új VBO erőforrás nevet
-	glGenBuffers(1, &m_vboID); 
+	glGenBuffers(1, &m_vboID);
 	glBindBuffer(GL_ARRAY_BUFFER, m_vboID); // tegyük "aktívvá" a létrehozott VBO-t
 	// töltsük fel adatokkal az aktív VBO-t
-	glBufferData( GL_ARRAY_BUFFER,	// az aktív VBO-ba töltsünk adatokat
-				  sizeof(vert),		// ennyi bájt nagyságban
-				  vert,	// erről a rendszermemóriabeli címről olvasva
-				  GL_STATIC_DRAW);	// úgy, hogy a VBO-nkba nem tervezünk ezután írni és minden kirajzoláskor felhasnzáljuk a benne lévő adatokat
-	
+	glBufferData(GL_ARRAY_BUFFER,	// az aktív VBO-ba töltsünk adatokat
+		sizeof(vert),		// ennyi bájt nagyságban
+		vert,	// erről a rendszermemóriabeli címről olvasva
+		GL_STATIC_DRAW);	// úgy, hogy a VBO-nkba nem tervezünk ezután írni és minden kirajzoláskor felhasnzáljuk a benne lévő adatokat
 
-	// VAO-ban jegyezzük fel, hogy a VBO-ban az első 3 float sizeof(Vertex)-enként lesz az első attribútum (pozíció)
+
+// VAO-ban jegyezzük fel, hogy a VBO-ban az első 3 float sizeof(Vertex)-enként lesz az első attribútum (pozíció)
 	glEnableVertexAttribArray(0); // ez lesz majd a pozíció
 	glVertexAttribPointer(
 		(GLuint)0,				// a VB-ben található adatok közül a 0. "indexű" attribútumait állítjuk be
@@ -59,17 +71,17 @@ bool CMyApp::Init()
 		GL_FALSE,		// normalizált legyen-e
 		sizeof(Vertex),	// stride (0=egymás után)
 		0				// a 0. indexű attribútum hol kezdődik a sizeof(Vertex)-nyi területen belül
-	); 
+	);
 
 	// a második attribútumhoz pedig a VBO-ban sizeof(Vertex) ugrás után sizeof(glm::vec3)-nyit menve újabb 3 float adatot találunk (szín)
 	glEnableVertexAttribArray(1); // ez lesz majd a szín
 	glVertexAttribPointer(
 		(GLuint)1,
-		3, 
+		3,
 		GL_FLOAT,
 		GL_FALSE,
 		sizeof(Vertex),
-		(void*)(sizeof(glm::vec3)) );
+		(void*)(sizeof(glm::vec3)));
 
 	glBindVertexArray(0); // feltöltüttük a VAO-t, kapcsoljuk le
 	glBindBuffer(GL_ARRAY_BUFFER, 0); // feltöltöttük a VBO-t is, ezt is vegyük le
@@ -77,8 +89,8 @@ bool CMyApp::Init()
 	//
 	// shaderek betöltése
 	//
-	GLuint vs_ID = loadShader(GL_VERTEX_SHADER,		"myVert.vert");
-	GLuint fs_ID = loadShader(GL_FRAGMENT_SHADER,	"myFrag.frag");
+	GLuint vs_ID = loadShader(GL_VERTEX_SHADER, "myVert.vert");
+	GLuint fs_ID = loadShader(GL_FRAGMENT_SHADER, "myFrag.frag");
 
 	// a shadereket tároló program létrehozása
 	m_programID = glCreateProgram();
@@ -88,8 +100,8 @@ bool CMyApp::Init()
 	glAttachShader(m_programID, fs_ID);
 
 	// attributomok osszerendelese a VAO es shader kozt
-	glBindAttribLocation( m_programID, 0, "vs_in_pos");
-	glBindAttribLocation( m_programID, 1, "vs_in_col");
+	glBindAttribLocation(m_programID, 0, "vs_in_pos");
+	glBindAttribLocation(m_programID, 1, "vs_in_col");
 
 	// illesszük össze a shadereket (kimenő-bemenő változók összerendelése stb.)
 	glLinkProgram(m_programID);
@@ -108,8 +120,8 @@ bool CMyApp::Init()
 	}
 
 	// már nincs ezekre szükség
-	glDeleteShader( vs_ID );
-	glDeleteShader( fs_ID );
+	glDeleteShader(vs_ID);
+	glDeleteShader(fs_ID);
 
 	return true;
 }
@@ -119,7 +131,7 @@ void CMyApp::Clean()
 	glDeleteBuffers(1, &m_vboID);
 	glDeleteVertexArrays(1, &m_vaoID);
 
-	glDeleteProgram( m_programID );
+	glDeleteProgram(m_programID);
 }
 
 void CMyApp::Update()
@@ -133,20 +145,20 @@ void CMyApp::Render()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	// shader bekapcsolása, ebben a projektben a teljes programot jelöli, hisz nem váltunk a shaderek között
-	glUseProgram( m_programID );
+	glUseProgram(m_programID);
 
 	// kapcsoljuk be a VAO-t (a VBO jön vele együtt)
 	glBindVertexArray(m_vaoID);
 
 	// kirajzolás
 	//A draw hívásokhoz a VAO és a program bindolva kell legyenek (glUseProgram() és glBindVertexArray())
-	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+	glDrawArrays(GL_TRIANGLES, 0, 12);
 
 	// VAO kikapcsolása
 	glBindVertexArray(0);
 
 	// shader kikapcsolása
-	glUseProgram( 0 );
+	glUseProgram(0);
 }
 
 void CMyApp::KeyboardDown(SDL_KeyboardEvent& key)
@@ -177,5 +189,5 @@ void CMyApp::MouseWheel(SDL_MouseWheelEvent& wheel)
 // a két paraméterbe az új ablakméret szélessége (_w) és magassága (_h) található
 void CMyApp::Resize(int _w, int _h)
 {
-	glViewport(0, 0, _w, _h );
+	glViewport(0, 0, _w, _h);
 }

@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id "io.freefair.lombok" version "6.2.0"
+    id "com.adarshr.test-logger" version "3.1.0"
+}
+
+group 'hu.elte.progtech'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.6'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '4.1.0'
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,228 @@
+@startuml
+
+note as Note
+    SpaceShipSprite - Spaceship
+    PlanetSprite - Planet
+    compositions are omitted for better transparency
+    as well as the subclasses of the preceding ones
+
+    Getters and Setters are omitted.
+end note
+
+class GameManager{
+    -round: int
+    -actualPlayer: Player
+    -bluePlayer: Player
+    -redPlayer: Player
+    -drawManager: DrawManager
+    -movableElements: Movable[]
+    +registerMovable(Movable)
+    +removeMovable(Movable)
+    +startNextRound(Player)
+    +detectCollisions()
+    +checkEnd()
+    +tick()
+    +mine()
+}
+class Player{
+    -planets:Planet[]
+    -ships:SpaceShip[]
+    -deuterium: int
+    -actionPoint: int
+    +useActionPoint(amount)
+    +removeDeathShips()
+    +addShip(Spaceship)
+    +addPlanet(Planet)
+    +removePlanet(Planet)
+}
+
+abstract class Planet{
+    #area: int
+    #temperature: int
+    #buildings: Building[]
+    #resources: Resource[]
+    +addResource(Resource)
+    +dispatchResource(Resource)
+    +colonize()
+    +build(Building)
+    +upgrade(Building)
+    +tick()
+    #consumeResource(Resource)
+}
+
+class Resource{
+    -type: ResourcesType
+    -quantity: int
+}
+
+abstract class SpaceShip{
+    #damage: int
+    #defense: int
+    #speed: int
+    #life: int
+    #price: int
+    #consumption: int
+    #moveCost: int
+    #attackRange: int
+    #name: String
+    +hit(int)
+}
+
+abstract class Building{
+    #level: int
+    #energyConsumption: int
+    #productionRate: int
+    +produce()
+}
+
+class DeuteriumMine{
+}
+
+class IronMine{
+}
+
+class SonarPanel{
+    -planetBonus:int
+}
+
+class StarGate{
+}
+
+abstract class Mine{
+
+}
+
+class JPanel{}
+
+class Screen{
+    -planetMenu:Menu
+    -gameManager: GameManager
+    -timer: Timer
+    -playGround: PlayGround
+    -sideMenu: SideMenu
+    -startTimer()
+    #paintComponent(Graphics)
+    +actionPerformed(ActionEvent)
+}
+
+class Menu{
+    -items:MenuItem[]
+    +drawMenu()
+    +onClick(ActionListener)
+}
+
+class MenuItem{
+    -title:String
+    +render()
+    +onSelect()
+}
+
+class PlayGround{
+    +drawPlanets()
+    +drawBackground()
+}
+
+class SideMenu{
+    +drawMenu(Player,Coord)
+}
+
+class DrawManager{
+    {static}+graphics: Graphics
+    -drawableElements: Drawable[]
+    +redraw()
+    ~registerDrawable()
+    +registerMovable()
+    +removeMovable()
+}
+
+
+abstract class Drawable{
+    #image: Image
+    #coord: Coord
+    #selected: boolean
+    #size: Size
+    +render()
+}
+
+abstract class Movable{
+    #destination: Coord
+    +onMove()
+    {abstract}+getSpeed()
+}
+
+interface Selectable{
+    +onSelect()
+}
+
+interface Collidable{
+    +onCollide()
+}
+
+class Missile{
+    -damage:int
+    +onHit()
+}
+
+abstract class SpaceShipSprite{
+    #speceShip: SpaceShip
+    +onDestroy()
+}
+
+abstract class PlanetSprite{
+    #planet: Planet
+}
+
+abstract class MouseAdapter{
+    {abstract}#mouseClicked(MouseEvent)
+    {abstract}#mouseMoved(MouseEvent)
+    {abstract}#mouseReleased(MouseEvent)
+}
+
+class MouseListener{}
+
+enum ResourcesType{
+    ENERGY
+    IRON
+    DEUTERIUM
+}
+
+MouseAdapter <|--MouseListener
+Screen o-- MouseListener
+
+Player o-- GameManager
+Planet -- Resource
+Planet *-- Building
+
+Building <|-- Mine
+Building <|-- StarGate
+Mine <|-- SonarPanel
+Mine <|-- IronMine
+Mine <|-- DeuteriumMine
+Mine *-- Resource
+StarGate -- SpaceShip
+Resource o-- ResourcesType
+JPanel <|-- Screen
+
+Screen o-- Menu
+Screen o-- PlayGround
+Screen o-- SideMenu
+Menu o-- MenuItem
+Screen o-- GameManager
+GameManager o-- DrawManager
+
+Player -- SpaceShip
+Player -- Planet
+Player -- Resource
+
+DrawManager -- Drawable
+Drawable <|-- Movable
+
+Selectable <|-- SpaceShipSprite
+Selectable <|-- PlanetSprite
+Drawable <|-- PlanetSprite
+Movable <|-- SpaceShipSprite
+Collidable <|-- Drawable
+Movable <|-- Missile
+
+
+@enduml

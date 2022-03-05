@@ -49,7 +49,7 @@ class LER {
         vector.forEach {
             print("$it ")
         }
-        
+
     }
 
 
