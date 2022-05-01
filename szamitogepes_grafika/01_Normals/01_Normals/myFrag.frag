@@ -21,6 +21,8 @@ uniform vec3 Ka = vec3(0.2, 0.4, 0.6);
 uniform vec3 Kd = vec3(0.2, 0.4, 0.6);
 uniform vec3 Ks = vec3(0.4, 0.8, 1.0);
 
+uniform vec3 eyePos;
+
 //uniform sampler2D texImage;
 
 void main()
@@ -29,7 +31,7 @@ void main()
 	// ambiens szín számítása
 	//
 
-	//vec3 ambient = ;
+	vec3 ambient = Ka;
 
 	//
 	// diffúz szín számítása
@@ -39,6 +41,12 @@ void main()
 	    - skaláris szorzat: http://www.opengl.org/sdk/docs/manglsl/xhtml/dot.xml
 	    - clamp: http://www.opengl.org/sdk/docs/manglsl/xhtml/clamp.xml
 	*/
+
+	vec3 l=normalize(light_dir);
+	vec3 n=normalize(vs_out_norm);
+	float di=clamp(dot(-l,n),0,1);
+	vec3 diffuse=di*Ld*Kd;
+
 
 	//vec3 diffuse = ;
 
@@ -52,7 +60,10 @@ void main()
 				pow(alap, kitevő);
 	*/
 
-	//vec3 specular = ;
+	vec3 r=reflect(l,n);
+	vec3 toEye=normalize(eyePos - vs_out_pos);
+	float si= pow(clamp(dot(r,toEye),0,1),16);
+	vec3 specular = si*Ls*Ks ;
 	
 	//
 	// a fragment végső színének meghatározása
@@ -61,9 +72,9 @@ void main()
 	//fs_out_col = vec4(ambient + diffuse + specular, 1);
 
 	// felületi normális
-	fs_out_col = vec4(vs_out_norm, 1);
+	//fs_out_col = vec4(vs_out_norm, 1);
 
-
+	fs_out_col = vec4(ambient+diffuse+specular, 1);
 
 	// textúrával
 	//vec4 textureColor = texture(texImage, vs_out_tex);

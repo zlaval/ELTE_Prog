@@ -219,6 +219,7 @@ bool CMyApp::Init()
 	m_loc_mvp = glGetUniformLocation(m_programID, "MVP");
 	m_loc_world = glGetUniformLocation(m_programID, "world");
 	m_loc_worldIT = glGetUniformLocation(m_programID, "worldIT");
+	m_loc_eyePos= glGetUniformLocation(m_programID, "eyePos");
 	//m_loc_tex = glGetUniformLocation(m_programID, "texImage");
 	
 	return true;
@@ -256,7 +257,8 @@ void CMyApp::Render()
 	//
 	// - Gömb kirajzolása
 	//
-
+	glm::vec3 eyePos = m_camera.GetEye();
+	glUniform3fv(m_loc_eyePos, 1, &eyePos.x);
 	glm::mat4 viewProj = m_camera.GetViewProj();
 	glm::mat4 world = glm::mat4(1.0f);
 	glm::mat4 wolrdIT = glm::inverse(glm::transpose(world));

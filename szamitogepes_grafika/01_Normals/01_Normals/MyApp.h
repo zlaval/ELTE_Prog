@@ -62,6 +62,7 @@ protected:
 	GLuint m_loc_mvp = 0;
 	GLuint m_loc_world = 0;
 	GLuint m_loc_worldIT = 0;
+	GLuint m_loc_eyePos = 0;
 	//GLuint m_loc_tex;
 
 	// NxM darab négyszöggel közelítjük a parametrikus felületünket => (N+1)x(M+1) pontban kell kiértékelni
