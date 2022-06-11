@@ -1,0 +1,37 @@
+{
+    "hash_fn": "openssl_sha1",
+    "char_count": 12,
+    "type": "ALL",
+    "round_count": 591225,
+    "collided_fragment": "a05672fdfee3",
+    "str1": "3682d04f-9d28-4c7e-81a7-58b4f97985e2",
+    "str1_hash": "1fc8d1dae4356d98fe9a05672fdfee35602ed4a7",
+    "str2": "ce941411-3299-4c7d-a6ca-46009bd42a96",
+    "str2_hash": "564439c9c7b6ae0a2a3a05672fdfee35f67e54ed",
+    "runtime": "14.043260335922241",
+    "position": "19"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 12,
+    "type": "ALL",
+    "round_count": 591225,
+    "collided_fragment": "05672fdfee35",
+    "str1": "3682d04f-9d28-4c7e-81a7-58b4f97985e2",
+    "str1_hash": "1fc8d1dae4356d98fe9a05672fdfee35602ed4a7",
+    "str2": "ce941411-3299-4c7d-a6ca-46009bd42a96",
+    "str2_hash": "564439c9c7b6ae0a2a3a05672fdfee35f67e54ed",
+    "runtime": "14.043260335922241",
+    "position": "20"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 12,
+    "type": "ALL",
+    "round_count": 1952507,
+    "collided_fragment": "cbedf0721ee3",
+    "str1": "746f74de-8f71-4030-8978-f5de72d988f3",
+    "str1_hash": "ab192ecbedf0721ee35f5a15f653a89fbcdd5889",
+    "str2": "15e4b1d5-2929-4a11-9dba-6f9cbb87e040",
+    "str2_hash": "f5bee0cbedf0721ee34f41eacb6b5bca29a77b70",
+    "runtime": "48.20095705986023",
+    "position": "6"
+}

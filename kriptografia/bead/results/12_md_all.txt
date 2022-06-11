@@ -1,0 +1,35 @@
+Found 12 character(s) long collision at the ALL with openssl_md5 fn.
+Hash fragment: de85b81d5f44, Iteration: 2986354, time: 0:00:56.153627
+First string/hash: 5c37dde1-7c68-4e16-a80b-1250a415845f, bc2a07292577cde85b81d5f4497a9dc8
+Second string/hash: 581853ca-8286-4c46-9f58-f5ec75703d54, a3e5f5b387682de85b81d5f4455a0bfc
+position: 13..25
+
+Found 12 character(s) long collision at the ALL with openssl_md5 fn.
+Hash fragment: 37bfded52d2b, Iteration: 6659911, time: 0:02:10.495357
+First string/hash: dd1caaa5-d8e0-40fc-a90e-9a69eacb54b1, 25d193f72e7af0c7b37bfded52d2bd25
+Second string/hash: 29670908-cae4-429d-bb91-a818eebde320, 5489d376991ad3f4c37bfded52d2bdb0
+position: 17..29
+
+Found 12 character(s) long collision at the ALL with openssl_md5 fn.
+Hash fragment: 7bfded52d2bd, Iteration: 6659911, time: 0:02:10.495357
+First string/hash: dd1caaa5-d8e0-40fc-a90e-9a69eacb54b1, 25d193f72e7af0c7b37bfded52d2bd25
+Second string/hash: 29670908-cae4-429d-bb91-a818eebde320, 5489d376991ad3f4c37bfded52d2bdb0
+position: 18..30
+
+Found 12 character(s) long collision at the ALL with openssl_sha1 fn.
+Hash fragment: a05672fdfee3, Iteration: 591225, time: 0:00:14.043260
+First string/hash: 3682d04f-9d28-4c7e-81a7-58b4f97985e2, 1fc8d1dae4356d98fe9a05672fdfee35602ed4a7
+Second string/hash: ce941411-3299-4c7d-a6ca-46009bd42a96, 564439c9c7b6ae0a2a3a05672fdfee35f67e54ed
+position: 19..31
+
+Found 12 character(s) long collision at the ALL with openssl_sha1 fn.
+Hash fragment: 05672fdfee35, Iteration: 591225, time: 0:00:14.043260
+First string/hash: 3682d04f-9d28-4c7e-81a7-58b4f97985e2, 1fc8d1dae4356d98fe9a05672fdfee35602ed4a7
+Second string/hash: ce941411-3299-4c7d-a6ca-46009bd42a96, 564439c9c7b6ae0a2a3a05672fdfee35f67e54ed
+position: 20..32
+
+Found 12 character(s) long collision at the ALL with openssl_sha1 fn.
+Hash fragment: cbedf0721ee3, Iteration: 1952507, time: 0:00:48.200957
+First string/hash: 746f74de-8f71-4030-8978-f5de72d988f3, ab192ecbedf0721ee35f5a15f653a89fbcdd5889
+Second string/hash: 15e4b1d5-2929-4a11-9dba-6f9cbb87e040, f5bee0cbedf0721ee34f41eacb6b5bca29a77b70
+position: 6..18

@@ -1,0 +1,56 @@
+{
+    "hash_fn": "openssl_sha1",
+    "char_count": 7,
+    "type": "BEGIN",
+    "round_count": 4716,
+    "collided_fragment": "f180a07",
+    "str1": "5c18a14f-7214-4831-b443-7b9a7e411ef5",
+    "str1_hash": "f180a0737932e4b8434772895338c8350271e797",
+    "str2": "368bf103-8b4f-4bd2-a951-53fb0220055d",
+    "str2_hash": "f180a07f2cd9e8ce6cb223bd66f7833284c9236a",
+    "runtime": "0.012000083923339844"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 7,
+    "type": "BEGIN",
+    "round_count": 21954,
+    "collided_fragment": "88410de",
+    "str1": "191f517d-6fb3-4988-b28c-9db13797eb49",
+    "str1_hash": "88410def1bbc7e8ce5ba4dbd7f7631cd70ab18ee",
+    "str2": "bad62ed6-93fd-4add-a233-a675a62d1e34",
+    "str2_hash": "88410dee7357bd65e5a7e269ddd29156a7348fd6",
+    "runtime": "0.06253504753112793"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 7,
+    "type": "BEGIN",
+    "round_count": 3415,
+    "collided_fragment": "27cf7fd",
+    "str1": "37b8ca86-f9bf-4ef1-a2db-162f58fab0c2",
+    "str1_hash": "27cf7fdc5d7f20f7a8fb16bbb2e40048a271af81",
+    "str2": "f0f6e1eb-9af3-492d-a0ce-eb7387c40559",
+    "str2_hash": "27cf7fde840cf10fd2b60192822c44b685bfa3b4",
+    "runtime": "0.008999347686767578"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 7,
+    "type": "BEGIN",
+    "round_count": 17252,
+    "collided_fragment": "b205bb9",
+    "str1": "eb5444ad-1db6-4d37-8f79-474dbf915943",
+    "str1_hash": "b205bb95a9bc68227a86a2da21202fb0ec295cc1",
+    "str2": "9e65821f-7d4c-496b-bcd9-0af892442384",
+    "str2_hash": "b205bb9bf44cc67f64ae09f7311034fad523fd33",
+    "runtime": "0.04731488227844238"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 7,
+    "type": "BEGIN",
+    "round_count": 13335,
+    "collided_fragment": "b5dfc67",
+    "str1": "90568177-a86d-4321-b6b2-330b3194ba0a",
+    "str1_hash": "b5dfc674cffa3bc12a0af1a4a78f6b3b26ceaaa6",
+    "str2": "84f1542d-0724-4b52-9353-6e8fff36671a",
+    "str2_hash": "b5dfc6740c43faf3424071b1cfff26590e8bcb0b",
+    "runtime": "0.0658879280090332"
+}

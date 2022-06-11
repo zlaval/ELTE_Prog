@@ -1,0 +1,61 @@
+{
+    "hash_fn": "openssl_sha1",
+    "char_count": 9,
+    "type": "ALL",
+    "round_count": 21333,
+    "collided_fragment": "39cacc78c",
+    "str1": "8edb3434-384e-4465-af3b-4d59aa85ce21",
+    "str1_hash": "39cacc78c8b794d5c8e2abd1266cc3b4afb24b2c",
+    "str2": "5d1441a5-596e-4f0f-9524-71b83b08f766",
+    "str2_hash": "39cacc78cf22014feec738fef67289e64197520c",
+    "runtime": "0.4882166385650635",
+    "position": "0"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 9,
+    "type": "ALL",
+    "round_count": 3227,
+    "collided_fragment": "8315ac078",
+    "str1": "5bdeb3be-e58c-4ccc-907c-11d149798c58",
+    "str1_hash": "de1e3f384038e104c7182ef418315ac0781ad24a",
+    "str2": "6b12b9ea-f1d6-4732-a9c5-e089348bc857",
+    "str2_hash": "218a5c3797b032cdc5f74214a8315ac078b0c133",
+    "runtime": "0.06531143188476562",
+    "position": "25"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 9,
+    "type": "ALL",
+    "round_count": 64157,
+    "collided_fragment": "562445976",
+    "str1": "9dfd7ef4-bf60-4a37-ac99-385e4d133fd6",
+    "str1_hash": "506bc5624459763387e74c920d40b80d9079f9d7",
+    "str2": "68c0d481-d54e-48d9-9b66-944349d4042c",
+    "str2_hash": "bba405624459762199f1b9098e1f33b0daee99fb",
+    "runtime": "1.4904615879058838",
+    "position": "5"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 9,
+    "type": "ALL",
+    "round_count": 36787,
+    "collided_fragment": "77830a969",
+    "str1": "295c2a7c-f5fc-4062-95c3-2a5df45c7ccd",
+    "str1_hash": "170e77830a9693f9581e3d6ef94b0881509969a6",
+    "str2": "77173c8f-3b0c-47d2-b69c-48f596ad058b",
+    "str2_hash": "5ce677830a96982d66ae038b5b61694ff2c69786",
+    "runtime": "0.7881720066070557",
+    "position": "4"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 9,
+    "type": "ALL",
+    "round_count": 69425,
+    "collided_fragment": "c671479ef",
+    "str1": "3b0a5b52-2aed-4e93-9d05-1893c2ad370a",
+    "str1_hash": "0d05dc297997d2fc671479ef7eec42401edebc64",
+    "str2": "ae1310d5-6318-4218-bce4-2ea138183ee2",
+    "str2_hash": "644af4b5d117ef0c671479ef08af2d2ff30f1688",
+    "runtime": "1.6684985160827637",
+    "position": "15"
+}

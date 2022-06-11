@@ -1,0 +1,37 @@
+{
+    "hash_fn": "openssl_md5",
+    "char_count": 12,
+    "type": "ALL",
+    "round_count": 2986354,
+    "collided_fragment": "de85b81d5f44",
+    "str1": "5c37dde1-7c68-4e16-a80b-1250a415845f",
+    "str1_hash": "bc2a07292577cde85b81d5f4497a9dc8",
+    "str2": "581853ca-8286-4c46-9f58-f5ec75703d54",
+    "str2_hash": "a3e5f5b387682de85b81d5f4455a0bfc",
+    "runtime": "56.15262579917908",
+    "position": "13"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 12,
+    "type": "ALL",
+    "round_count": 6659911,
+    "collided_fragment": "37bfded52d2b",
+    "str1": "dd1caaa5-d8e0-40fc-a90e-9a69eacb54b1",
+    "str1_hash": "25d193f72e7af0c7b37bfded52d2bd25",
+    "str2": "29670908-cae4-429d-bb91-a818eebde320",
+    "str2_hash": "5489d376991ad3f4c37bfded52d2bdb0",
+    "runtime": "130.495356798172",
+    "position": "17"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 12,
+    "type": "ALL",
+    "round_count": 6659911,
+    "collided_fragment": "7bfded52d2bd",
+    "str1": "dd1caaa5-d8e0-40fc-a90e-9a69eacb54b1",
+    "str1_hash": "25d193f72e7af0c7b37bfded52d2bd25",
+    "str2": "29670908-cae4-429d-bb91-a818eebde320",
+    "str2_hash": "5489d376991ad3f4c37bfded52d2bdb0",
+    "runtime": "130.495356798172",
+    "position": "18"
+}

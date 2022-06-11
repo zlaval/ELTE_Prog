@@ -1,0 +1,433 @@
+{
+    "hash_fn": "openssl_md5",
+    "place": "BEGIN",
+    "char_count": 1,
+    "avg_iteration": 6.2,
+    "avg_runtime": 0.0
+}{
+    "hash_fn": "openssl_md5",
+    "place": "BEGIN",
+    "char_count": 2,
+    "avg_iteration": 21.2,
+    "avg_runtime": 0.0005309104919433594
+}{
+    "hash_fn": "openssl_md5",
+    "place": "BEGIN",
+    "char_count": 3,
+    "avg_iteration": 71.8,
+    "avg_runtime": 0.00020117759704589843
+}{
+    "hash_fn": "openssl_md5",
+    "place": "BEGIN",
+    "char_count": 4,
+    "avg_iteration": 396.4,
+    "avg_runtime": 0.0028015613555908204
+}{
+    "hash_fn": "openssl_md5",
+    "place": "BEGIN",
+    "char_count": 5,
+    "avg_iteration": 1534.2,
+    "avg_runtime": 0.004799890518188477
+}{
+    "hash_fn": "openssl_md5",
+    "place": "BEGIN",
+    "char_count": 6,
+    "avg_iteration": 5903.2,
+    "avg_runtime": 0.017600107192993163
+}{
+    "hash_fn": "openssl_md5",
+    "place": "BEGIN",
+    "char_count": 7,
+    "avg_iteration": 19463.2,
+    "avg_runtime": 0.06480073928833008
+}{
+    "hash_fn": "openssl_md5",
+    "place": "BEGIN",
+    "char_count": 8,
+    "avg_iteration": 103004.6,
+    "avg_runtime": 0.3132446765899658
+}{
+    "hash_fn": "openssl_md5",
+    "place": "BEGIN",
+    "char_count": 9,
+    "avg_iteration": 269369.0,
+    "avg_runtime": 0.7920596122741699
+}{
+    "hash_fn": "openssl_md5",
+    "place": "BEGIN",
+    "char_count": 10,
+    "avg_iteration": 983250.6,
+    "avg_runtime": 2.8741193771362306
+}{
+    "hash_fn": "openssl_md5",
+    "place": "BEGIN",
+    "char_count": 11,
+    "avg_iteration": 5469221.0,
+    "avg_runtime": 16.65905613899231
+}{
+    "hash_fn": "openssl_md5",
+    "place": "BEGIN",
+    "char_count": 12,
+    "avg_iteration": 26291078.4,
+    "avg_runtime": 81.35041213035583
+}{
+    "hash_fn": "openssl_md5",
+    "place": "END",
+    "char_count": 1,
+    "avg_iteration": 5.8,
+    "avg_runtime": 0.0008018016815185547
+}{
+    "hash_fn": "openssl_md5",
+    "place": "END",
+    "char_count": 2,
+    "avg_iteration": 15.8,
+    "avg_runtime": 0.0009978771209716796
+}{
+    "hash_fn": "openssl_md5",
+    "place": "END",
+    "char_count": 3,
+    "avg_iteration": 85.2,
+    "avg_runtime": 0.000999784469604492
+}{
+    "hash_fn": "openssl_md5",
+    "place": "END",
+    "char_count": 4,
+    "avg_iteration": 333.0,
+    "avg_runtime": 0.0016757965087890625
+}{
+    "hash_fn": "openssl_md5",
+    "place": "END",
+    "char_count": 5,
+    "avg_iteration": 1367.2,
+    "avg_runtime": 0.0060956478118896484
+}{
+    "hash_fn": "openssl_md5",
+    "place": "END",
+    "char_count": 6,
+    "avg_iteration": 5034.8,
+    "avg_runtime": 0.015758705139160157
+}{
+    "hash_fn": "openssl_md5",
+    "place": "END",
+    "char_count": 7,
+    "avg_iteration": 19156.8,
+    "avg_runtime": 0.05684847831726074
+}{
+    "hash_fn": "openssl_md5",
+    "place": "END",
+    "char_count": 8,
+    "avg_iteration": 84686.2,
+    "avg_runtime": 0.2451329231262207
+}{
+    "hash_fn": "openssl_md5",
+    "place": "END",
+    "char_count": 9,
+    "avg_iteration": 338472.6,
+    "avg_runtime": 0.9946404457092285
+}{
+    "hash_fn": "openssl_md5",
+    "place": "END",
+    "char_count": 10,
+    "avg_iteration": 1188364.8,
+    "avg_runtime": 3.5893396377563476
+}{
+    "hash_fn": "openssl_md5",
+    "place": "END",
+    "char_count": 11,
+    "avg_iteration": 5142794.8,
+    "avg_runtime": 15.785386800765991
+}{
+    "hash_fn": "openssl_md5",
+    "place": "END",
+    "char_count": 12,
+    "avg_iteration": 34274867.0,
+    "avg_runtime": 107.60263729095459
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "BEGIN",
+    "char_count": 1,
+    "avg_iteration": 6.4,
+    "avg_runtime": 0.0
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "BEGIN",
+    "char_count": 2,
+    "avg_iteration": 20.8,
+    "avg_runtime": 0.001972484588623047
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "BEGIN",
+    "char_count": 3,
+    "avg_iteration": 85.6,
+    "avg_runtime": 0.00025067329406738283
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "BEGIN",
+    "char_count": 4,
+    "avg_iteration": 310.8,
+    "avg_runtime": 0.0026564598083496094
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "BEGIN",
+    "char_count": 5,
+    "avg_iteration": 895.8,
+    "avg_runtime": 0.0027996063232421874
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "BEGIN",
+    "char_count": 6,
+    "avg_iteration": 4735.4,
+    "avg_runtime": 0.013385248184204102
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "BEGIN",
+    "char_count": 7,
+    "avg_iteration": 12134.4,
+    "avg_runtime": 0.03954753875732422
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "BEGIN",
+    "char_count": 8,
+    "avg_iteration": 112073.0,
+    "avg_runtime": 0.3246767044067383
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "BEGIN",
+    "char_count": 9,
+    "avg_iteration": 285055.4,
+    "avg_runtime": 0.8303478240966797
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "BEGIN",
+    "char_count": 10,
+    "avg_iteration": 1627051.8,
+    "avg_runtime": 4.873464679718017
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "BEGIN",
+    "char_count": 11,
+    "avg_iteration": 6355158.8,
+    "avg_runtime": 19.00211148262024
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "BEGIN",
+    "char_count": 12,
+    "avg_iteration": 12558268.0,
+    "avg_runtime": 38.011643409729004
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "END",
+    "char_count": 1,
+    "avg_iteration": 5.8,
+    "avg_runtime": 0.0004001617431640625
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "END",
+    "char_count": 2,
+    "avg_iteration": 22.8,
+    "avg_runtime": 0.00019989013671875
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "END",
+    "char_count": 3,
+    "avg_iteration": 47.4,
+    "avg_runtime": 0.0025548458099365233
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "END",
+    "char_count": 4,
+    "avg_iteration": 281.8,
+    "avg_runtime": 0.0008002758026123047
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "END",
+    "char_count": 5,
+    "avg_iteration": 1059.6,
+    "avg_runtime": 0.0032761096954345703
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "END",
+    "char_count": 6,
+    "avg_iteration": 4405.6,
+    "avg_runtime": 0.013086891174316407
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "END",
+    "char_count": 7,
+    "avg_iteration": 20301.4,
+    "avg_runtime": 0.05974555015563965
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "END",
+    "char_count": 8,
+    "avg_iteration": 75571.2,
+    "avg_runtime": 0.2159799575805664
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "END",
+    "char_count": 9,
+    "avg_iteration": 366268.8,
+    "avg_runtime": 1.067643165588379
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "END",
+    "char_count": 10,
+    "avg_iteration": 1644740.4,
+    "avg_runtime": 4.910672616958618
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "END",
+    "char_count": 11,
+    "avg_iteration": 7617693.2,
+    "avg_runtime": 23.333087921142578
+}{
+    "hash_fn": "openssl_sha1",
+    "place": "END",
+    "char_count": 12,
+    "avg_iteration": 22173146.2,
+    "avg_runtime": 68.72201371192932
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "BEGIN",
+    "char_count": 1,
+    "avg_iteration": 3.8,
+    "avg_runtime": 0.0004002571105957031
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "BEGIN",
+    "char_count": 2,
+    "avg_iteration": 23.4,
+    "avg_runtime": 0.002828645706176758
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "BEGIN",
+    "char_count": 3,
+    "avg_iteration": 75.0,
+    "avg_runtime": 0.0004001140594482422
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "BEGIN",
+    "char_count": 4,
+    "avg_iteration": 377.6,
+    "avg_runtime": 0.0030586719512939453
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "BEGIN",
+    "char_count": 5,
+    "avg_iteration": 1014.4,
+    "avg_runtime": 0.0037999629974365236
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "BEGIN",
+    "char_count": 6,
+    "avg_iteration": 5320.0,
+    "avg_runtime": 0.019609642028808594
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "BEGIN",
+    "char_count": 7,
+    "avg_iteration": 15229.2,
+    "avg_runtime": 0.04785423278808594
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "BEGIN",
+    "char_count": 8,
+    "avg_iteration": 68010.8,
+    "avg_runtime": 0.21531085968017577
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "BEGIN",
+    "char_count": 9,
+    "avg_iteration": 287454.8,
+    "avg_runtime": 0.928600263595581
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "BEGIN",
+    "char_count": 10,
+    "avg_iteration": 1863183.8,
+    "avg_runtime": 6.075419616699219
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "BEGIN",
+    "char_count": 11,
+    "avg_iteration": 3698447.4,
+    "avg_runtime": 12.271668100357056
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "BEGIN",
+    "char_count": 12,
+    "avg_iteration": 24518680.4,
+    "avg_runtime": 83.6678970336914
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "END",
+    "char_count": 1,
+    "avg_iteration": 4.4,
+    "avg_runtime": 0.0004002571105957031
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "END",
+    "char_count": 2,
+    "avg_iteration": 19.4,
+    "avg_runtime": 0.002446269989013672
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "END",
+    "char_count": 3,
+    "avg_iteration": 68.6,
+    "avg_runtime": 0.0004008293151855469
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "END",
+    "char_count": 4,
+    "avg_iteration": 269.0,
+    "avg_runtime": 0.0029998779296875
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "END",
+    "char_count": 5,
+    "avg_iteration": 1277.2,
+    "avg_runtime": 0.004407930374145508
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "END",
+    "char_count": 6,
+    "avg_iteration": 4854.0,
+    "avg_runtime": 0.015503549575805664
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "END",
+    "char_count": 7,
+    "avg_iteration": 15497.6,
+    "avg_runtime": 0.049266386032104495
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "END",
+    "char_count": 8,
+    "avg_iteration": 94634.6,
+    "avg_runtime": 0.30790371894836427
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "END",
+    "char_count": 9,
+    "avg_iteration": 285028.8,
+    "avg_runtime": 0.9321155548095703
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "END",
+    "char_count": 10,
+    "avg_iteration": 1174732.2,
+    "avg_runtime": 3.9321398735046387
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "END",
+    "char_count": 11,
+    "avg_iteration": 4190798.4,
+    "avg_runtime": 14.133365821838378
+}{
+    "hash_fn": "openssl_sha3_512",
+    "place": "END",
+    "char_count": 12,
+    "avg_iteration": 18471892.8,
+    "avg_runtime": 63.61761965751648
+}

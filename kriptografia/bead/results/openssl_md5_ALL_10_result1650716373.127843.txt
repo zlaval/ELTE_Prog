@@ -1,0 +1,61 @@
+{
+    "hash_fn": "openssl_md5",
+    "char_count": 10,
+    "type": "ALL",
+    "round_count": 241986,
+    "collided_fragment": "aa96b43971",
+    "str1": "5eb3e981-d7ff-4f4c-b2fb-bcbfaad23933",
+    "str1_hash": "f86528f6360aa96b43971f87abf59ca5",
+    "str2": "49416b48-a830-4225-a3f6-9e7dc0e32791",
+    "str2_hash": "ea6234b260daa96b43971e8a9359dcb2",
+    "runtime": "4.389430046081543",
+    "position": "11"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 10,
+    "type": "ALL",
+    "round_count": 134093,
+    "collided_fragment": "176ba57648",
+    "str1": "734db9fe-a6b0-4a13-b841-4cdebb96c4b3",
+    "str1_hash": "c7be814b041be93828c21176ba576486",
+    "str2": "21e835ee-5df8-43f2-91f5-8b6fbba8b1d8",
+    "str2_hash": "707ee3f49d0e01c3e2c12176ba57648e",
+    "runtime": "2.4048473834991455",
+    "position": "21"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 10,
+    "type": "ALL",
+    "round_count": 318622,
+    "collided_fragment": "2841e3921d",
+    "str1": "ddf92e26-cb04-486c-8a7b-245eda6ae4a3",
+    "str1_hash": "211f395aec0f2841e3921d2735c6aac3",
+    "str2": "140c14fd-aceb-4fd7-b3e4-3c06eec7fe66",
+    "str2_hash": "f638071290042841e3921de23bd5094a",
+    "runtime": "5.937031269073486",
+    "position": "12"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 10,
+    "type": "ALL",
+    "round_count": 233824,
+    "collided_fragment": "ee513d8da6",
+    "str1": "a8b04ac4-05a0-4efb-9001-9604f31af749",
+    "str1_hash": "e54c55dee513d8da6295376abab4f0ca",
+    "str2": "479f6665-af1f-4af6-856c-bd44c0c3730f",
+    "str2_hash": "9ef5b85ee513d8da6659e142621a4a6d",
+    "runtime": "4.208671569824219",
+    "position": "7"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 10,
+    "type": "ALL",
+    "round_count": 232234,
+    "collided_fragment": "40daf03234",
+    "str1": "0daf3761-76f5-4326-88f2-201003627979",
+    "str1_hash": "4840f545fce40daf032349cab7de9a8d",
+    "str2": "98306e34-c62c-46ba-b2a3-780493f02789",
+    "str2_hash": "dacb439ca4d40daf032346a99de1d82a",
+    "runtime": "4.2189624309539795",
+    "position": "11"
+}

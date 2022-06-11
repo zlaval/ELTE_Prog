@@ -1,0 +1,56 @@
+{
+    "hash_fn": "openssl_sha3_512",
+    "char_count": 6,
+    "type": "BEGIN",
+    "round_count": 5028,
+    "collided_fragment": "4dc280",
+    "str1": "e5bf4b96-3a03-44ad-99f8-aa39e2b739b5",
+    "str1_hash": "4dc28094b3321557c724105b495958e96b7b203c659af8d763e93c591460c7a9a76467d8dce07a6af7c3c17e35df0945ed18fe39a1b812312509df268f8485b5",
+    "str2": "f5e49361-d353-4c02-a7b1-019ce1182d82",
+    "str2_hash": "4dc280201b7f10adc362ce29fdd992d3b7e8c01ed84f1ee84a9d2de3d061fee6605fa043eef80ff8a88ef7cc0c7cebdc01ada91ef6cb7ae1151e886a3deecf9c",
+    "runtime": "0.01735067367553711"
+}{
+    "hash_fn": "openssl_sha3_512",
+    "char_count": 6,
+    "type": "BEGIN",
+    "round_count": 5281,
+    "collided_fragment": "da931b",
+    "str1": "b07368f0-cb30-46ec-b05e-a6ad00312ed5",
+    "str1_hash": "da931b9d129e3dab9c834ef7af95ec80011be2bd40ba3c6e995b023b553fb4a83ff0b271d7453b5bf1a4f0f6703bb17716a14db17504edc1a620e212433dc388",
+    "str2": "955e9b2e-5fd6-40e8-9a49-4b8b7401e669",
+    "str2_hash": "da931b366188a9ac64e47caa7f8565af86c8536b621592649ce0dfa4fa2a1dd6a8d64d5c3aa6a1e315d5a3d8f20678f4fe8b0e6d7962abfc522ba16df0c2147d",
+    "runtime": "0.01784992218017578"
+}{
+    "hash_fn": "openssl_sha3_512",
+    "char_count": 6,
+    "type": "BEGIN",
+    "round_count": 2050,
+    "collided_fragment": "62e284",
+    "str1": "e4046fdf-fd81-4f60-90f3-dd1aa731a583",
+    "str1_hash": "62e284819471bd6c3aa5833e4dfe1488b84613f8403c9adfbea27e356fed4a8235895d901d1dd30435ab4a1bd8c65078767765bd6f1caf1b43e23d122def9536",
+    "str2": "a3eb5dde-6dfc-4d1e-a84d-6b1d77890e24",
+    "str2_hash": "62e284302716b57c7f15cd07c16b5e2a3b73e7bc57b6e88c271d1ee0df2437028e91c4b75193c21638f215956e6d978369a82a71bd5dbfcc93e2d21d90cfcc69",
+    "runtime": "0.007000923156738281"
+}{
+    "hash_fn": "openssl_sha3_512",
+    "char_count": 6,
+    "type": "BEGIN",
+    "round_count": 8733,
+    "collided_fragment": "a8a40c",
+    "str1": "e2f1177c-08c7-4853-90ec-88ccd942fbd7",
+    "str1_hash": "a8a40c977b297061ae51e46f8be5f40e17f74b30d2f09f7c89af48b0e710bc9ea8d1ca25f1a2f2bdb9fccdb539d53ab2520cd18276f37f5db85413ff9e0f93d7",
+    "str2": "075ee4fc-6432-4787-94e1-bcbccc1e5d9d",
+    "str2_hash": "a8a40c2f7192c35338d39050665dc8d5ca3200ccfe55b0abe349a972580427c2c039adb2844044d73fb44125b5bc0f77f58a2073195c5059c0b7ca5a094da700",
+    "runtime": "0.03578305244445801"
+}{
+    "hash_fn": "openssl_sha3_512",
+    "char_count": 6,
+    "type": "BEGIN",
+    "round_count": 5508,
+    "collided_fragment": "fded6c",
+    "str1": "81b05f3a-9120-450c-8585-b537e7fc47d5",
+    "str1_hash": "fded6c258932ee88225ba02051ba0a64db8c31786a5f4e981dab2d5076513974705af62c6e6c5198a3fc80f9839e403961da3f81f92254570bec2c0672f8e101",
+    "str2": "c0faa791-ae35-448b-b237-f7d0681496c3",
+    "str2_hash": "fded6c5c345150d154ade3d0fbe83155d246331ad3ff5fa64276f17f910149b3c562844538a6d9a44ec4f19a33b908b019bb838a80faa5078047ebb16d8d101a",
+    "runtime": "0.01906299591064453"
+}

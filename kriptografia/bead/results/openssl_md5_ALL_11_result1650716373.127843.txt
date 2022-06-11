@@ -1,0 +1,61 @@
+{
+    "hash_fn": "openssl_md5",
+    "char_count": 11,
+    "type": "ALL",
+    "round_count": 2304453,
+    "collided_fragment": "d80c41b2b41",
+    "str1": "509eb285-8c08-4777-9dbf-2a55dc1e26a5",
+    "str1_hash": "4331d80c41b2b413ae261d71f965d345",
+    "str2": "08a752f4-ebc2-47c0-acf0-fc1ee3f7081d",
+    "str2_hash": "3ca9d80c41b2b410d16d2d78c772bfe4",
+    "runtime": "45.84695839881897",
+    "position": "4"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 11,
+    "type": "ALL",
+    "round_count": 535188,
+    "collided_fragment": "33e74160636",
+    "str1": "e574dafe-ad3b-4666-bed5-3db6026361f2",
+    "str1_hash": "edb57a33e7416063665b398e6cfbb9fd",
+    "str2": "bdb19b73-d404-4660-8daa-d26e6c8a4730",
+    "str2_hash": "d8776e33e741606360e78248e27d340e",
+    "runtime": "10.202619314193726",
+    "position": "6"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 11,
+    "type": "ALL",
+    "round_count": 285704,
+    "collided_fragment": "d9fe711a051",
+    "str1": "1ad79f50-7db6-40e0-bff6-ec738f34400f",
+    "str1_hash": "17efd9fe711a0511eb8273f42fddbc2a",
+    "str2": "093034f1-f439-4db0-bc5e-7aef7c761529",
+    "str2_hash": "868cd9fe711a051e835c43cd388eef46",
+    "runtime": "5.290195941925049",
+    "position": "4"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 11,
+    "type": "ALL",
+    "round_count": 400285,
+    "collided_fragment": "69d46331109",
+    "str1": "57aca6e8-d437-4e3d-86c8-ee367df6d76c",
+    "str1_hash": "c269d46331109c85c7f56030c01c413c",
+    "str2": "530d1b00-2116-4ac4-b573-6275450714f5",
+    "str2_hash": "7769d46331109049c33c9ca274dd1ff8",
+    "runtime": "7.348063945770264",
+    "position": "2"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 11,
+    "type": "ALL",
+    "round_count": 680501,
+    "collided_fragment": "7d36183086a",
+    "str1": "2bf7ff03-29cb-4671-8502-59fadb69ff39",
+    "str1_hash": "9d864e34872d54b77c27d36183086ade",
+    "str2": "7111077d-5a94-4e7a-97f9-35fcfe981891",
+    "str2_hash": "dff06c0c3b69f733e337d36183086ac3",
+    "runtime": "12.655812978744507",
+    "position": "19"
+}

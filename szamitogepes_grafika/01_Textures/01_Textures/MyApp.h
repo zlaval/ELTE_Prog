@@ -31,6 +31,7 @@ public:
 	void MouseUp(SDL_MouseButtonEvent&);
 	void MouseWheel(SDL_MouseWheelEvent&);
 	void Resize(int, int);
+	
 
 protected:
 	struct Vertex
@@ -41,6 +42,7 @@ protected:
 
 	// belső eljárások
 	GLuint GenerateRandomTexture();
+	glm::vec3 toDescatres(float fi, float theta);
 
 	// shaderekhez szükséges változók
 	GLuint m_programID = 0; // shaderprogram erőforrás azonosító
@@ -64,6 +66,18 @@ protected:
 	GLuint	m_loc_mvp = 0;
 	GLuint  m_loc_w = 0;
 	GLuint	m_loc_tex = 0;
+	GLuint	m_loc_tex2 = 0;
+
+	float fi = M_PI * 1.5f;
+	float theta = M_PI / 2.f;
+
+	glm::vec3 eye = glm::vec3(0, 0, 10);
+	glm::vec3 forward = toDescatres(fi,theta);
+	glm::vec3 look_at = eye + forward;
+	glm::vec3 up=glm::vec3(0,1,0);
+	glm::vec3 right = glm::cross(up, forward);
+
+	bool is_left_pressed=false;
 
 	// a jobb olvashatóság kedvéért
 	void InitCube();

@@ -1,0 +1,61 @@
+{
+    "hash_fn": "openssl_sha1",
+    "char_count": 4,
+    "type": "ALL",
+    "round_count": 101,
+    "collided_fragment": "84a6",
+    "str1": "1a7dc14a-3862-49e1-b4e0-a4d5493669b5",
+    "str1_hash": "7c5f1a2054b6f59b8b784a640261fd3832fcfd18",
+    "str2": "c0bf2f46-a2f8-485b-b055-6c20f43b6ef5",
+    "str2_hash": "0d5237639f530423f0a84a6075e3712efa04e63c",
+    "runtime": "0.002001047134399414",
+    "position": "19"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 4,
+    "type": "ALL",
+    "round_count": 65,
+    "collided_fragment": "3f08",
+    "str1": "961cc4c2-b3d7-4575-963d-bd18c43bb687",
+    "str1_hash": "eb6cc3e5c1e04ab3f08a0948e49c0c88e5504cfc",
+    "str2": "a34c381f-873e-4bfa-9a99-4890fb3425fe",
+    "str2_hash": "a802210ddcf45ff3f082c10e12c229c400fe877e",
+    "runtime": "0.0012698173522949219",
+    "position": "15"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 4,
+    "type": "ALL",
+    "round_count": 75,
+    "collided_fragment": "4e4f",
+    "str1": "90b5760f-5055-4281-82e9-41e24e7bcbd9",
+    "str1_hash": "1af2419a40a61a6c5f888e78df55ffc4b4e4f630",
+    "str2": "39d087c5-8f35-442e-a7a0-40a00ed79a56",
+    "str2_hash": "2035b9fefb438c7a542afa28d197e2abd4e4f08c",
+    "runtime": "0.002000093460083008",
+    "position": "33"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 4,
+    "type": "ALL",
+    "round_count": 69,
+    "collided_fragment": "bb2e",
+    "str1": "0c02b815-5bde-42b0-8792-61d26b3fd691",
+    "str1_hash": "c5369626081ec8b455fc6772489fbc72f9dbb2e8",
+    "str2": "164a18c2-8e77-481d-8b73-643fe9cc0366",
+    "str2_hash": "9ec3b33cc7b2fe8885f6e9a1335f37b47f8bb2e7",
+    "runtime": "0.0010030269622802734",
+    "position": "35"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 4,
+    "type": "ALL",
+    "round_count": 55,
+    "collided_fragment": "0272",
+    "str1": "47d52a80-10ba-43ef-b5f5-d1ed7d0e16b9",
+    "str1_hash": "0272a3bc961fc0c7142268c5cbfe8ac5dbf0cb4c",
+    "str2": "6420828e-9ad7-47a3-a5c2-9d29f297e839",
+    "str2_hash": "027226b8732422db8d0e201181a7548741dfc996",
+    "runtime": "0.0009982585906982422",
+    "position": "0"
+}

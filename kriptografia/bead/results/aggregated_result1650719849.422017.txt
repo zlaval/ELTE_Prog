@@ -1,0 +1,7 @@
+{
+    "hash_fn": "openssl_sha3_512",
+    "place": "ALL",
+    "char_count": 12,
+    "avg_iteration": 395373.0,
+    "avg_runtime": 38.43957710266113
+}

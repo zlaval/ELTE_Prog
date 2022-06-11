@@ -1,0 +1,56 @@
+{
+    "hash_fn": "openssl_sha1",
+    "char_count": 6,
+    "type": "BEGIN",
+    "round_count": 10035,
+    "collided_fragment": "4318b5",
+    "str1": "c19c364c-aaa0-41a5-a84b-1aa0969dc153",
+    "str1_hash": "4318b5a8da0f1ae2de05a92bf8daebc17a0a06ef",
+    "str2": "29ef457a-e447-428f-bfb8-94e4733b85b9",
+    "str2_hash": "4318b59678bf43e1e992ccec212899a045ee4401",
+    "runtime": "0.027039289474487305"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 6,
+    "type": "BEGIN",
+    "round_count": 5496,
+    "collided_fragment": "e4ad50",
+    "str1": "825f4943-6830-4816-8c16-38e11e2028f5",
+    "str1_hash": "e4ad50a2966ea05e76a6d9b5326e3bc0d92fa08b",
+    "str2": "7d8e5c79-669e-4e33-9f00-293af344f961",
+    "str2_hash": "e4ad500cbb2a64d8993fadb46afc55fe57fb7490",
+    "runtime": "0.016234636306762695"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 6,
+    "type": "BEGIN",
+    "round_count": 2464,
+    "collided_fragment": "acf05b",
+    "str1": "2ff3f89e-80f2-48d2-b1a9-08975bf67aa3",
+    "str1_hash": "acf05bd13c8565632962a990eb87af590285a716",
+    "str2": "5e20bd69-1b60-496b-a348-369e5945c733",
+    "str2_hash": "acf05bc358f947f88a0b5df7cf191d53edf2811c",
+    "runtime": "0.007009267807006836"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 6,
+    "type": "BEGIN",
+    "round_count": 2452,
+    "collided_fragment": "0004db",
+    "str1": "3be18165-72ad-4cee-a436-1fb617aec432",
+    "str1_hash": "0004db58f2bc891c72b55c77135ac91fb26b93cc",
+    "str2": "b722152b-22ce-47a8-b289-795950964d12",
+    "str2_hash": "0004dbbd7dbdfc3e8146c49882778564c45fdfb6",
+    "runtime": "0.006026268005371094"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 6,
+    "type": "BEGIN",
+    "round_count": 3230,
+    "collided_fragment": "b9c67c",
+    "str1": "efbae18f-c483-4438-be4c-b0bb1875177e",
+    "str1_hash": "b9c67cf1ac0728c8e9b926c3357003cf43d73b26",
+    "str2": "f7a879af-ee8f-4988-a52f-a451d40e61a2",
+    "str2_hash": "b9c67c0a1a8d4310d977d3593c6a0f4f58daf00d",
+    "runtime": "0.008001089096069336"
+}

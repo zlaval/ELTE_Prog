@@ -1,0 +1,56 @@
+{
+    "hash_fn": "openssl_md5",
+    "char_count": 12,
+    "type": "BEGIN",
+    "round_count": 29179739,
+    "collided_fragment": "b3648fd0b5aa",
+    "str1": "7dcc5c31-edbd-4532-9e0e-195e0067beeb",
+    "str1_hash": "b3648fd0b5aa57dcbfb71fefb10eef3e",
+    "str2": "0e114cc4-8d7a-43d8-bbad-d52b987a10f5",
+    "str2_hash": "b3648fd0b5aa6f35f8c22cca7e01d585",
+    "runtime": "89.62456178665161"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 12,
+    "type": "BEGIN",
+    "round_count": 14444580,
+    "collided_fragment": "b1fd4da47298",
+    "str1": "dba16880-a643-4e5b-869f-679b2abeea00",
+    "str1_hash": "b1fd4da4729872560d86b567cf5ab9c9",
+    "str2": "674763b5-8317-49d1-ac96-705d418b6135",
+    "str2_hash": "b1fd4da47298e65e7be80c4a21f8ee5b",
+    "runtime": "44.58508586883545"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 12,
+    "type": "BEGIN",
+    "round_count": 31922473,
+    "collided_fragment": "a7dcba625184",
+    "str1": "e575b142-ad42-420d-890f-6c08a1c8c17e",
+    "str1_hash": "a7dcba625184090d53b528bf8c3396db",
+    "str2": "2538301c-845e-42d0-8c79-f9e4209bdd6b",
+    "str2_hash": "a7dcba625184bd37ba6b910cd2194918",
+    "runtime": "98.40024304389954"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 12,
+    "type": "BEGIN",
+    "round_count": 41969057,
+    "collided_fragment": "3a2e8c49456c",
+    "str1": "7e47fc55-6e0e-4406-9c8e-2e50be96e38e",
+    "str1_hash": "3a2e8c49456cb6ca9d84fc526b10a411",
+    "str2": "d72db768-f472-4a8c-ad11-a5707e280911",
+    "str2_hash": "3a2e8c49456c2296a3961aa98611d153",
+    "runtime": "131.2490575313568"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 12,
+    "type": "BEGIN",
+    "round_count": 13939543,
+    "collided_fragment": "c590fb554091",
+    "str1": "11dc0d1a-59d2-4ff1-b6e4-4b4587d41253",
+    "str1_hash": "c590fb55409167120c29a6e7bd8e059d",
+    "str2": "dcd7b19a-e13f-4abe-86b2-c302211bd561",
+    "str2_hash": "c590fb554091c822bfa6bf060373607c",
+    "runtime": "42.89311242103577"
+}

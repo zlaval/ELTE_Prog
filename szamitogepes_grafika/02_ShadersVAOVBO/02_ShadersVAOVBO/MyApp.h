@@ -36,6 +36,7 @@ protected:
 	// OpenGL-es dolgok
 	GLuint m_vaoID; // vertex array object erőforrás azonosító
 	GLuint m_vboID; // vertex buffer object erőforrás azonosító
+	GLint m_loc_scale; // vertex buffer object erőforrás azonosító
 
 	struct Vertex
 	{

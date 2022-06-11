@@ -1,0 +1,56 @@
+{
+    "hash_fn": "openssl_sha1",
+    "char_count": 9,
+    "type": "END",
+    "round_count": 585601,
+    "collided_fragment": "5852c9475",
+    "str1": "5d78bce0-ae1b-405d-aadc-78f36c0d5aed",
+    "str1_hash": "ce8e5c916b5b85a8c56a343b84f9faa5852c9475",
+    "str2": "02ff6cac-b24f-4f75-8ff7-1654f8b54648",
+    "str2_hash": "bbe97c715d66e1086ecddd6f896058b5852c9475",
+    "runtime": "1.7025399208068848"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 9,
+    "type": "END",
+    "round_count": 497140,
+    "collided_fragment": "f3c924f4f",
+    "str1": "725ac76e-0c52-4047-a720-b6c4ca34057f",
+    "str1_hash": "23c4018001941b3e2c74292c8b04766f3c924f4f",
+    "str2": "d0037fde-6343-4fc4-84ff-d69614b716b7",
+    "str2_hash": "bfa4d8e345420d6249e0c24a5c29ca8f3c924f4f",
+    "runtime": "1.4508857727050781"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 9,
+    "type": "END",
+    "round_count": 224129,
+    "collided_fragment": "873e05750",
+    "str1": "9bd5af44-501f-4355-8e87-5ffd90732751",
+    "str1_hash": "2bf6849022a15ab13d1dcb7396ce5b1873e05750",
+    "str2": "d56cb071-99ea-4d30-963c-b6bc0ab1e55f",
+    "str2_hash": "5ce685ec9aaae0f0a81b6c00aaf9e0d873e05750",
+    "runtime": "0.6540234088897705"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 9,
+    "type": "END",
+    "round_count": 102459,
+    "collided_fragment": "df73ab680",
+    "str1": "ef3f2109-0808-433e-b9d7-f271ee57d1e0",
+    "str1_hash": "f05a4b330f56c84a8d2c5e79d111bd1df73ab680",
+    "str2": "6b2dde8d-79a8-4441-ae82-0fcb2c3cbcc9",
+    "str2_hash": "9ba4f9c2569452aeb7fa0158f709298df73ab680",
+    "runtime": "0.2944765090942383"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 9,
+    "type": "END",
+    "round_count": 422015,
+    "collided_fragment": "a83d64651",
+    "str1": "408a6af0-c54b-466d-90b5-27cdcce82e60",
+    "str1_hash": "0c3898a4d373fdea4b6243169f35242a83d64651",
+    "str2": "4769a5dc-9604-4474-92cb-a29f300527a7",
+    "str2_hash": "37a0c6de2e110afc6d97ec4b948d751a83d64651",
+    "runtime": "1.2282741069793701"
+}

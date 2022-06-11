@@ -1,0 +1,56 @@
+{
+    "hash_fn": "openssl_sha1",
+    "char_count": 5,
+    "type": "BEGIN",
+    "round_count": 663,
+    "collided_fragment": "ff505",
+    "str1": "5b6cb478-2135-4380-bd83-87bf850a3b0a",
+    "str1_hash": "ff5055a06b20fcee66fd45cd66d351142ac9ba8c",
+    "str2": "d14c3292-3d64-462e-8654-ce95921b2879",
+    "str2_hash": "ff5052bb90511df9012359fd179ea41097f726e1",
+    "runtime": "0.001998424530029297"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 5,
+    "type": "BEGIN",
+    "round_count": 1564,
+    "collided_fragment": "8c3b0",
+    "str1": "8cd669ee-e0e2-450b-9312-01a7031ce864",
+    "str1_hash": "8c3b0db5a5afb12895be576e69ce59cbb5e42af3",
+    "str2": "a48cec8d-1931-4bad-b9d6-8eccacca317e",
+    "str2_hash": "8c3b02bcc01b16371ae2c822e4fd237be5d02040",
+    "runtime": "0.005000114440917969"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 5,
+    "type": "BEGIN",
+    "round_count": 1108,
+    "collided_fragment": "90a38",
+    "str1": "2e8ef398-5e84-4980-9b71-e2a7d6e18f0d",
+    "str1_hash": "90a38deaeded1a6350ea5f4052db3bd8ba1727b2",
+    "str2": "669991d6-4d7b-4fba-b340-103f39ab89ab",
+    "str2_hash": "90a382388eb3b267934a84eff44443f2206dc753",
+    "runtime": "0.003000020980834961"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 5,
+    "type": "BEGIN",
+    "round_count": 208,
+    "collided_fragment": "cf984",
+    "str1": "241d65b9-9c3e-408c-892d-d5f0427c775c",
+    "str1_hash": "cf98457082a63f6390267cd1df5f0a6198e53da6",
+    "str2": "a00bf7f6-9d1a-4a4f-9472-590e3871cdec",
+    "str2_hash": "cf984e3b65cc78610f18cc2362c50c4661915cac",
+    "runtime": "0.0010004043579101562"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 5,
+    "type": "BEGIN",
+    "round_count": 936,
+    "collided_fragment": "83b0e",
+    "str1": "991fc9f9-1ce8-41b3-a297-bed2abaa50cf",
+    "str1_hash": "83b0e84383efd7b9f56ded2f8b6263be0d90e0c8",
+    "str2": "3c5bc913-31e7-4fb2-9ea2-3e33f57ad7e5",
+    "str2_hash": "83b0e6bbcffc5db8828a2cb4eabd0c41cbf7dc44",
+    "runtime": "0.0029990673065185547"
+}

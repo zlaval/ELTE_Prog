@@ -1,16 +1,20 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import json
+import socket
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def receive_message():
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as srv:
+        srv.bind(('0.0.0.0', 55555))
+        srv.listen()
+        cli, cli_address = srv.accept()
+        # msg = cli.recv(2000)
+        # print(msg.decode("utf-8"), cli_address)
+        # cli.send(b'Hello client\n')
+        msg = cli.recv(2000)
+        data = json.loads(msg.decode())
+        print(data)
+        cli.close()
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    receive_message()

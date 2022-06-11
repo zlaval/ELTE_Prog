@@ -1,0 +1,61 @@
+{
+    "hash_fn": "openssl_md5",
+    "char_count": 7,
+    "type": "ALL",
+    "round_count": 3466,
+    "collided_fragment": "ca8b2ce",
+    "str1": "881c8777-a473-4cac-80bf-dfdd26697a9c",
+    "str1_hash": "5f67d452988f1bfc9bfb6aaca8b2cedd",
+    "str2": "2acc6a36-20c2-4f02-ab3a-35d2dc0527ac",
+    "str2_hash": "74f3746ec06be45985e621bca8b2cec8",
+    "runtime": "0.05958390235900879",
+    "position": "23"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 7,
+    "type": "ALL",
+    "round_count": 2404,
+    "collided_fragment": "c64a21c",
+    "str1": "7702a8d4-43c9-4214-b800-b511da0bf38a",
+    "str1_hash": "10caf93064e357e7e982c64a21c77983",
+    "str2": "c1dd34ae-b194-4f2a-9a32-2eb3edad7bb6",
+    "str2_hash": "721083ffe3648dd4fd83c64a21c6f8b8",
+    "runtime": "0.03940939903259277",
+    "position": "20"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 7,
+    "type": "ALL",
+    "round_count": 3438,
+    "collided_fragment": "94282bb",
+    "str1": "9305cf94-b7e5-4f39-8a4d-558bf9e84062",
+    "str1_hash": "1de4e0694282bbb3418c35a67cefbe26",
+    "str2": "bdc4a6d7-c604-48d5-91d8-673567095780",
+    "str2_hash": "810926494282bb837058c7e2c49d2300",
+    "runtime": "0.06763958930969238",
+    "position": "7"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 7,
+    "type": "ALL",
+    "round_count": 2987,
+    "collided_fragment": "cec72cd",
+    "str1": "34ce6d45-3be8-4cfb-abd2-659fe4b7fa9c",
+    "str1_hash": "0b9cbf5cda4c160fcec72cde02c7f733",
+    "str2": "95b2b68d-44ed-47cc-8521-6e4e5818ea2b",
+    "str2_hash": "c3928e3a77384d83cec72cd8ebb0dd34",
+    "runtime": "0.0533452033996582",
+    "position": "16"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 7,
+    "type": "ALL",
+    "round_count": 819,
+    "collided_fragment": "8d71aca",
+    "str1": "a6f04c67-95f2-4cbf-a436-5007c56eb25f",
+    "str1_hash": "d4b18d71aca437990e3a1d7e82147c8f",
+    "str2": "66935fca-8366-4397-bb19-e7cdb15641b0",
+    "str2_hash": "ed608d71aca5b50876286a3ecc11dfcb",
+    "runtime": "0.005002260208129883",
+    "position": "4"
+}

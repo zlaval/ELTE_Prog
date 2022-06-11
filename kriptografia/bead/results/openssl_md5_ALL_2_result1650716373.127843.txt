@@ -1,0 +1,73 @@
+{
+    "hash_fn": "openssl_md5",
+    "char_count": 2,
+    "type": "ALL",
+    "round_count": 8,
+    "collided_fragment": "1c",
+    "str1": "077dc666-b197-4ff8-ad9c-9c90f4f2bb03",
+    "str1_hash": "9937dcd785964acd20ed72e9af01c848",
+    "str2": "7bef08dd-758d-4407-bc50-d9cfd1f3396f",
+    "str2_hash": "b3a3e4ace10db30caaaeb9840391c431",
+    "runtime": "0.0",
+    "position": "27"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 2,
+    "type": "ALL",
+    "round_count": 2,
+    "collided_fragment": "cd",
+    "str1": "cc1ccd0a-bec9-40e3-871a-9df5db0f4619",
+    "str1_hash": "91b19fcd5c5885cef7715fca253a6337",
+    "str2": "dd5c127f-391f-4162-abb0-2eff9d205d66",
+    "str2_hash": "be4c74cd09275f213801f20d2fe8a86d",
+    "runtime": "0.0",
+    "position": "6"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 2,
+    "type": "ALL",
+    "round_count": 4,
+    "collided_fragment": "60",
+    "str1": "f93fffde-2aad-4ebd-801a-9ac8fbb79de1",
+    "str1_hash": "cc9ac6091c14b60c9fd368570da9665e",
+    "str2": "b6522cca-e92e-4f8b-aabc-4229b7c22289",
+    "str2_hash": "06ad6832574096078b8357a83f9a26e1",
+    "runtime": "0.0",
+    "position": "13"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 2,
+    "type": "ALL",
+    "round_count": 5,
+    "collided_fragment": "77",
+    "str1": "528f3115-5488-4d9a-9475-166c761c1748",
+    "str1_hash": "0564dd77a4afbd3c903cf1d7dbe7ec7b",
+    "str2": "c7373017-2155-4139-9b1f-ae41709b4384",
+    "str2_hash": "472f6c77a7e0adf6c537329c78dcf3d6",
+    "runtime": "0.0",
+    "position": "6"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 2,
+    "type": "ALL",
+    "round_count": 5,
+    "collided_fragment": "7a",
+    "str1": "528f3115-5488-4d9a-9475-166c761c1748",
+    "str1_hash": "0564dd77a4afbd3c903cf1d7dbe7ec7b",
+    "str2": "c7373017-2155-4139-9b1f-ae41709b4384",
+    "str2_hash": "472f6c77a7e0adf6c537329c78dcf3d6",
+    "runtime": "0.0",
+    "position": "7"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 2,
+    "type": "ALL",
+    "round_count": 3,
+    "collided_fragment": "be",
+    "str1": "0ec6bbe4-f66d-42e7-bdda-b7121ad484dd",
+    "str1_hash": "011260bc91db15dce53ee2be9031763d",
+    "str2": "2106c603-d6fa-4b6e-83b8-217a560c278b",
+    "str2_hash": "884373b8ee4822010d17d4be4b95f0b3",
+    "runtime": "0.0",
+    "position": "22"
+}

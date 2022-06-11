@@ -54,6 +54,8 @@ GLuint CMyApp::GenerateRandomTexture()
 	return tmpID;
 }
 
+
+
 void CMyApp::InitFloor()
 {
 	//struct Vertex{ glm::vec3 position; glm::vec2 texture; };
@@ -61,8 +63,8 @@ void CMyApp::InitFloor()
 	Vertex vert[] =
 	{
 		{glm::vec3(-1, 0,  1), glm::vec2(0,0)},
-		{glm::vec3( 1, 0,  1), glm::vec2(1,0)},
-		{glm::vec3( 1, 0, -1), glm::vec2(1,1)},
+		{glm::vec3(1, 0,  1), glm::vec2(1,0)},
+		{glm::vec3(1, 0, -1), glm::vec2(1,1)},
 		{glm::vec3(-1, 0, -1), glm::vec2(0,1)}
 	};
 
@@ -84,7 +86,7 @@ void CMyApp::InitFloor()
 		sizeof(vert),		// ennyi bájt nagyságban
 		vert,	// erről a rendszermemóriabeli címről olvasva
 		GL_STATIC_DRAW);	// úgy, hogy a VBO-nkba nem tervezünk ezután írni és minden kirajzoláskor felhasnzáljuk a benne lévő adatokat
-		
+
 
 	// VAO-ban jegyezzük fel, hogy a VBO-ban az első 3 float sizeof(Vertex)-enként lesz az első attribútum (pozíció)
 	glEnableVertexAttribArray(0);
@@ -147,11 +149,11 @@ void CMyApp::InitCube()
 	vertices.push_back({ glm::vec3(+0.5, -0.5, -0.5), glm::vec2(1, 0) });
 	vertices.push_back({ glm::vec3(-0.5, -0.5, +0.5), glm::vec2(0, 1) });
 	vertices.push_back({ glm::vec3(+0.5, -0.5, +0.5), glm::vec2(1, 1) });
-	
+
 	GLushort indices[36];
 	int index = 0;
 	//4 csúcspontonként 6 index eltárolása
-	for (int i = 0; i < 6*4; i += 4)
+	for (int i = 0; i < 6 * 4; i += 4)
 	{
 		indices[index + 0] = i + 0;
 		indices[index + 1] = i + 1;
@@ -259,12 +261,13 @@ bool CMyApp::Init()
 	InitTextures();
 
 	// vetítési mátrix létrehozása
-	m_matProj = glm::perspective( 45.0f, 640/480.0f, 1.0f, 1000.0f );
+	m_matProj = glm::perspective(45.0f, 640 / 480.0f, 1.0f, 1000.0f);
 
 	// shader-beli transzformációs mátrixok címének lekérdezése
-	m_loc_mvp = glGetUniformLocation( m_programID, "MVP");
-	m_loc_w = glGetUniformLocation( m_programID, "world" );
+	m_loc_mvp = glGetUniformLocation(m_programID, "MVP");
+	m_loc_w = glGetUniformLocation(m_programID, "world");
 	m_loc_tex = glGetUniformLocation(m_programID, "texImage");
+	m_loc_tex2 = glGetUniformLocation(m_programID, "texImage2");
 
 	return true;
 }
@@ -281,16 +284,31 @@ void CMyApp::Clean()
 	glDeleteVertexArrays(1, &m_floor_vaoID);
 	glDeleteVertexArrays(1, &m_cube_vaoID);
 
-	glDeleteProgram( m_programID );
+	glDeleteProgram(m_programID);
 }
 
 void CMyApp::Update()
 {
 	// nézeti transzformáció beállítása
-	m_matView = glm::lookAt(glm::vec3( 0,  6, 10),		// honnan nézzük a színteret
-							glm::vec3( 0,  0,  0),		// a színtér melyik pontját nézzük
-							glm::vec3( 0,  1,  0));		// felfelé mutató irány a világban
+	m_matView = glm::lookAt(eye, look_at, forward
+		//glm::vec3(0, 6, 10),		// honnan nézzük a színteret
+		//glm::vec3(0, 0, 0),		// a színtér melyik pontját nézzük
+		//glm::vec3(0, 1, 0)
+
+	);		// felfelé mutató irány a világban
+
+
 }
+
+glm::vec3 CMyApp::toDescatres(float fi, float theta)
+{
+	return glm::vec3(
+		sinf(theta) * cosf(fi),
+		cosf(theta),
+		sinf(theta) * sinf(fi)
+	);
+}
+
 
 void CMyApp::Render()
 {
@@ -307,7 +325,7 @@ void CMyApp::Render()
 	glBindVertexArray(m_floor_vaoID);
 
 	// a talaj átméretezése és eltolása
-	m_matWorld = glm::translate(glm::vec3(0, -0.5, 0))*glm::scale(glm::vec3(10, 1, 10));
+	m_matWorld = glm::translate(glm::vec3(0, -0.5, 0)) * glm::scale(glm::vec3(10, 1, 10));
 	glm::mat4 mvp = m_matProj * m_matView * m_matWorld;
 	glUniformMatrix4fv(m_loc_mvp, 1, GL_FALSE, &(mvp[0][0]));
 	glUniformMatrix4fv(m_loc_w, 1, GL_FALSE, &(m_matWorld[0][0]));
@@ -322,6 +340,10 @@ void CMyApp::Render()
 	// beállítjuk, hogy a fragment shaderben a "texImage" nevű mintavételező a 0-ás számú legyen
 	glUniform1i(m_loc_tex, 0);
 
+	glActiveTexture(GL_TEXTURE1);
+	glBindTexture(GL_TEXTURE_2D, m_loadedTextureID);
+	glUniform1i(m_loc_tex2, 1);
+
 	// kirajzolás
 	//A draw hívásokhoz a VAO és a program bindolva kell legyenek (glUseProgram() és glBindVertexArray())
 
@@ -330,7 +352,7 @@ void CMyApp::Render()
 		6,							// hány darab csúcspontot akarunk kirajzolni
 		GL_UNSIGNED_SHORT,			// az indexek típusa
 		0							// eltolás
-	);			
+	);
 
 
 	//
@@ -339,7 +361,9 @@ void CMyApp::Render()
 	// Váltsunk át a kocka VAO-jára
 	glBindVertexArray(m_cube_vaoID);
 	// és textúrájára (továbbra is a 0-ás mintavételező aktív, és ez van beállítva a shaderben is)
-	glBindTexture(GL_TEXTURE_2D, m_loadedTextureID);
+
+
+	//glBindTexture(GL_TEXTURE_2D, m_loadedTextureID);
 
 	// a középső kocka kirajzolása
 	m_matWorld = glm::translate(glm::vec3(0, 0, 0));
@@ -353,8 +377,8 @@ void CMyApp::Render()
 	int r = 4, n = 10; // keringés sugara + kockák száma
 	for (int i = 0; i < n; ++i)
 	{
-		float distance = time + M_PI*2.f/n*i;
-		m_matWorld = glm::translate(glm::vec3(cos(distance)*r, sin(distance)*r,0));
+		float distance = time + M_PI * 2.f / n * i;
+		m_matWorld = glm::translate(glm::vec3(cos(distance) * r, sin(distance) * r, 0));
 		mvp = m_matProj * m_matView * m_matWorld;
 		glUniformMatrix4fv(m_loc_mvp, 1, GL_FALSE, &(mvp[0][0]));
 		glUniformMatrix4fv(m_loc_w, 1, GL_FALSE, &(m_matWorld[0][0]));
@@ -368,18 +392,34 @@ void CMyApp::Render()
 	glBindTexture(GL_TEXTURE_2D, 0);
 
 	// shader kikapcsolasa
-	glUseProgram( 0 );
+	glUseProgram(0);
 }
 
 void CMyApp::KeyboardDown(SDL_KeyboardEvent& key)
 {
 	switch (key.keysym.sym)
 	{
-		case(SDLK_w): std::cout << "---\n|W|\n"; break;
-		case(SDLK_s): std::cout << "---\n|S|\n"; break;
-		case(SDLK_d): std::cout << "---\n|D|\n"; break;
-		case(SDLK_a): std::cout << "---\n|A|\n"; break;
-		default: break;
+	case(SDLK_w):
+		std::cout << "---\n|W|\n";
+		eye += forward;
+		look_at += forward;
+		break;
+	case(SDLK_s): 
+		std::cout << "---\n|S|\n";
+		eye -= forward;
+		look_at -= forward;
+		break;
+	case(SDLK_d):
+		std::cout << "---\n|D|\n";
+		eye -= right;
+		look_at -= right;
+		break;
+	case(SDLK_a): 
+		std::cout << "---\n|A|\n";
+		eye += right;
+		look_at += right;
+		break;
+	default: break;
 	}
 }
 
@@ -390,14 +430,29 @@ void CMyApp::KeyboardUp(SDL_KeyboardEvent& key)
 void CMyApp::MouseMove(SDL_MouseMotionEvent& mouse)
 {
 
+	if (is_left_pressed) {
+		fi += mouse.xrel / 100.0f;
+		theta += mouse.yrel / 100.f;
+		theta = glm::clamp(theta, 0.1f, 3.1f);
+		forward = toDescatres(fi, theta);
+		look_at = eye + forward;
+		right = glm::cross(up, forward);
+	}
+
 }
 
 void CMyApp::MouseDown(SDL_MouseButtonEvent& mouse)
 {
+	if (mouse.button == SDL_BUTTON_LEFT) {
+		is_left_pressed = true;
+	}
 }
 
 void CMyApp::MouseUp(SDL_MouseButtonEvent& mouse)
 {
+	if (mouse.button == SDL_BUTTON_LEFT) {
+		is_left_pressed = false;
+	}
 }
 
 void CMyApp::MouseWheel(SDL_MouseWheelEvent& wheel)
@@ -409,8 +464,8 @@ void CMyApp::Resize(int _w, int _h)
 {
 	glViewport(0, 0, _w, _h);
 
-	m_matProj = glm::perspective(   glm::radians(60.0f),	// 60 fokos nyílásszög radiánban
-									_w/(float)_h,			// ablakméreteknek megfelelő nézeti arány
-									0.01f,					// közeli vágósík
-									1000.0f);				// távoli vágósík
+	m_matProj = glm::perspective(glm::radians(60.0f),	// 60 fokos nyílásszög radiánban
+		_w / (float)_h,			// ablakméreteknek megfelelő nézeti arány
+		0.01f,					// közeli vágósík
+		1000.0f);				// távoli vágósík
 }

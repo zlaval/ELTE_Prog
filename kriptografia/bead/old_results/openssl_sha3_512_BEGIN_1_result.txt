@@ -1,0 +1,12 @@
+{
+    "hash_fn": "openssl_sha3_512",
+    "char_count": 1,
+    "type": "BEGIN",
+    "round_count": 2,
+    "collided_fragment": "c",
+    "str1": "eb5ec921-100f-413e-8e3b-9be7884640ed",
+    "str1_hash": "c38a66041aa5474c46c37a3b01786113b6e968fd9b9576967ace04e941296151429778212c159f7b387e8817a0d3e245b8b348617b6124a04defb825cc6be038",
+    "str2": "c1c8ddbd-4043-4fcb-a9f2-a58b83ee7e89",
+    "str2_hash": "c99084e31bd40174c1b0f4e791fcbb5340e4ee70ee77db9a67a5114a711a018559dce4d056aa283092724e187d75dabdda10c6397be5ca04a630c8923089653c",
+    "runtime": "0.0"
+}

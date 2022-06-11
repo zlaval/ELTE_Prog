@@ -1,0 +1,61 @@
+{
+    "hash_fn": "openssl_md5",
+    "char_count": 5,
+    "type": "ALL",
+    "round_count": 254,
+    "collided_fragment": "b0cc7",
+    "str1": "85a76bb4-6c47-4ef1-b50f-104e8d84e67b",
+    "str1_hash": "83274c40d21ca103fa2165b0cc7e2c8a",
+    "str2": "b62b7bec-bdcb-46ff-9ee9-8e1a063ec3c8",
+    "str2_hash": "8849992afa62ca8250729bb0cc759ccb",
+    "runtime": "0.010002851486206055",
+    "position": "22"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 5,
+    "type": "ALL",
+    "round_count": 182,
+    "collided_fragment": "59468",
+    "str1": "eed11528-dc71-4ddd-be20-fb7fe55a6c0e",
+    "str1_hash": "cf375e118594681ade7c5cc637849148",
+    "str2": "a5972a5a-aca3-47a6-9401-ca3a9622f430",
+    "str2_hash": "13adad24c594688b92d49fed7c42f72c",
+    "runtime": "0.0",
+    "position": "9"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 5,
+    "type": "ALL",
+    "round_count": 455,
+    "collided_fragment": "b6158",
+    "str1": "2ab19b2f-7ea6-45b5-ba38-086a95b2d08b",
+    "str1_hash": "7da4f3f7c0fc7626b615801f6762771d",
+    "str2": "93173e21-8aa0-4082-b257-13a7676ce5c5",
+    "str2_hash": "7a995db9e20c7441b615884031e323f0",
+    "runtime": "0.013238191604614258",
+    "position": "16"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 5,
+    "type": "ALL",
+    "round_count": 156,
+    "collided_fragment": "77449",
+    "str1": "59122dbe-5c1a-48c9-b7cb-6d6856a51501",
+    "str1_hash": "05304bcb428e9ac7744980ddb3085e82",
+    "str2": "bfb27547-b720-44c9-bdd0-43a76f20f41d",
+    "str2_hash": "9dabde1a0e59ac97744953f65affa2fe",
+    "runtime": "0.0019991397857666016",
+    "position": "15"
+}{
+    "hash_fn": "openssl_md5",
+    "char_count": 5,
+    "type": "ALL",
+    "round_count": 257,
+    "collided_fragment": "c953c",
+    "str1": "128d5940-0189-4c06-bd3f-4056077f1bfb",
+    "str1_hash": "936fe0c6534dc953c626f8eba02de075",
+    "str2": "52a92c84-4146-4fec-9952-cf74388326f9",
+    "str2_hash": "123065bf9aa4c953c97224a526a603bf",
+    "runtime": "0.004001140594482422",
+    "position": "12"
+}

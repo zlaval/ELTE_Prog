@@ -1,0 +1,56 @@
+{
+    "hash_fn": "openssl_sha1",
+    "char_count": 11,
+    "type": "BEGIN",
+    "round_count": 5566925,
+    "collided_fragment": "ec6121eef7a",
+    "str1": "f052eccb-a7e5-4426-85bd-d1cbbc8d7218",
+    "str1_hash": "ec6121eef7a0a1d644c00a351eb4a5e6767f4478",
+    "str2": "7ffbdd28-4bf0-45f7-891f-9824583d7c63",
+    "str2_hash": "ec6121eef7a6b7203c987c57576bc9b47c38b710",
+    "runtime": "16.61384916305542"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 11,
+    "type": "BEGIN",
+    "round_count": 13097707,
+    "collided_fragment": "7e44d297d0d",
+    "str1": "8ccff7c6-945f-4c4e-a833-ed6edf892892",
+    "str1_hash": "7e44d297d0d8d761d609c48476bed29052b135fd",
+    "str2": "06ac5d98-3c9f-4af4-b93d-c97017d7b3ea",
+    "str2_hash": "7e44d297d0d458773c4d8976d7c32aa7e80e0100",
+    "runtime": "39.61361312866211"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 11,
+    "type": "BEGIN",
+    "round_count": 5227718,
+    "collided_fragment": "ddc0aa7026b",
+    "str1": "69b8c7c6-c0e9-453d-953e-62f55e246f8e",
+    "str1_hash": "ddc0aa7026bfd778ff8d90be3ba22b0bb84db3d6",
+    "str2": "f5f0fd7a-9899-4f65-ab6c-bdb234f59c1b",
+    "str2_hash": "ddc0aa7026b9a9aab06d6c092d709724066dfcf3",
+    "runtime": "15.477997303009033"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 11,
+    "type": "BEGIN",
+    "round_count": 3412903,
+    "collided_fragment": "7509cfec33f",
+    "str1": "5c32a1aa-cc71-48f2-b276-85c34b975741",
+    "str1_hash": "7509cfec33f267240a74d939ef408dc6b3502ebc",
+    "str2": "c5ebb625-f13c-44ea-adc0-18a4a27952c8",
+    "str2_hash": "7509cfec33f4215844550de931a790cf80b34951",
+    "runtime": "10.108752250671387"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 11,
+    "type": "BEGIN",
+    "round_count": 4470541,
+    "collided_fragment": "727684cfe03",
+    "str1": "c7a63fe1-f99f-4ace-946f-e40d82bc6b34",
+    "str1_hash": "727684cfe0315d5dbeb04d0dd662399ba92a02cd",
+    "str2": "4c8f9b7f-abdf-4051-8a26-65f119b2e528",
+    "str2_hash": "727684cfe038cecc2d52231f4fc69c3588ad0551",
+    "runtime": "13.194343328475952"
+}

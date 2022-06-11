@@ -123,6 +123,8 @@ bool CMyApp::Init()
 	glDeleteShader(vs_ID);
 	glDeleteShader(fs_ID);
 
+	m_loc_scale=glGetUniformLocation(m_programID, "scale");
+
 	return true;
 }
 
@@ -146,6 +148,8 @@ void CMyApp::Render()
 
 	// shader bekapcsolása, ebben a projektben a teljes programot jelöli, hisz nem váltunk a shaderek között
 	glUseProgram(m_programID);
+
+	glUniform1f(m_loc_scale, sinf(SDL_GetTicks() *M_PI *2.f / 2000.f)*0.5f +0.5f); //sinus periodusidő = 2PI, normalizáljuk
 
 	// kapcsoljuk be a VAO-t (a VBO jön vele együtt)
 	glBindVertexArray(m_vaoID);

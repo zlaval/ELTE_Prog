@@ -1,0 +1,12 @@
+{
+    "hash_fn": "openssl_sha1",
+    "char_count": 1,
+    "type": "BEGIN",
+    "round_count": 3,
+    "collided_fragment": "4",
+    "str1": "9bd9718b-b157-4a73-8ee1-3a3d850633a0",
+    "str1_hash": "488ad1557e8af19f27e4540878f661508793a992",
+    "str2": "ae9c14ed-5d1a-4dd4-be32-746c8b90369e",
+    "str2_hash": "48bf834e858e16621481e6a0a6b3890643e9f7a0",
+    "runtime": "0.0"
+}

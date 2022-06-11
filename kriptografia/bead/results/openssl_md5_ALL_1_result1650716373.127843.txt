@@ -1,0 +1,13 @@
+{
+    "hash_fn": "openssl_md5",
+    "char_count": 1,
+    "type": "ALL",
+    "round_count": 3,
+    "collided_fragment": "5",
+    "str1": "adac43bc-f88b-4386-a7cd-78f8b66cdfbc",
+    "str1_hash": "97485aa26c1398a27a3636138cceaa50",
+    "str2": "31b82320-0467-4a95-a077-ee6577c6ae4d",
+    "str2_hash": "a0ddb8b238a6a8ea66d12117b25b8457",
+    "runtime": "0.02285003662109375",
+    "position": "30"
+}

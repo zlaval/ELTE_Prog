@@ -1,0 +1,56 @@
+{
+    "hash_fn": "openssl_sha1",
+    "char_count": 7,
+    "type": "END",
+    "round_count": 5948,
+    "collided_fragment": "4281c39",
+    "str1": "90a2a605-ef4e-4573-bfc4-a0157be26798",
+    "str1_hash": "8c40bfef4857ca5314da96a621c2450c14281c39",
+    "str2": "2f21456f-5554-44f4-bf8c-4188fa9821c5",
+    "str2_hash": "cca7d1e46b0a0b75577818e95767c80c04281c39",
+    "runtime": "0.017056703567504883"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 7,
+    "type": "END",
+    "round_count": 30763,
+    "collided_fragment": "b33c832",
+    "str1": "15a88942-f3cf-4566-b443-82a0a4324006",
+    "str1_hash": "6683f03e7aa12f2d74820c196cee8d928b33c832",
+    "str2": "2e787559-e6ba-41de-887c-73600daac08a",
+    "str2_hash": "461ea27cba3e6870bbd17f9e6f86bee00b33c832",
+    "runtime": "0.0922691822052002"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 7,
+    "type": "END",
+    "round_count": 25097,
+    "collided_fragment": "0e05763",
+    "str1": "451f3f25-9918-4557-9de1-40c111a75969",
+    "str1_hash": "5c5ed2e8fb5ddd22bd1936c135b2b25b10e05763",
+    "str2": "9ab113e3-989b-4037-8381-ffa80e28d05d",
+    "str2_hash": "4fcf682546e676ba3d1e49f7f1707335d0e05763",
+    "runtime": "0.07361745834350586"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 7,
+    "type": "END",
+    "round_count": 6803,
+    "collided_fragment": "c0c25fb",
+    "str1": "4448ba87-95e2-4b97-90b4-1196f0a08911",
+    "str1_hash": "b43087c6ae3f4058af522a738c22bd987c0c25fb",
+    "str2": "223feb1c-6f0a-4439-9fd6-e3867d4b753d",
+    "str2_hash": "1fd899137533e2d29e5b0e67cfe6d8abdc0c25fb",
+    "runtime": "0.019999265670776367"
+}{
+    "hash_fn": "openssl_sha1",
+    "char_count": 7,
+    "type": "END",
+    "round_count": 32896,
+    "collided_fragment": "e49600a",
+    "str1": "dfc955ad-bbdc-4879-bd03-69d31a0fed89",
+    "str1_hash": "20b6e8786c94b4a4f495187c1635e0f0be49600a",
+    "str2": "df71ecf1-408e-44cd-901c-81f725556862",
+    "str2_hash": "275c1d1833cf5b66a79d0f0bfefa05b6be49600a",
+    "runtime": "0.09578514099121094"
+}
