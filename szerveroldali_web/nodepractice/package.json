@@ -1,0 +1,25 @@
+{
+  "name": "nodepractice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db": "npx rimraf database.sqlite && npx sequelize db:migrate && npx sequelize db:seed:all",
+    "start": "npx nodemon .\\src\\server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "fastify": "^4.10.0",
+    "rimraf": "^3.0.2",
+    "sequelize": "^6.25.6",
+    "sqlite3": "^5.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sequelize-cli": "^6.5.2"
+  }
+}
