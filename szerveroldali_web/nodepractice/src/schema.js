@@ -46,9 +46,22 @@ const CategoryPatchSchema = {
     }
 }
 
+const LoginSchema = {
+    schema: {
+        body: {
+            type: 'object',
+            required: ['email'],
+            properties: {
+                email: {type: 'string', format: 'email'}
+            }
+        }
+    }
+}
+
 module.exports = {
     IdSchema,
     CategoryPostSchema,
     CategoryPutSchema,
-    CategoryPatchSchema
+    CategoryPatchSchema,
+    LoginSchema
 }
