@@ -1,4 +1,5 @@
 const {Post, User, Category} = require("../models");
+const {PostPostSchema} = require("./schema")
 
 const excludeTimestamps = {
     attributes: {
@@ -26,6 +27,29 @@ const routes = async (fastify, options) => {
             ...excludeTimestamps
         })
         reply.send(posts)
+    })
+
+    fastify.post('/posts', {...PostPostSchema, onRequest: [fastify.authenticate]}, async (request, reply) => {
+        const {title, content, categories} = request.body
+        const post = await Post.create({
+            title,
+            content,
+            UserId: request.user.user.id
+        })
+
+        const persistedCategories = []
+        for (const categoryName of categories) {
+            let category = await Category.findOne({where: {name: categoryName}})
+            if (!category) {
+                category = await Category.create({
+                    name: categoryName,
+                    hidden: false
+                })
+            }
+            persistedCategories.push(category)
+        }
+        post.addCategories(persistedCategories)
+        reply.status(201).send({...post.dataValues, persistedCategories})
     })
 
 }

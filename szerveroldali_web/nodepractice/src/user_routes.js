@@ -16,7 +16,6 @@ const routes = async (fastify, options) => {
         reply.send(request.user)
     })
 
-
 }
 
 module.exports = routes

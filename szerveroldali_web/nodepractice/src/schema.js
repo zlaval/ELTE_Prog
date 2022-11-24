@@ -58,10 +58,25 @@ const LoginSchema = {
     }
 }
 
+const PostPostSchema = {
+    schema: {
+        body: {
+            type: 'object',
+            required: ['title', 'content', 'categories'],
+            properties: {
+                title: {type: 'string'},
+                content: {type: 'string'},
+                categories: {type: 'array', items: {type: 'string'}}
+            }
+        }
+    }
+}
+
 module.exports = {
     IdSchema,
     CategoryPostSchema,
     CategoryPutSchema,
     CategoryPatchSchema,
-    LoginSchema
+    LoginSchema,
+    PostPostSchema
 }
