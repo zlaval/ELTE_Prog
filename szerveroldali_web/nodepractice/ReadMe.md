@@ -53,3 +53,11 @@ const t = [12, 34, 45, 67]
 faker.helpers.unique(()=>{faker.helpers.arrayElement(t)})
 ```
 
+### GraphQL
+
+```graphql
+query{
+  hello(name: "Zalan")
+}
+```
+

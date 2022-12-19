@@ -8,7 +8,7 @@ const routes = async (fastify, options) => {
         if(!user){
             return reply.status(404).send({message: 'User not found'})
         }
-        const token = fastify.jwt.sign({user})
+        const token = fastify.jwt.sign(user.toJSON())
         reply.send({token})
     });
 
